@@ -94,6 +94,14 @@ Comparação entre dados trimestrais (linha) e médias anuais (pontos), demonstr
 
 ![Análise de Sensibilidade](graficos/analise_sensibilidade.png)
 
+---
+
+### *Contexto Econômico do Período*
+
+- Recessão 2014-2016
+- Pandemia 2020
+- Choque inflacionário pós-2021
+
 
 ---
 
