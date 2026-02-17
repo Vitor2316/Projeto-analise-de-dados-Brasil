@@ -84,6 +84,8 @@ Comparação de salário médio por hora em USD PPP.
 
 ![Produtividade Absoluta 2025](graficos/produtividade_2025.png)
 
+Embora o Brasil tenha crescido 24%, Uruguai e Chile já partiam de níveis mais altos de produtividade. Turquia, apesar do crescimento de 40%, ainda tem produtividade similar ao Brasil.
+
 ---
 
 ### Análise de Sensibilidade Metodológica
