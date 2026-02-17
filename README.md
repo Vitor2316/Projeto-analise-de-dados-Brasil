@@ -37,9 +37,9 @@ O Brasil experimentou um **paradoxo econômico** no período analisado:
 
 | Métrica | Variação 2012-2025 |
 |---------|-------------------|
-| 📈 Produtividade (rendimento/hora) | **+26%** |
-| 📉 Poder de compra (salário real) | **-42%** |
-| ⏰ Horas trabalhadas/semana | 40.6h → 39.1h |
+|  Produtividade (rendimento/hora) | **+26%** |
+|  Poder de compra (salário real) | **-42%** |
+|  Horas trabalhadas/semana | 40.6h → 39.1h |
 
 **Conclusão:** Os trabalhadores brasileiros se tornaram mais produtivos, trabalham menos horas, mas perderam significativamente em poder de compra - sendo o **único país entre os comparados** com perda de salário real.
 
@@ -51,7 +51,7 @@ O Brasil experimentou um **paradoxo econômico** no período analisado:
 
 Evolução do rendimento por hora trabalhada entre países emergentes (2012-2025).
 
-![Produtividade Internacional](graficos/Evolução_da_produtividade_do_Trabalho_-_Países_Emergentes__2012-2025_.png)
+![Produtividade Internacional](graficos/produtividade_internacional.png)
 
 **Ranking de crescimento:**
 1. Turquia: +40%
@@ -67,9 +67,8 @@ Evolução do rendimento por hora trabalhada entre países emergentes (2012-2025
 
 Evolução do salário real ajustado pela inflação (2012-2025).
 
-![Poder de Compra Internacional](graficos/Evolução_do_Poder_de_Compra_-_Países_Emergentes__2012-2025_.png)
+![Poder de Compra Internacional](graficos/salario_real_internacional.png)
 
-**Ranking de variação:**
 1. Turquia: +46%
 2. Peru: +33%
 3. Chile: +18%
@@ -83,7 +82,7 @@ Evolução do salário real ajustado pela inflação (2012-2025).
 
 Comparação de salário médio por hora em USD PPP.
 
-![Produtividade Absoluta 2025](graficos/Produtividade_Absoluta_em_2025.png)
+![Produtividade Absoluta 2025](graficos/produtividade_2025.png)
 
 ---
 
@@ -91,7 +90,8 @@ Comparação de salário médio por hora em USD PPP.
 
 Comparação entre dados trimestrais (linha) e médias anuais (pontos), demonstrando a robustez da metodologia.
 
-![Análise de Sensibilidade](graficos/Análise_de_Sensibilidade_Comparação_Trimestral_X_Anual.png)
+![Análise de Sensibilidade](graficos/analise_sensibilidade.png)
+
 
 ---
 
