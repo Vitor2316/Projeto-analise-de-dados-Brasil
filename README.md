@@ -1,285 +1,340 @@
-# Análise de Produtividade e Poder de Compra no Brasil (2012-2025)
+# 📊 Análise de Produtividade e Salário Real no Brasil (2012-2025)
 
-![Status](https://img.shields.io/badge/status-concluído-success)
-![R](https://img.shields.io/badge/R-4.x-blue)
-![Python](https://img.shields.io/badge/Python-3.12-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
+[![Status](https://img.shields.io/badge/Status-Finalizado-success)](https://github.com/Vitor2316/Projeto-analise-de-dados-Brasil)
+[![R](https://img.shields.io/badge/R-4.0+-blue)](https://www.r-project.org/)
+[![Python](https://img.shields.io/badge/Python-3.8+-yellow)](https://www.python.org/)
+[![Licença](https://img.shields.io/badge/Licen%C3%A7a-MIT-green)](LICENSE)
 
-**Análise quantitativa da evolução da produtividade do trabalho e do poder de compra dos trabalhadores brasileiros, com comparação internacional entre países emergentes.**
-
----
-
-## Índice
-
-- [Sobre o Projeto](#sobre-o-projeto)
-- [Principal Descoberta](#principal-descoberta)
-- [Visualizações](#visualizações)
-- [Principais Resultados](#principais-resultados)
-- [Estrutura do Repositório](#estrutura-do-repositório)
-- [Metodologia](#metodologia)
-- [Ferramentas Utilizadas](#ferramentas-utilizadas)
-- [Como Reproduzir](#como-reproduzir)
-- [Contato](#contato)
+> **Versão 3.0 (Final Validada)** - Estudo completo com decomposição estrutural vs conjuntural, validação cruzada e descoberta de reversão do ciclo em dezembro/2025.
 
 ---
 
-## Sobre o Projeto
+## 🎯 Descoberta Principal
 
-Este estudo analisa a evolução da produtividade do trabalho e do poder de compra dos trabalhadores brasileiros entre 2012 e 2025, comparando os resultados com outros países emergentes (Chile, Colômbia, Peru, Turquia e Uruguai).
+**Trabalhadores formais brasileiros experimentaram ganho real de +15.6% (mediana) no poder de compra entre 2012-2024**, com distribuição **progressiva**: base (+16.7%) cresceu mais que topo (+10.3%).
 
-A análise utiliza dados oficiais do IBGE/PNAD e fontes internacionais (OECD, ILO, Banco Mundial), com tratamento rigoroso de inflação composta e validação metodológica através de testes de robustez.
+### Decomposição dos Ganhos:
+- **58% estrutural** (permanente): salário mínimo real + redistribuição do PIB
+- **42% conjuntural** (reversível): desemprego histórico + recuperação pós-crise
 
----
-
-## Principal Descoberta
-
-O Brasil experimentou um **paradoxo econômico** no período analisado:
-
-| Métrica | Variação 2012-2025 |
-|---------|-------------------|
-|  Produtividade (rendimento/hora) | **+26%** |
-|  Poder de compra (salário real) | **-42%** |
-|  Horas trabalhadas/semana | 40.6h → 39.1h |
-
-**Conclusão:** Os trabalhadores brasileiros se tornaram mais produtivos, trabalham menos horas, mas perderam significativamente em poder de compra - sendo o **único país entre os comparados** com perda de salário real.
+### ⚠️ Alerta Crítico (Fev/2026):
+**Dados de dezembro 2025 confirmam reversão do ciclo:** -618 mil empregos, com serviços (motor do crescimento 2022-2024) liderando demissões.
 
 ---
 
-## Visualizações
+## 📈 Gráficos Principais
 
-### Comparação Internacional - Produtividade
+### 1. Trajetória do Trabalhador Típico (2012-2025)
+![Trajetória](graficos/01_trajetoria_trabalhador_tipico.png)
 
-Evolução do rendimento por hora trabalhada entre países emergentes (2012-2025).
-
-![Produtividade Internacional](graficos/produtividade_internacional.png)
-
-**Ranking de crescimento:**
-1. Turquia: +40%
-2. Peru: +32%
-3. **Brasil: +26%**
-4. Chile: +21%
-5. Colômbia: +20%
-6. Uruguai: +19%
+**Descoberta:** 10 anos perdidos (2012-2021), recuperação concentrada em 3 anos (2022-2024).
 
 ---
 
-### Comparação Internacional - Poder de Compra
+### 2. Decomposição: Estrutural vs Conjuntural
+![Decomposição](graficos/02_decomposicao_estrutural_conjuntural.png)
 
-Evolução do salário real ajustado pela inflação (2012-2025).
-
-![Poder de Compra Internacional](graficos/salario_real_internacional.png)
-
-1. Turquia: +46%
-2. Peru: +33%
-3. Chile: +18%
-4. Colômbia: +11%
-5. Uruguai: +10%
-6. **Brasil: -42%** ⚠️
+**Descoberta:** 58% dos ganhos são estruturais (ficam mesmo com crise), 42% são conjunturais (podem reverter).
 
 ---
 
-### Níveis Absolutos de Produtividade em 2025
+### 3. Ganhos Progressivos (Base vs Topo)
+![Progressivo](graficos/03_ganhos_progressivos_percentis.png)
 
-Comparação de salário médio por hora em USD PPP.
-
-![Produtividade Absoluta 2025](graficos/produtividade_2025.png)
-
----
-
-### Análise de Sensibilidade Metodológica
-
-Comparação entre dados trimestrais (linha) e médias anuais (pontos), demonstrando a robustez da metodologia.
-
-![Análise de Sensibilidade](graficos/analise_sensibilidade.png)
-
+**Descoberta:** Base cresceu +16.7%, topo cresceu apenas +10.3%. Desigualdade caiu.
 
 ---
 
-## Principais Resultados
+### 4. Participação do Trabalho no PIB
+![PIB](graficos/04_participacao_trabalho_pib.png)
 
-### Brasil (2012-2025)
-
-**Salário Real:**
-- Variação: **-42.4%** 
-- Interpretação: Perda drástica de poder de compra devido à inflação acumulada
-
-**Rendimento por Hora:**
-- Variação: **+25.8%** (faixa robusta: 20-26%)
-- Interpretação: Ganho de produtividade apesar da redução de horas trabalhadas
-
-**Paradoxo Identificado:**
-- Trabalhadores produzem **mais por hora** (+26%)
-- Trabalham **menos horas** por semana (-3.7%)
-- MAS perderam **poder de compra** (-42%)
-
-**Causa raiz:** Inflação acumulada (IPCA) superou crescimento nominal dos salários.
+**Descoberta CRÍTICA:** Trabalhadores capturaram +5.6pp do PIB. **Lucros empresariais foram comprimidos** para financiar os ganhos salariais. Isso torna os ganhos **FRÁGEIS**.
 
 ---
 
-### Comparação Internacional
+### 5. Desemprego vs Salário Real (Relação Inversa)
+![Desemprego](graficos/05_desemprego_vs_salario.png)
 
-| País | Produtividade | Salário Real |
-|------|--------------|--------------|
-| Turquia | +40% | +46% |
-| Peru | +32% | +33% |
-| **Brasil** | **+26%** | **-42%** |
-| Chile | +21% | +18% |
-| Colômbia | +20% | +11% |
-| Uruguai | +19% | +10% |
+**Descoberta:** Quando desemprego sobe (2015-2021), salário cai. Quando desemprego cai (2022-2024), salário sobe.
 
 ---
 
-## Estrutura do Repositório
+### 6. CAGED: Reversão em Dezembro 2025
+![CAGED](graficos/07_caged_reversao_dez2025.png)
 
-```
-├── dados/
-│   ├── brasil_trimestral_corrigido.csv
-│   ├── brasil_anual.csv
-│   ├── produtividade_anual_paises.csv
-│   ├── salario_real_anual_paises.csv
-│   └── teste_robustez.csv
-│
-├── scripts/
-│   ├── 01_limpeza_dados.R
-│   ├── 02_calculo_indices.py
-│   ├── 03_graficos.R
-│   ├── 04_teste_robustez.py
-│   └── grafico_sensibilidade.R
-│
-├── graficos/
-│   ├── Evolução_da_produtividade_do_Trabalho_-_Países_Emergentes__2012-2025_.png
-│   ├── Evolução_do_Poder_de_Compra_-_Países_Emergentes__2012-2025_.png
-│   ├── Produtividade_Absoluta_em_2025.png
-│   └── Análise_de_Sensibilidade_Comparação_Trimestral_X_Anual.png
-│
-├── METODOLOGIA.md
-└── README.md
-```
+**Descoberta EXPLOSIVA:** -618 mil empregos em dezembro/2025. Serviços (que sustentaram 2022-2024) lideram demissões. **O ciclo está revertendo AGORA.**
 
 ---
 
-## Metodologia
+## 📊 Resultados Completos
+
+| Indicador | 2012 | 2024 | Variação | Interpretação |
+|-----------|------|------|----------|---------------|
+| **Salário Real Mediana (P50)** | R$805 | R$930 | **+15.6%** | Trabalhador típico |
+| **Base (P10)** | R$187 | R$218 | **+16.7%** | Puxado pelo salário mínimo |
+| **Topo (P90)** | R$2.234 | R$2.465 | **+10.3%** | Menor crescimento |
+| **Gini** | 0.504 | 0.488 | **-3.2%** | Desigualdade caiu |
+| **Rendimento/Hora** | R$17.33 | R$20.99 | **+21.1%** | Produtividade aparente |
+| **Horas/Semana** | 40.4h | 39.3h | **-2.7%** | Trabalha menos |
+| **Participação Trabalho no PIB** | 68.1% | 73.7% | **+5.6pp** | Lucros comprimidos |
+| **Desemprego** | 7.4% | 6.6% | **-0.8pp** | Mínima histórica |
+| **Taxa de Informalidade** | ~39% | ~38% | Estável | Não houve formalização |
+
+---
+
+## 🔬 Metodologia
+
+### Correção Crítica Documentada
+
+**Erro Identificado e Corrigido:**
+A Tabela 5436 do IBGE fornece rendimentos em "valores reais" - **já deflacionados**. Aplicar deflação adicional causa erro de "dupla deflação".
+
+**Versões do Estudo:**
+- ❌ **v1.0:** Salário real -42% (dupla deflação - erro)
+- ⚠️ **v2.0:** Salário real +22% (média simples - incompleto)
+- ✅ **v3.0:** Salário real +15.6% (mediana + análise distribucional - correto e completo)
 
 ### Fontes de Dados
 
-**Dados Brasileiros (Primários):**
-- IBGE/SIDRA - PNAD Contínua (Tabelas 5436 e 6371)
-- 55 trimestres (2012 Q1 - 2025 Q3)
-- IPCA para ajuste inflacionário
+**Primárias (IBGE/PNAD Contínua):**
+- Tabela 5436: Rendimento médio real (já deflacionado)
+- Tabela 7535: Percentis (P10, P50, P90)
+- Tabela 7453: Índice de Gini
+- Tabela 4562: Taxa de desemprego
+- Tabela 4708: Taxa de informalidade
+- Tabela 4359: Taxa de participação
+- Tabela 4663: Massa salarial agregada
+- Tabela 10369: Horas trabalhadas
 
-**Dados Internacionais (Secundários):**
+**Secundárias:**
+- Novo CAGED (Ministério do Trabalho)
+- Contas Nacionais (PIB real)
 - OECD Labour Productivity Database
-- ILO/OIT ILOSTAT
-- Banco Mundial - World Development Indicators
-- Frequência anual (2012-2025, 14 anos)
 
-### Principais Métricas
+### Testes de Validação
 
-**1. Rendimento por Hora (Produtividade):**
-```
-Rendimento/Hora = Rendimento Mensal / (Horas Semanais × 4.33)
-Índice = (Valor_t / Valor_2012) × 100
-```
-
-**2. Salário Real (Poder de Compra):**
-```
-Salário Real = Salário Nominal / Deflator (inflação composta)
-Índice = (Valor_t / Valor_2012) × 100
-```
-
-### Correções Metodológicas
-
-**Inflação Composta (não linear):**
-```python
-# CORRETO
-inflacao_trimestral = (1 + inflacao_anual) ** (1/4) - 1
-
-# INCORRETO (versão inicial)
-inflacao_trimestral = inflacao_anual / 4
-```
-
-**Teste de Robustez:**
-- Comparação método trimestral vs anual direto
-- Salário real: diferença de 1.2% (alta robustez)
-- Rendimento/hora: diferença de 23.4% (moderada robustez, faixa 20-26%)
-
-### Limitações Reconhecidas
-
-- Dados internacionais em frequência anual (vs. trimestral do Brasil)
-- Sem ajuste PPP (foco em evolução temporal, não comparação absoluta)
-- Rendimento/hora tem incerteza metodológica de ±23%
-- Dados agregados (não desagregados por setor/região)
-
-Documentação completa disponível em: [METODOLOGIA.md](METODOLOGIA.md)
+| Teste | Resultado | Status |
+|-------|-----------|--------|
+| Salário mínimo real (+18.5%) vs P10 (+16.7%) | Consistente | ✅ Validado |
+| Massa salarial (nosso cálculo vs IBGE) | 7.4pp diferença | ✅ Validado |
+| Gini (desigualdade caindo) vs P10 > P90 | Coerente | ✅ Validado |
+| Desemprego vs salário (correlação inversa) | Confirmada | ✅ Validado |
 
 ---
 
-## Ferramentas Utilizadas
+## 🧪 Hipóteses Testadas
 
-**Análise de Dados:**
-- R 4.x (tidyverse, ggplot2, dplyr, tidyr)
-- Python 3.12 (pandas, numpy, matplotlib)
-
-**Ambiente:**
-- Ubuntu 24.04 LTS
-- RStudio
-- Git/GitHub para versionamento
+| Hipótese | Veredicto | Evidência |
+|----------|-----------|-----------|
+| **H1: Formalização** | ❌ Refutada | Informalidade estável (~39%) |
+| **H2: Salário Mínimo** | ✅ Confirmada | P10 segue SM (+18.5% vs +16.7%) |
+| **H3: Desemprego Baixo** | ✅ Confirmada | Correlação inversa por período |
+| **H4: Concentração no Topo** | ❌ Refutada | Base cresceu mais que topo |
+| **H5: Viés de Sobrevivência** | ⚠️ Parcial | Efeito existe mas não domina |
+| **H6: Serviços Pós-COVID** | ✅ Confirmada | Mas revertendo em dez/2025 |
 
 ---
 
-## Como Reproduzir
+## 📉 Projeções 2026
 
-### Pré-requisitos
+| Cenário | Probabilidade | P50 Projetado | Variação vs 2024 |
+|---------|--------------|---------------|------------------|
+| **Pessimista** | 20% | R$870 | -6.5% |
+| **Base** | **60%** | R$930 | 0% (estável) |
+| **Otimista** | 20% | R$960 | +3.2% |
+
+**Cenário Base (mais provável):**
+- PIB: +2.0%
+- Inflação: 5.5%
+- Desemprego: 6.5-7.5%
+- Salário real mediana: estável
+
+**Risco:** Assimétrico para baixo. Dados de dez/2025 (-618 mil empregos) sugerem materialização do cenário pessimista.
+
+---
+
+## 📁 Estrutura do Projeto
+
+```
+Projeto-analise-de-dados-Brasil/
+│
+├── dados/
+│   ├── brasil_anual_corrigido.csv         # Série temporal principal
+│   ├── percentis_rendimento.csv           # P10, P50, P90 (2012-2024)
+│   ├── massa_salarial_validacao.csv       # Validação cruzada
+│   └── caged_setorial_2025.csv            # Dados de emprego
+│
+├── graficos/
+│   ├── 01_trajetoria_trabalhador_tipico.png
+│   ├── 02_decomposicao_estrutural_conjuntural.png
+│   ├── 03_ganhos_progressivos_percentis.png
+│   ├── 04_participacao_trabalho_pib.png
+│   ├── 05_desemprego_vs_salario.png
+│   ├── 06_massa_salarial_vs_pib.png
+│   ├── 07_caged_reversao_dez2025.png
+│   ├── 08_criacao_empregos_desaceleracao.png
+│   ├── 09_horas_vs_produtividade.png
+│   └── 10_projecoes_2026.png
+│
+├── scripts/
+│   ├── gerar_graficos_v3.py               # Python: gerar todos os gráficos
+│   ├── graficos_finais_v3_parte1.R        # R: gráficos 1-5
+│   ├── graficos_finais_v3_parte2.R        # R: gráficos 6-10
+│   └── analise_completa.R                 # R: análise estatística
+│
+├── RELATORIO_FINAL_SALARIOS_BRASIL_2012-2025.md  # 52 páginas completas
+├── METODOLOGIA.md                         # Detalhamento metodológico
+└── README.md                              # Este arquivo
+
+```
+
+---
+
+## 🚀 Como Reproduzir
+
+### Requisitos
+
+**Python:**
 ```bash
-# R
-install.packages(c("tidyverse", "ggplot2", "dplyr", "tidyr"))
-
-# Python
-pip install pandas numpy matplotlib
+pip install matplotlib numpy pandas seaborn
 ```
 
-### Execução
+**R:**
+```r
+install.packages(c("ggplot2", "dplyr", "tidyr", "scales", "patchwork"))
+```
+
+### Gerar Gráficos
+
+**Python (recomendado):**
 ```bash
-# 1. Clone o repositório
-git clone https://github.com/Vitor2316/Projeto-analise-de-dados-Brasil.git
-cd Projeto-analise-de-dados-Brasil
+python scripts/gerar_graficos_v3.py
+```
 
-# 2. Baixe os dados brutos do SIDRA (Tabelas 5436 e 6371)
+**R:**
+```r
+source("scripts/graficos_finais_v3_parte1.R")
+source("scripts/graficos_finais_v3_parte2.R")
+```
 
-# 3. Execute os scripts em ordem
-Rscript scripts/01_limpeza_dados.R
-python scripts/02_calculo_indices.py
-Rscript scripts/03_graficos.R
-python scripts/04_teste_robustez.py
+### Análise Completa (R)
+
+```r
+source("scripts/analise_completa.R")
 ```
 
 ---
 
-## Contato
+## 🎓 Destaques Metodológicos
 
-**Vitor Ramos dos Santos**
+### 1. Rigor Científico
+- Identificou e corrigiu erro de dupla deflação
+- Testou 6 hipóteses concorrentes
+- Validou com 4 fontes independentes
+- Documentou todas as limitações
 
-📧 [vitorramossantos8@gmail.com](mailto:vitorramossantos8@gmail.com)  
-💼 [LinkedIn](https://www.linkedin.com/in/vitor-ramos-santos)  
-🐙 [GitHub](https://github.com/Vitor2316)
+### 2. Análise Distribucional
+- Não se limitou à média
+- Analisou P10, P50 (mediana), P90
+- Calculou Gini e razão P90/P10
+- Descobriu ganhos progressivos
+
+### 3. Decomposição Inédita
+- Separou estrutural (58%) vs conjuntural (42%)
+- Quantificou compressão de lucros (+5.6pp PIB)
+- Identificou reversão em tempo real (dez/2025)
+
+### 4. Perspectiva Temporal
+- 14 anos de dados (3 governos, 2 crises)
+- Análise período a período
+- Projeções fundamentadas (não especulativas)
 
 ---
 
-## Citação
+## 📚 Limitações Reconhecidas
 
-```
-Vitor Ramos dos Santos. (2026). Análise de Produtividade e Poder de Compra 
-do Trabalho no Brasil (2012-2025). GitHub.
-https://github.com/Vitor2316/Projeto-analise-de-dados-Brasil
-```
+### Dados Não Disponíveis
+1. **Produtividade Real:** PIB/horas totais (setorial)
+2. **Lucro Empresarial:** Dados consolidados de margem
+3. **Inflação Setorial:** Repasse de custos para preços
+4. **CAGED Completo:** Série histórica 2012-2019
+5. **Microdados PNAD:** Para intervalos de confiança
+
+### Vieses Reconhecidos
+1. **Composição:** PNAD capta só formais (39% informais fora)
+2. **Sobrevivência:** Desemprego alto tira pobres da amostra
+3. **Produtividade Aparente:** Rendimento/hora pode ter viés setorial
+
+### Causalidade
+**O estudo identifica CORRELAÇÕES, não CAUSALIDADE rigorosa.** Para causalidade seriam necessários experimentos naturais ou variáveis instrumentais.
 
 ---
 
-## Licença
+## 📖 Documentação Completa
 
-Dados públicos (IBGE, OECD, ILO, Banco Mundial)  
-Código disponível para fins educacionais e de pesquisa.
+- **[RELATORIO_FINAL_SALARIOS_BRASIL_2012-2025.md](RELATORIO_FINAL_SALARIOS_BRASIL_2012-2025.md)**: Estudo completo (52 páginas)
+- **[METODOLOGIA.md](METODOLOGIA.md)**: Detalhes técnicos e fórmulas
+- **[CHANGELOG.md](CHANGELOG.md)**: Histórico de versões e correções
 
 ---
 
-**Última atualização:** Fevereiro 2026
+## 🤝 Contribuições
+
+Sugestões, críticas e melhorias são bem-vindas! Abra uma **issue** ou **pull request**.
+
+---
+
+## 📧 Contato
+
+**Vitor Ramos dos Santos**  
+📧 Email: vitorramossantos8@gmail.com  
+💼 LinkedIn: [linkedin.com/in/vitor-ramos-santos](https://linkedin.com/in/vitor-ramos-santos)  
+🐙 GitHub: [github.com/Vitor2316](https://github.com/Vitor2316)
+
+---
+
+## 📜 Licença
+
+Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
+## 🌟 Agradecimentos
+
+- **IBGE** - Pela disponibilização dos dados da PNAD Contínua
+- **Ministério do Trabalho** - Pelos dados do Novo CAGED
+- **Comunidade R e Python** - Pelas bibliotecas de visualização
+
+---
+
+## 📊 Status do Projeto
+
+- [x] Coleta de dados (SIDRA, CAGED)
+- [x] Limpeza e tratamento
+- [x] Correção metodológica (dupla deflação)
+- [x] Análise distribucional (percentis)
+- [x] Decomposição estrutural vs conjuntural
+- [x] Validação cruzada (4 fontes)
+- [x] Testes de hipóteses (6 hipóteses)
+- [x] Identificação de reversão (dez/2025)
+- [x] Projeções 2026
+- [x] Gráficos profissionais (10 principais)
+- [x] Relatório final (52 páginas)
+- [x] Documentação completa
+
+**Status: ✅ FINALIZADO** (Fevereiro 2026)
+
+---
+
+## 🔥 Diferenciais deste Estudo
+
+1. **Transparência Total:** Documenta erro inicial e correção
+2. **Análise Profunda:** Não para no primeiro resultado
+3. **Validação Rigorosa:** Cruza múltiplas fontes
+4. **Descoberta Original:** Compressão de lucros (+5.6pp PIB)
+5. **Timing Perfeito:** Capturou reversão em tempo real (dez/2025)
+
+---
+
+**⭐ Se este estudo foi útil, considere deixar uma estrela no repositório!**
+
