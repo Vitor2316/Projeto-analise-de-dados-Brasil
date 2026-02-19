@@ -1,4 +1,4 @@
-# 📊 Análise de Produtividade e Salário Real no Brasil (2012-2025)
+#  Análise de Produtividade e Salário Real no Brasil (2012-2025)
 
 [![Status](https://img.shields.io/badge/Status-Finalizado-success)](https://github.com/Vitor2316/Projeto-analise-de-dados-Brasil)
 [![R](https://img.shields.io/badge/R-4.0+-blue)](https://www.r-project.org/)
@@ -9,7 +9,7 @@
 
 ---
 
-## 🎯 Descoberta Principal
+##  Descoberta Principal
 
 **Trabalhadores formais brasileiros experimentaram ganho real de +15.6% (mediana) no poder de compra entre 2012-2024**, com distribuição **progressiva**: base (+16.7%) cresceu mais que topo (+10.3%).
 
@@ -22,7 +22,7 @@
 
 ---
 
-## 📈 Gráficos Principais
+##  Gráficos Principais
 
 ### 1. Trajetória do Trabalhador Típico (2012-2025)
 ![Trajetória](graficos/01_trajetoria_trabalhador_tipico.png)
@@ -79,7 +79,7 @@ Embora o Brasil tenha crescido 24%, Uruguai e Chile já partiam de níveis mais 
 
 ---
 
-## 📊 Resultados Completos
+##  Resultados Completos
 
 | Indicador | 2012 | 2024 | Variação | Interpretação |
 |-----------|------|------|----------|---------------|
@@ -95,7 +95,7 @@ Embora o Brasil tenha crescido 24%, Uruguai e Chile já partiam de níveis mais 
 
 ---
 
-## 🔬 Metodologia
+##  Metodologia
 
 ### Correção Crítica Documentada
 
@@ -103,9 +103,9 @@ Embora o Brasil tenha crescido 24%, Uruguai e Chile já partiam de níveis mais 
 A Tabela 5436 do IBGE fornece rendimentos em "valores reais" - **já deflacionados**. Aplicar deflação adicional causa erro de "dupla deflação".
 
 **Versões do Estudo:**
-- ❌ **v1.0:** Salário real -42% (dupla deflação - erro)
-- ⚠️ **v2.0:** Salário real +22% (média simples - incompleto)
-- ✅ **v3.0:** Salário real +15.6% (mediana + análise distribucional - correto e completo)
+-  **v1.0:** Salário real -42% (dupla deflação - erro)
+-  **v2.0:** Salário real +22% (média simples - incompleto)
+-  **v3.0:** Salário real +15.6% (mediana + análise distribucional - correto e completo)
 
 ### Fontes de Dados
 
@@ -128,14 +128,14 @@ A Tabela 5436 do IBGE fornece rendimentos em "valores reais" - **já deflacionad
 
 | Teste | Resultado | Status |
 |-------|-----------|--------|
-| Salário mínimo real (+18.5%) vs P10 (+16.7%) | Consistente | ✅ Validado |
-| Massa salarial (nosso cálculo vs IBGE) | 7.4pp diferença | ✅ Validado |
-| Gini (desigualdade caindo) vs P10 > P90 | Coerente | ✅ Validado |
-| Desemprego vs salário (correlação inversa) | Confirmada | ✅ Validado |
+| Salário mínimo real (+18.5%) vs P10 (+16.7%) | Consistente |  Validado |
+| Massa salarial (nosso cálculo vs IBGE) | 7.4pp diferença |  Validado |
+| Gini (desigualdade caindo) vs P10 > P90 | Coerente |  Validado |
+| Desemprego vs salário (correlação inversa) | Confirmada |  Validado |
 
 ---
 
-## 🧪 Hipóteses Testadas
+##  Hipóteses Testadas
 
 | Hipótese | Veredicto | Evidência |
 |----------|-----------|-----------|
@@ -148,7 +148,7 @@ A Tabela 5436 do IBGE fornece rendimentos em "valores reais" - **já deflacionad
 
 ---
 
-## 📉 Projeções 2026
+##  Projeções 2026
 
 | Cenário | Probabilidade | P50 Projetado | Variação vs 2024 |
 |---------|--------------|---------------|------------------|
@@ -166,7 +166,7 @@ A Tabela 5436 do IBGE fornece rendimentos em "valores reais" - **já deflacionad
 
 ---
 
-## 📁 Estrutura do Projeto
+##  Estrutura do Projeto
 
 ```
 Projeto-analise-de-dados-Brasil/
@@ -203,7 +203,7 @@ Projeto-analise-de-dados-Brasil/
 
 ---
 
-## 🚀 Como Reproduzir
+##  Como Reproduzir
 
 ### Requisitos
 
@@ -238,7 +238,7 @@ source("scripts/analise_completa.R")
 
 ---
 
-## 🎓 Destaques Metodológicos
+##  Destaques Metodológicos
 
 ### 1. Rigor Científico
 - Identificou e corrigiu erro de dupla deflação
@@ -264,7 +264,7 @@ source("scripts/analise_completa.R")
 
 ---
 
-## 📚 Limitações Reconhecidas
+##  Limitações Reconhecidas
 
 ### Dados Não Disponíveis
 1. **Produtividade Real:** PIB/horas totais (setorial)
@@ -283,7 +283,7 @@ source("scripts/analise_completa.R")
 
 ---
 
-## 📖 Documentação Completa
+##  Documentação Completa
 
 - **[RELATORIO_FINAL_SALARIOS_BRASIL_2012-2025.md](RELATORIO_FINAL_SALARIOS_BRASIL_2012-2025.md)**: Estudo completo (52 páginas)
 - **[METODOLOGIA.md](METODOLOGIA.md)**: Detalhes técnicos e fórmulas
@@ -291,13 +291,13 @@ source("scripts/analise_completa.R")
 
 ---
 
-## 🤝 Contribuições
+##  Contribuições
 
 Sugestões, críticas e melhorias são bem-vindas! Abra uma **issue** ou **pull request**.
 
 ---
 
-## 📧 Contato
+##  Contato
 
 **Vitor Ramos dos Santos**  
 📧 Email: vitorramossantos8@gmail.com  
@@ -306,13 +306,13 @@ Sugestões, críticas e melhorias são bem-vindas! Abra uma **issue** ou **pull 
 
 ---
 
-## 📜 Licença
+##  Licença
 
 Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ---
 
-## 🌟 Agradecimentos
+##  Agradecimentos
 
 - **IBGE** - Pela disponibilização dos dados da PNAD Contínua
 - **Ministério do Trabalho** - Pelos dados do Novo CAGED
@@ -320,7 +320,7 @@ Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) par
 
 ---
 
-## 📊 Status do Projeto
+##  Status do Projeto
 
 - [x] Coleta de dados (SIDRA, CAGED)
 - [x] Limpeza e tratamento
@@ -339,13 +339,6 @@ Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) par
 
 ---
 
-## 🔥 Diferenciais deste Estudo
-
-1. **Transparência Total:** Documenta erro inicial e correção
-2. **Análise Profunda:** Não para no primeiro resultado
-3. **Validação Rigorosa:** Cruza múltiplas fontes
-4. **Descoberta Original:** Compressão de lucros (+5.6pp PIB)
-5. **Timing Perfeito:** Capturou reversão em tempo real (dez/2025)
 
 ---
 
