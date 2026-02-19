@@ -197,9 +197,9 @@ Projeto-analise-de-dados-Brasil/
 │   └── 10_projecoes_2026.png
 │
 ├── scripts/                                # Código para gerar gráficos
-│   ├── gerar_graficos_v3.py               # 🐍 Python: TODOS os 10 gráficos
-│   ├── graficos_finais_v3_parte1.R        # 📊 R: gráficos 1-5 (alternativo)
-│   └── graficos_finais_v3_parte2.R        # 📊 R: gráficos 6-10 (alternativo)
+│   ├── gerar_graficos_v3.py               #  Python: TODOS os 10 gráficos
+│   ├── graficos_finais_v3_parte1.R        #  R: gráficos 1-5 (alternativo)
+│   └── graficos_finais_v3_parte2.R        #  R: gráficos 6-10 (alternativo)
 │
 ├── README.md                               # 📖 Este arquivo (visão geral)
 ├── METODOLOGIA.md                          # 🔬 Detalhes técnicos completos
