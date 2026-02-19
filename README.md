@@ -64,8 +64,8 @@ Embora o Brasil tenha crescido 24%, Uruguai e Chile já partiam de níveis mais 
 ### 6. CAGED: Reversão em Dezembro 2025
 ![CAGED](graficos/07_caged_reversao_dez2025.png)
 
-<<<<<<< HEAD
-**Descoberta EXPLOSIVA:** -618 mil empregos em dezembro/2025. Serviços (que sustentaram 2022-2024) lideram demissões. **O ciclo está revertendo AGORA.**
+
+**Descoberta Principal ponto:** -618 mil empregos em dezembro/2025. Serviços (que sustentaram 2022-2024) lideram demissões. **O ciclo está revertendo AGORA.**
 =======
 ---
 
