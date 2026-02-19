@@ -57,25 +57,12 @@
 
 **Descoberta:** Quando desemprego sobe (2015-2021), salário cai. Quando desemprego cai (2022-2024), salário sobe.
 
-Embora o Brasil tenha crescido 24%, Uruguai e Chile já partiam de níveis mais altos de produtividade. Turquia, apesar do crescimento de 40%, ainda tem produtividade similar ao Brasil.
-
 ---
 
 ### 6. CAGED: Reversão em Dezembro 2025
 ![CAGED](graficos/07_caged_reversao_dez2025.png)
 
-<<<<<<< HEAD
 **Descoberta EXPLOSIVA:** -618 mil empregos em dezembro/2025. Serviços (que sustentaram 2022-2024) lideram demissões. **O ciclo está revertendo AGORA.**
-=======
----
-
-### *Contexto Econômico do Período*
-
-- Recessão 2014-2016
-- Pandemia 2020
-- Choque inflacionário pós-2021
-
->>>>>>> 4f3dc004229ef6ac195dc1c7d0ff32610920c766
 
 ---
 
@@ -171,13 +158,18 @@ A Tabela 5436 do IBGE fornece rendimentos em "valores reais" - **já deflacionad
 ```
 Projeto-analise-de-dados-Brasil/
 │
-├── dados/
-│   ├── brasil_anual_corrigido.csv         # Série temporal principal
+├── dados/                                  # Dados processados e prontos
+│   ├── brasil_anual_CORRIGIDO_FINAL.csv   # Série temporal Brasil 2012-2025
 │   ├── percentis_rendimento.csv           # P10, P50, P90 (2012-2024)
-│   ├── massa_salarial_validacao.csv       # Validação cruzada
-│   └── caged_setorial_2025.csv            # Dados de emprego
+│   ├── massa_salarial_validacao.csv       # Validação: nosso cálculo vs IBGE
+│   ├── desemprego_salario.csv             # Desemprego e P50 por ano
+│   ├── participacao_pib.csv               # Trabalho vs Capital no PIB
+│   ├── caged_setorial_2025.csv            # CAGED dezembro 2025 por setor
+│   ├── projecoes_2026.csv                 # Cenários 2026 (pessimista/base/otimista)
+│   ├── salario_real_anual_paises.csv      # Comparação internacional (opcional)
+│   └── produtividade_anual_paises.csv     # Comparação internacional (opcional)
 │
-├── graficos/
+├── graficos/                               # Visualizações (geradas pelos scripts)
 │   ├── 01_trajetoria_trabalhador_tipico.png
 │   ├── 02_decomposicao_estrutural_conjuntural.png
 │   ├── 03_ganhos_progressivos_percentis.png
@@ -189,15 +181,15 @@ Projeto-analise-de-dados-Brasil/
 │   ├── 09_horas_vs_produtividade.png
 │   └── 10_projecoes_2026.png
 │
-├── scripts/
-│   ├── gerar_graficos_v3.py               # Python: gerar todos os gráficos
-│   ├── graficos_finais_v3_parte1.R        # R: gráficos 1-5
-│   ├── graficos_finais_v3_parte2.R        # R: gráficos 6-10
-│   └── analise_completa.R                 # R: análise estatística
+├── scripts/                                # Código para gerar gráficos
+│   ├── gerar_graficos_v3.py               # 🐍 Python: TODOS os 10 gráficos
+│   ├── graficos_finais_v3_parte1.R        # 📊 R: gráficos 1-5 (alternativo)
+│   └── graficos_finais_v3_parte2.R        # 📊 R: gráficos 6-10 (alternativo)
 │
-├── RELATORIO_FINAL_SALARIOS_BRASIL_2012-2025.md  # 52 páginas completas
-├── METODOLOGIA.md                         # Detalhamento metodológico
-└── README.md                              # Este arquivo
+├── README.md                               # 📖 Este arquivo (visão geral)
+├── METODOLOGIA.md                          # 🔬 Detalhes técnicos completos
+├── RELATORIO_FINAL_SALARIOS_BRASIL_2012-2025.md  # 📄 Estudo completo (52 págs)
+└── LICENSE                                 # ⚖️ Licença MIT
 
 ```
 
@@ -205,36 +197,60 @@ Projeto-analise-de-dados-Brasil/
 
 ## 🚀 Como Reproduzir
 
-### Requisitos
+### Pré-requisitos
 
-**Python:**
+**Python 3.8+:**
 ```bash
 pip install matplotlib numpy pandas seaborn
 ```
 
-**R:**
+**R 4.0+ (opcional - alternativa ao Python):**
 ```r
 install.packages(c("ggplot2", "dplyr", "tidyr", "scales", "patchwork"))
 ```
 
-### Gerar Gráficos
+### Passo 1: Clone o Repositório
 
-**Python (recomendado):**
 ```bash
-python scripts/gerar_graficos_v3.py
+git clone https://github.com/Vitor2316/Projeto-analise-de-dados-Brasil.git
+cd Projeto-analise-de-dados-Brasil
 ```
 
-**R:**
-```r
-source("scripts/graficos_finais_v3_parte1.R")
-source("scripts/graficos_finais_v3_parte2.R")
+### Passo 2: Gerar Gráficos
+
+**Opção A - Python (Recomendado):**
+```bash
+cd scripts
+python gerar_graficos_v3.py
 ```
 
-### Análise Completa (R)
+Isso irá gerar todos os 10 gráficos na pasta `graficos/`.
 
-```r
-source("scripts/analise_completa.R")
+**Opção B - R:**
+```bash
+cd scripts
+Rscript graficos_finais_v3_parte1.R  # Gráficos 1-5
+Rscript graficos_finais_v3_parte2.R  # Gráficos 6-10
 ```
+
+### Passo 3: Explorar os Dados
+
+Os CSVs na pasta `dados/` estão prontos para análise. Você pode:
+- Abrir no Excel/LibreOffice
+- Importar no Python com `pandas.read_csv()`
+- Importar no R com `read.csv()`
+
+### Estrutura dos Dados
+
+**brasil_anual_CORRIGIDO_FINAL.csv:**
+- Colunas: ano, rendimento_real, horas_semanais, rendimento_hora
+- 14 linhas (2012-2025)
+
+**percentis_rendimento.csv:**
+- Colunas: ano, p10, p50, p90
+- 13 linhas (2012-2024)
+
+**Demais CSVs:** Auto-explicativos pelos nomes das colunas
 
 ---
 
