@@ -641,6 +641,6 @@ Dados de dezembro 2025 mostram reversão iniciada, confirmando que parte conjunt
 ---
 
 **Documento gerado em:** Fevereiro 2026  
-**Última atualização:** 18/02/2026  
+**Última atualização:** 19/02/2026  
 **Contato:** vitorramossantos8@gmail.com
 
