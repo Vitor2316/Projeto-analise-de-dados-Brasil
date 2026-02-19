@@ -66,8 +66,6 @@
 **Descoberta:** -618 mil empregos em dezembro/2025. Serviços (que sustentaram 2022-2024) lideram demissões. **O ciclo está revertendo AGORA.**
 =======
 
-**Descoberta Principal ponto:** -618 mil empregos em dezembro/2025. Serviços (que sustentaram 2022-2024) lideram demissões. **O ciclo está revertendo AGORA.**
-=======
 ---
 
 ### *Contexto Econômico do Período*
@@ -76,7 +74,7 @@
 - Pandemia 2020
 - Choque inflacionário pós-2021
 
->>>>>>> 4f3dc004229ef6ac195dc1c7d0ff32610920c766
+>>>>>>> 
 >>>>>>> 11829ae218678eab81d38d07d8d9ef6f71fd0813:README.md
 
 ---
