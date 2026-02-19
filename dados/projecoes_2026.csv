@@ -1,0 +1,4 @@
+cenario,p50_projetado,probabilidade,pib,inflacao,desemprego
+Pessimista,870,0.20,0.5,7.0,8.5
+Base,930,0.60,2.0,5.5,7.0
+Otimista,960,0.20,3.0,4.0,5.5
