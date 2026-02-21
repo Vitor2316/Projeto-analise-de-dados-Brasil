@@ -1,4 +1,4 @@
-# 🔥 EXECUTIVE SUMMARY - Brazilian Wage Analysis 2012-2025
+#  EXECUTIVE SUMMARY - Brazilian Wage Analysis 2012-2025
 
 **Version:** 3.0 Final  
 **Author:** Vitor Ramos dos Santos  
@@ -6,7 +6,7 @@
 
 ---
 
-## ⚡ THE CONTROVERSIAL THESIS
+##  THE CONTROVERSIAL THESIS
 
 ### Brazilian wage gains (2022-2024) were financed by **squeezing corporate profits**, not by productivity growth — making them **fragile and reversible**.
 
@@ -22,7 +22,7 @@
 
 ---
 
-## 💣 THE UNCOMFORTABLE FINDINGS
+##  THE UNCOMFORTABLE FINDINGS
 
 ### 1. THE "GROWTH" WAS MOSTLY RECOVERY FROM CRISIS
 
@@ -105,7 +105,7 @@ When growth slows and profits are already squeezed, companies have **only one le
 
 ---
 
-## 🎯 THE PREDICTION (VALIDATED IN REAL-TIME)
+##  THE PREDICTION (VALIDATED IN REAL-TIME)
 
 **Written in study (before December 2025 data):**
 
@@ -121,7 +121,7 @@ When growth slows and profits are already squeezed, companies have **only one le
 
 ---
 
-## 💡 THE COUNTERINTUITIVE INSIGHT
+##  THE COUNTERINTUITIVE INSIGHT
 
 ### Most people think: "Workers gained +15.6%, inequality fell, everything is great!"
 
@@ -140,7 +140,7 @@ Politicians will claim victory: "Real wages rose under my government!"
 
 ---
 
-## 📊 THE UNCOMFORTABLE CHART NOBODY WANTS TO SEE
+##  THE UNCOMFORTABLE CHART NOBODY WANTS TO SEE
 
 **Labor Share of GDP (2012-2024):**
 
@@ -160,7 +160,7 @@ December 2025: They did.
 
 ---
 
-## 🚨 THE WARNING NOBODY HEEDED
+##  THE WARNING NOBODY HEEDED
 
 **Before December 2025:**
 - Unemployment: 6.6% (historic low)
@@ -179,7 +179,7 @@ December 2025: They did.
 
 ---
 
-## 🎓 METHODOLOGICAL RIGOR THAT STRENGTHENS THE THESIS
+##  METHODOLOGICAL RIGOR THAT STRENGTHENS THE THESIS
 
 **This study survived:**
 
@@ -199,7 +199,7 @@ December 2025: They did.
 
 ---
 
-## 💰 THE BOTTOM LINE FOR RECRUITERS
+##  THE BOTTOM LINE FOR RECRUITERS
 
 **If you have 3 minutes, here's what matters:**
 
@@ -220,7 +220,7 @@ December 2025: They did.
 
 ---
 
-## 🔥 THE CONTROVERSIAL CONCLUSION
+##  THE CONTROVERSIAL CONCLUSION
 
 ### The Brazilian wage "boom" of 2022-2024 was:
 1. **50% recovering lost ground** (2012-2021 lost decade)
