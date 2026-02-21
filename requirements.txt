@@ -1,0 +1,21 @@
+# Python Requirements for Brazil Wages Analysis Project
+# Install with: pip install -r requirements.txt
+
+# Core data analysis
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.10.0
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.14.0
+
+# Machine Learning / Stats
+scikit-learn>=1.2.0
+
+# Dashboard (optional - only needed for Streamlit app)
+streamlit>=1.28.0
+
+# Note: For R scripts, install packages separately:
+# install.packages(c("ggplot2", "dplyr", "tidyr", "scales", "patchwork"))
