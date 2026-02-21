@@ -62,7 +62,24 @@
 ### 6. CAGED: Reversão em Dezembro 2025
 ![CAGED](graficos/07_caged_reversao_dez2025.png)
 
+<<<<<<< HEAD
 **Descoberta EXPLOSIVA:** -618 mil empregos em dezembro/2025. Serviços (que sustentaram 2022-2024) lideram demissões. **O ciclo está revertendo AGORA.**
+=======
+
+**Descoberta:** -618 mil empregos em dezembro/2025. Serviços (que sustentaram 2022-2024) lideram demissões. **O ciclo está revertendo AGORA.**
+=======
+
+---
+
+### *Contexto Econômico do Período*
+
+- Recessão 2014-2016
+- Pandemia 2020
+- Choque inflacionário pós-2021
+
+>>>>>>> 
+>>>>>>> 11829ae218678eab81d38d07d8d9ef6f71fd0813:README.md
+>>>>>>> 3200fafba16b95365f6a9cf0f4c7b2667a032805
 
 ---
 
@@ -182,9 +199,9 @@ Projeto-analise-de-dados-Brasil/
 │   └── 10_projecoes_2026.png
 │
 ├── scripts/                                # Código para gerar gráficos
-│   ├── gerar_graficos_v3.py               # 🐍 Python: TODOS os 10 gráficos
-│   ├── graficos_finais_v3_parte1.R        # 📊 R: gráficos 1-5 (alternativo)
-│   └── graficos_finais_v3_parte2.R        # 📊 R: gráficos 6-10 (alternativo)
+│   ├── gerar_graficos_v3.py               #  Python: TODOS os 10 gráficos
+│   ├── graficos_finais_v3_parte1.R        #  R: gráficos 1-5 (alternativo)
+│   └── graficos_finais_v3_parte2.R        #  R: gráficos 6-10 (alternativo)
 │
 ├── README.md                               # 📖 Este arquivo (visão geral)
 ├── METODOLOGIA.md                          # 🔬 Detalhes técnicos completos

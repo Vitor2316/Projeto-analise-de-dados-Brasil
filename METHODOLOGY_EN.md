@@ -7,7 +7,7 @@
 
 ---
 
-## 📋 Table of Contents
+##  Table of Contents
 
 1. [Research Objective](#1-research-objective)
 2. [Data Sources](#2-data-sources)
