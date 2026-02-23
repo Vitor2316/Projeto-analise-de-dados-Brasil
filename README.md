@@ -9,11 +9,19 @@
 
 ---
 
+<<<<<<< HEAD
 ## 🔥 THE CONTROVERSIAL THESIS
+=======
+
+##  THE CONTROVERSIAL THESIS
+=======
+##  Main Discovery
+>>>>>>> 
+>>>>>>> 97cad5923bc04cf7dc07a27b73b4a63bd562a176
 
 > **Brazilian wage gains (2022-2024) were financed by squeezing corporate profits, not by productivity growth — making them fragile and reversible.**
 
-**⚡ TL;DR:** [Read the 5-minute Executive Summary](EXECUTIVE_SUMMARY.md) for the controversial thesis and uncomfortable findings.
+** TL;DR:** [Read the 5-minute Executive Summary](EXECUTIVE_SUMMARY.md) for the controversial thesis and uncomfortable findings.
 
 ### Key Evidence:
 - **Labor's share of GDP:** 68.1% → 73.7% (+5.6pp) — workers captured this from profits
@@ -26,7 +34,17 @@
 - **58% structural** (permanent): real minimum wage policy + redistribution
 - **42% cyclical** (reversible): historic low unemployment + base effect
 
+<<<<<<< HEAD
 **Projection:** If unemployment rises to 8-10%, workers lose ~7pp (cyclical component) but keep ~9pp (structural gains).
+=======
+<<<<<<< 
+**Projection:** If unemployment rises to 8-10%, workers lose ~7pp (cyclical component) but keep ~9pp (structural gains).
+=======
+
+###  Critical Alert (Feb/2026):
+**December 2025 data confirms cycle reversal:** -618 thousand jobs, with services (growth driver 2022-2024) leading layoffs.
+>>>>>>> 5
+>>>>>>> 97cad5923bc04cf7dc07a27b73b4a63bd562a176
 
 ---
 
@@ -74,39 +92,44 @@
 
 ---
 
+<<<<<<< HEAD
 ## 🚀 ADVANCED ANALYSIS (New!)
+=======
+<<<<<<< 
+##  ADVANCED ANALYSIS (New!)
+>>>>>>> 97cad5923bc04cf7dc07a27b73b4a63bd562a176
 
-### 📊 Statistical Rigor
+###  Statistical Rigor
 - **Linear Regression:** Unemployment → Wage relationship quantified
 - **Structural Break Test:** Pre/post-2021 trend analysis
 - **95% Confidence Intervals:** Statistical validation of estimates
 - **Feature Engineering:** Volatility, growth rates, stability indices
 
-### 🎲 Monte Carlo Simulation (10,000 scenarios)
+###  Monte Carlo Simulation (10,000 scenarios)
 - **Probabilistic forecasting** for 2026
 - **Risk metrics:** P5-P95 confidence bands
 - **Expected value:** Probability-weighted outcomes
 - Files: `graficos/13_monte_carlo.png`, `dados/monte_carlo_10k.csv`
 
-### 🎯 Sensitivity Analysis
+###  Sensitivity Analysis
 - **Single-factor impacts:** Each driver analyzed independently
 - **Stress testing:** Extreme scenarios (crisis, stagflation, boom)
 - **Scenario matrix:** Unemployment vs Inflation heatmap
 - Files: `graficos/12_analise_sensibilidade.png`, `graficos/14_matriz_cenarios.png`
 
-### 🔮 Multi-Model Forecasting 2026-2030
+###  Multi-Model Forecasting 2026-2030
 - **Linear trend** (historical 2012-2024)
 - **Recent trend** (momentum 2022-2024)
 - **Macro scenarios:** Pessimistic (30%), Base (50%), Optimistic (20%)
 - **Expected forecast:** Probability-weighted average
 - File: `graficos/11_previsao_2026_2030.png`
 
-### 📱 Interactive Dashboard
+###  Interactive Dashboard
 **Streamlit Web App** with:
-- ⚙️ Real-time scenario simulator (adjust unemployment, inflation, GDP, wage policy)
-- 📊 Interactive charts (Plotly)
-- 🔍 Comparative period analysis
-- 💡 Economic impact calculator
+-  Real-time scenario simulator (adjust unemployment, inflation, GDP, wage policy)
+-  Interactive charts (Plotly)
+-  Comparative period analysis
+-  Economic impact calculator
 
 **To launch:**
 ```bash
@@ -122,7 +145,14 @@ streamlit run dashboard_salarios.py
 
 ---
 
+<<<<<<< HEAD
 ## 📊 Complete Results
+=======
+##  Complete Results
+=======
+##  Complete Results
+>>>>>>> 3200fafba16b95365f6a9cf0f4c7b2667a032805
+>>>>>>> 97cad5923bc04cf7dc07a27b73b4a63bd562a176
 
 | Indicator | 2012 | 2024 | Change | Interpretation |
 |-----------|------|------|--------|----------------|
@@ -191,7 +221,7 @@ IBGE Table 5436 provides income in "real values" - **already deflated by IBGE**.
 
 ---
 
-## 📉 2026 Projections
+##  2026 Projections
 
 | Scenario | Probability | Projected P50 | Change vs 2024 |
 |----------|-------------|---------------|-----------------|
@@ -224,11 +254,11 @@ Projeto-analise-de-dados-Brasil/
 │   ├── projecoes_2026.csv                 # 2026 scenarios (pessimistic/base/optimistic)
 │   ├── salario_real_anual_paises.csv      # International comparison (optional)
 │   ├── produtividade_anual_paises.csv     # International comparison (optional)
-│   ├── analise_estatistica_avancada.csv   # 📈 Statistical results
-│   ├── previsoes_2026_2030.csv            # 🔮 Multi-model forecasts
-│   ├── monte_carlo_10k.csv                # 🎲 10,000 simulations
-│   ├── monte_carlo_resumo.csv             # 🎲 Summary statistics
-│   └── stress_test_resultados.csv         # 🎯 Extreme scenarios
+│   ├── analise_estatistica_avancada.csv   #  Statistical results
+│   ├── previsoes_2026_2030.csv            #  Multi-model forecasts
+│   ├── monte_carlo_10k.csv                #  10,000 simulations
+│   ├── monte_carlo_resumo.csv             #  Summary statistics
+│   └── stress_test_resultados.csv         #  Extreme scenarios
 │
 ├── graficos/                               # Visualizations (generated by scripts)
 │   ├── 01_trajetoria_trabalhador_tipico.png
@@ -241,27 +271,26 @@ Projeto-analise-de-dados-Brasil/
 │   ├── 08_criacao_empregos_desaceleracao.png
 │   ├── 09_horas_vs_produtividade.png
 │   ├── 10_projecoes_2026.png
-│   ├── 11_previsao_2026_2030.png           # 🔮 Multi-model forecast
-│   ├── 12_analise_sensibilidade.png        # 🎯 Sensitivity analysis
-│   ├── 13_monte_carlo.png                  # 🎲 10k simulations
-│   └── 14_matriz_cenarios.png              # 📊 Scenario heatmap
+│   ├── 11_previsao_2026_2030.png           #  Multi-model forecast
+│   ├── 12_analise_sensibilidade.png        #  Sensitivity analysis
+│   ├── 13_monte_carlo.png                  #  10k simulations
+│   └── 14_matriz_cenarios.png              #  Scenario heatmap
 │
 ├── scripts/                                # Code to generate charts & analysis
-│   ├── gerar_graficos_v3.py               # 🐍 Python: ALL 10 main charts
-│   ├── graficos_finais_v3_parte1.R        # 📊 R: charts 1-5 (alternative)
-│   ├── graficos_finais_v3_parte2.R        # 📊 R: charts 6-10 (alternative)
-│   ├── analise_estatistica_avancada.py    # 📈 Statistical analysis (regression, CI)
-│   ├── previsao_2026_2030.py              # 🔮 Forecasting (multiple models)
-│   ├── simulador_avancado.py              # 🎲 Monte Carlo + Sensitivity
-│   └── dashboard_salarios.py              # 📱 Interactive Streamlit dashboard
+│   ├── gerar_graficos_v3.py               #  Python: ALL 10 main charts
+│   ├── graficos_finais_v3_parte1.R        #  R: charts 1-5 (alternative)
+│   ├── graficos_finais_v3_parte2.R        #  R: charts 6-10 (alternative)
+│   ├── analise_estatistica_avancada.py    #  Statistical analysis (regression, CI)
+│   ├── previsao_2026_2030.py              #  Forecasting (multiple models)
+│   ├── simulador_avancado.py              #  Monte Carlo + Sensitivity
+│   └── dashboard_salarios.py              #  Interactive Streamlit dashboard
 │
-├── README.md                               # 📖 This file (overview)
-├── README_PT.md                            # 📖 Portuguese version
-├── EXECUTIVE_SUMMARY.md                    # ⚡ 5-min controversial thesis (NEW!)
-├── METHODOLOGY.md                          # 🔬 Complete technical details
-├── METHODOLOGY_PT.md                       # 🔬 Portuguese version
-├── FINAL_REPORT_BRAZIL_WAGES_2012-2025.md # 📄 Complete study (52 pages)
-└── LICENSE                                 # ⚖️ MIT License
+├── README.md                               #  This file (overview)
+├── README_PT.md                            #  Portuguese version
+├── EXECUTIVE_SUMMARY.md                    #  5-min controversial thesis (NEW!)
+├── METHODOLOGY_PT.md                       #  Portuguese version
+├── FINAL_REPORT_BRAZIL_WAGES_2012-2025.md #  Complete study (52 pages)
+└── LICENSE                                 #  MIT License
 
 ```
 
