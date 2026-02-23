@@ -121,7 +121,7 @@ When growth slows and profits are already squeezed, companies have **only one le
 
 ---
 
-## 💡 THE COUNTERINTUITIVE INSIGHT
+##  THE COUNTERINTUITIVE INSIGHT
 
 ### Most people think: "Workers gained +15.6%, inequality fell, everything is great!"
 
