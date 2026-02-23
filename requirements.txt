@@ -17,5 +17,13 @@ scikit-learn>=1.2.0
 # Dashboard (optional - only needed for Streamlit app)
 streamlit>=1.28.0
 
+# API (optional - only needed for REST API)
+flask>=2.3.0
+flask-cors>=4.0.0
+
+# Jupyter Notebook (optional - for interactive notebooks)
+jupyter>=1.0.0
+ipywidgets>=8.0.0
+
 # Note: For R scripts, install packages separately:
 # install.packages(c("ggplot2", "dplyr", "tidyr", "scales", "patchwork"))

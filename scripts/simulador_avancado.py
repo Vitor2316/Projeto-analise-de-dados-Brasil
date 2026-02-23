@@ -11,7 +11,12 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from scipy import stats
 import warnings
+import os
 warnings.filterwarnings('ignore')
+
+# Criar diretórios necessários
+os.makedirs('../graficos', exist_ok=True)
+os.makedirs('../dados', exist_ok=True)
 
 # Configuração
 np.random.seed(42)

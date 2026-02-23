@@ -207,6 +207,10 @@ print(f"    → Correlação {'forte' if abs(corr_matrix.loc['Salário', 'PIB'])
 # 5. SALVAR ANÁLISES
 # ============================================================================
 
+# Criar diretório de dados se não existir
+import os
+os.makedirs('../dados', exist_ok=True)
+
 # Salvar resultados
 resultados = {
     'regressao_desemprego': {

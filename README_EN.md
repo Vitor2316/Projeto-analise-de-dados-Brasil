@@ -1,4 +1,4 @@
-#  Analysis of Productivity and Real Wages in Brazil (2012-2025)
+# 📊 Analysis of Productivity and Real Wages in Brazil (2012-2025)
 
 [![Status](https://img.shields.io/badge/Status-Complete-success)](https://github.com/Vitor2316/Projeto-analise-de-dados-Brasil)
 [![R](https://img.shields.io/badge/R-4.0+-blue)](https://www.r-project.org/)
@@ -9,7 +9,7 @@
 
 ---
 
-##  Main Discovery
+## 🎯 Main Discovery
 
 **Brazilian formal workers experienced a real gain of +15.6% (median) in purchasing power between 2012-2024**, with **progressive distribution**: the base (+16.7%) grew more than the top (+10.3%).
 
@@ -22,7 +22,7 @@
 
 ---
 
-##  Main Charts
+## 📈 Main Charts
 
 ### 1. Typical Worker Trajectory (2012-2025)
 ![Trajectory](graficos/01_trajetoria_trabalhador_tipico.png)
@@ -66,7 +66,7 @@
 
 ---
 
-##  Complete Results
+## 📊 Complete Results
 
 | Indicator | 2012 | 2024 | Change | Interpretation |
 |-----------|------|------|--------|----------------|
@@ -82,7 +82,7 @@
 
 ---
 
-##  Methodology
+## 🔬 Methodology
 
 ### Critical Methodological Correction
 
@@ -122,7 +122,7 @@ IBGE Table 5436 provides income in "real values" - **already deflated by IBGE**.
 
 ---
 
-##  Hypotheses Tested
+## 🧪 Hypotheses Tested
 
 | Hypothesis | Verdict | Evidence |
 |------------|---------|-----------|
@@ -135,7 +135,7 @@ IBGE Table 5436 provides income in "real values" - **already deflated by IBGE**.
 
 ---
 
-##  2026 Projections
+## 📉 2026 Projections
 
 | Scenario | Probability | Projected P50 | Change vs 2024 |
 |----------|-------------|---------------|-----------------|
@@ -153,7 +153,7 @@ IBGE Table 5436 provides income in "real values" - **already deflated by IBGE**.
 
 ---
 
-##  Project Structure
+## 📁 Project Structure
 
 ```
 Projeto-analise-de-dados-Brasil/
@@ -182,9 +182,9 @@ Projeto-analise-de-dados-Brasil/
 │   └── 10_projecoes_2026.png
 │
 ├── scripts/                                # Code to generate charts
-│   ├── gerar_graficos_v3.py               #  Python: ALL 10 charts
-│   ├── graficos_finais_v3_parte1.R        #  R: charts 1-5 (alternative)
-│   └── graficos_finais_v3_parte2.R        #  R: charts 6-10 (alternative)
+│   ├── gerar_graficos_v3.py               # 🐍 Python: ALL 10 charts
+│   ├── graficos_finais_v3_parte1.R        # 📊 R: charts 1-5 (alternative)
+│   └── graficos_finais_v3_parte2.R        # 📊 R: charts 6-10 (alternative)
 │
 ├── README.md                               # 📖 This file (overview)
 ├── README_PT.md                            # 📖 Portuguese version
@@ -197,7 +197,7 @@ Projeto-analise-de-dados-Brasil/
 
 ---
 
-##  How to Reproduce
+## 🚀 How to Reproduce
 
 ### Prerequisites
 
@@ -256,7 +256,7 @@ CSVs in `dados/` folder are ready for analysis. You can:
 
 ---
 
-##  Methodological Highlights
+## 🎓 Methodological Highlights
 
 ### 1. Scientific Rigor
 - Identified and corrected double deflation error
@@ -282,7 +282,7 @@ CSVs in `dados/` folder are ready for analysis. You can:
 
 ---
 
-##  Acknowledged Limitations
+## 📚 Acknowledged Limitations
 
 ### Unavailable Data
 1. **Real Sectoral Productivity:** GDP/hours by sector
@@ -301,7 +301,7 @@ CSVs in `dados/` folder are ready for analysis. You can:
 
 ---
 
-##  Complete Documentation
+## 📖 Complete Documentation
 
 - **[FINAL_REPORT_BRAZIL_WAGES_2012-2025.md](FINAL_REPORT_BRAZIL_WAGES_2012-2025.md)**: Complete study (52 pages)
 - **[METHODOLOGY.md](METHODOLOGY.md)**: Technical details and formulas
@@ -309,13 +309,13 @@ CSVs in `dados/` folder are ready for analysis. You can:
 
 ---
 
-##  Contributions
+## 🤝 Contributions
 
 Suggestions, critiques, and improvements are welcome! Open an **issue** or **pull request**.
 
 ---
 
-##  Contact
+## 📧 Contact
 
 **Vitor Ramos dos Santos**  
 📧 Email: vitorramossantos8@gmail.com  
@@ -336,7 +336,7 @@ This project is under MIT License. See [LICENSE](LICENSE) file for details.
 
 ---
 
-##  Acknowledgments
+## 🌟 Acknowledgments
 
 - **IBGE** - For providing PNAD Contínua data
 - **Ministry of Labor** - For New CAGED data
@@ -344,7 +344,7 @@ This project is under MIT License. See [LICENSE](LICENSE) file for details.
 
 ---
 
-##  Project Status
+## 📊 Project Status
 
 - [x] Data collection (SIDRA, CAGED)
 - [x] Cleaning and processing
@@ -363,7 +363,7 @@ This project is under MIT License. See [LICENSE](LICENSE) file for details.
 
 ---
 
-##  Study Differentials
+## 🔥 Study Differentials
 
 1. **Total Transparency:** Documents initial error and correction
 2. **Deep Analysis:** Doesn't stop at first result
