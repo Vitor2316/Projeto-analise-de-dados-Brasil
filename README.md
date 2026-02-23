@@ -30,11 +30,6 @@
 - **58% structural** (permanent): real minimum wage policy + redistribution
 - **42% cyclical** (reversible): historic low unemployment + base effect
 
-<<<<<<< 
-
-**Projection:** If unemployment rises to 8-10%, workers lose ~7pp (cyclical component) but keep ~9pp (structural gains).
-=======
-<<<<<<< 
 
 **Projection:** If unemployment rises to 8-10%, workers lose ~7pp (cyclical component) but keep ~9pp (structural gains).
 =======
