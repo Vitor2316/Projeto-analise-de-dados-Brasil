@@ -13,7 +13,7 @@
 =======
 ##  Main Discovery
 
->>>>>>>
+
 
 > **Brazilian wage gains (2022-2024) were financed by squeezing corporate profits, not by productivity growth — making them fragile and reversible.**
 
@@ -134,16 +134,10 @@ streamlit run dashboard_salarios.py
 - Compare historical periods dynamically
 - Export simulation results
 
----
 
-<<<<<<< 
-##  Complete Results
-=======
-##  Complete Results
-=======
 ##  Complete Results
 
->>>>>>> 
+
 
 | Indicator | 2012 | 2024 | Change | Interpretation |
 |-----------|------|------|--------|----------------|
@@ -326,20 +320,6 @@ python previsao_2026_2030.py
 python simulador_avancado.py
 ```
 
-**Interactive Dashboard:**
-```bash
-# Install Streamlit
-pip install streamlit plotly
-
-# Launch dashboard
-streamlit run dashboard_salarios.py
-```
-
-**Alternative (R):**
-```bash
-Rscript graficos_finais_v3_parte1.R  # Charts 1-5
-Rscript graficos_finais_v3_parte2.R  # Charts 6-10
-```
 
 This will generate:
 - **10 main charts** (graficos/01-10)
