@@ -145,8 +145,8 @@ Politicians will claim victory: "Real wages rose under my government!"
 **Labor Share of GDP (2012-2024):**
 
 ```
-2012: 68.1% 
-2024: 73.7% 
+2012: 68.1% ██████████████████████████████████
+2024: 73.7% ████████████████████████████████████████
               ↑ +5.6pp
 ```
 
@@ -210,11 +210,11 @@ December 2025: They did.
 5. **Decomposition:** 58% structural (stays), 42% cyclical (reverting)
 
 **This shows:**
--  I can identify uncomfortable truths in data
--  I can separate signal from noise
--  I don't just describe — I argue with evidence
--  I make falsifiable predictions and test them
--  I understand economic mechanisms, not just statistical patterns
+- ✅ I can identify uncomfortable truths in data
+- ✅ I can separate signal from noise
+- ✅ I don't just describe — I argue with evidence
+- ✅ I make falsifiable predictions and test them
+- ✅ I understand economic mechanisms, not just statistical patterns
 
 **That's the difference between a data analyst and a data scientist who thinks economically.**
 

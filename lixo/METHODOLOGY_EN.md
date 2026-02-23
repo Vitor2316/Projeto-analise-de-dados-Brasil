@@ -7,7 +7,7 @@
 
 ---
 
-##  Table of Contents
+## 📋 Table of Contents
 
 1. [Research Objective](#1-research-objective)
 2. [Data Sources](#2-data-sources)
@@ -124,9 +124,9 @@ real_wage_index = (year_value / value_2012) * 100  # No additional deflation
 
 | Version | Method | Real Wage Result |
 |---------|--------|------------------|
-| v1.0  | Double deflation | -42% (error) |
-| v2.0  | No additional deflation, simple mean | +22% (incomplete) |
-| v3.0  | No deflation, median + percentile analysis | +15.6% (correct) |
+| v1.0 ❌ | Double deflation | -42% (error) |
+| v2.0 ⚠️ | No additional deflation, simple mean | +22% (incomplete) |
+| v3.0 ✅ | No deflation, median + percentile analysis | +15.6% (correct) |
 
 ### 3.2 Methodological Lessons
 
@@ -290,7 +290,7 @@ Capital Share = 100% - Labor Share
 | P10 (PNAD) | +16.7% |
 | Difference | 1.8pp |
 
-**Verdict:**  **Consistent** - P10 closely follows MW
+**Verdict:** ✅ **Consistent** - P10 closely follows MW
 
 ### 6.2 Validation with GDP per Capita
 
@@ -308,7 +308,7 @@ Capital Share = 100% - Labor Share
 - Redistribution from capital to labor (+5.6pp)
 - Consistent with profit squeeze
 
-**Verdict:**  **Coherent with redistribution**
+**Verdict:** ✅ **Coherent with redistribution**
 
 ### 6.3 Validation with Official Wage Mass
 
@@ -326,7 +326,7 @@ Capital Share = 100% - Labor Share
 - IBGE may use **effective** income (includes overtime, bonuses)
 - Both methodologies are valid
 
-**Verdict:**  **Order of magnitude validated**
+**Verdict:** ✅ **Order of magnitude validated**
 
 ### 6.4 Validation with Gini
 
@@ -340,7 +340,7 @@ Capital Share = 100% - Labor Share
 | Gini | 0.504 | 0.488 | -3.2% |
 | P90/P10 Ratio | 11.9x | 11.3x | -5% |
 
-**Verdict:**  **Fully consistent** - Base grew more than top
+**Verdict:** ✅ **Fully consistent** - Base grew more than top
 
 ---
 
@@ -483,9 +483,9 @@ corr = np.corrcoef(X, Y)[0,1]
 ### 10.2 Transparency about Limitations
 
 **We clearly differentiate:**
--  **Proven:** Minimum wage explains P10, unemployment correlates with wage
--  **Plausible but not tested:** Post-COVID services, Bolsa Família
--  **Not testable:** Exact marginal impact of each factor
+- ✅ **Proven:** Minimum wage explains P10, unemployment correlates with wage
+- ⚠️ **Plausible but not tested:** Post-COVID services, Bolsa Família
+- ❌ **Not testable:** Exact marginal impact of each factor
 
 **We do not claim causality where there is only correlation.**
 
@@ -573,20 +573,20 @@ corr = np.corrcoef(X, Y)[0,1]
 ## CHANGELOG
 
 **v3.0 (February 2026) - Current:**
--  Definitive double deflation correction
--  Median (P50) analysis instead of mean
--  Structural vs cyclical decomposition
--  Validation with 4 independent sources
--  Testing of 6 competing hypotheses
--  Reversal identification (CAGED Dec/2025)
--  Complete limitations documentation
+- ✅ Definitive double deflation correction
+- ✅ Median (P50) analysis instead of mean
+- ✅ Structural vs cyclical decomposition
+- ✅ Validation with 4 independent sources
+- ✅ Testing of 6 competing hypotheses
+- ✅ Reversal identification (CAGED Dec/2025)
+- ✅ Complete limitations documentation
 
 **v2.0 (February 2026):**
--  Double deflation correction
--  Still used simple mean
+- ✅ Double deflation correction
+- ⚠️ Still used simple mean
 
 **v1.0 (February 2026):**
--  Double deflation error (result -42% incorrect)
+- ❌ Double deflation error (result -42% incorrect)
 
 ---
 
@@ -597,8 +597,8 @@ corr = np.corrcoef(X, Y)[0,1]
 
 ---
 
-##  Language Versions
+## 🌍 Language Versions
 
--  **[English](METHODOLOGY.md)** - This file
--  **[Portuguese](METHODOLOGY_PT.md)** - Versão em Português
+- 🇺🇸 **[English](METHODOLOGY.md)** - This file
+- 🇧🇷 **[Portuguese](METHODOLOGY_PT.md)** - Versão em Português
 

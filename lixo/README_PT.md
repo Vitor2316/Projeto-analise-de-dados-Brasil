@@ -1,4 +1,4 @@
-#  Análise de Produtividade e Salário Real no Brasil (2012-2025)
+# 📊 Análise de Produtividade e Salário Real no Brasil (2012-2025)
 
 [![Status](https://img.shields.io/badge/Status-Finalizado-success)](https://github.com/Vitor2316/Projeto-analise-de-dados-Brasil)
 [![R](https://img.shields.io/badge/R-4.0+-blue)](https://www.r-project.org/)
@@ -9,7 +9,7 @@
 
 ---
 
-##  Descoberta Principal
+## 🎯 Descoberta Principal
 
 **Trabalhadores formais brasileiros experimentaram ganho real de +15.6% (mediana) no poder de compra entre 2012-2024**, com distribuição **progressiva**: base (+16.7%) cresceu mais que topo (+10.3%).
 
@@ -17,12 +17,12 @@
 - **58% estrutural** (permanente): salário mínimo real + redistribuição do PIB
 - **42% conjuntural** (reversível): desemprego histórico + recuperação pós-crise
 
-###  Alerta Crítico (Fev/2026):
+### ⚠️ Alerta Crítico (Fev/2026):
 **Dados de dezembro 2025 confirmam reversão do ciclo:** -618 mil empregos, com serviços (motor do crescimento 2022-2024) liderando demissões.
 
 ---
 
-##  Gráficos Principais
+## 📈 Gráficos Principais
 
 ### 1. Trajetória do Trabalhador Típico (2012-2025)
 ![Trajetória](graficos/01_trajetoria_trabalhador_tipico.png)
@@ -66,7 +66,7 @@
 
 ---
 
-##  Resultados Completos
+## 📊 Resultados Completos
 
 | Indicador | 2012 | 2024 | Variação | Interpretação |
 |-----------|------|------|----------|---------------|
@@ -82,7 +82,7 @@
 
 ---
 
-##  Metodologia
+## 🔬 Metodologia
 
 ### Correção Crítica Documentada
 
@@ -90,9 +90,9 @@
 A Tabela 5436 do IBGE fornece rendimentos em "valores reais" - **já deflacionados**. Aplicar deflação adicional causa erro de "dupla deflação".
 
 **Versões do Estudo:**
--  **v1.0:** Salário real -42% (dupla deflação - erro)
--  **v2.0:** Salário real +22% (média simples - incompleto)
--  **v3.0:** Salário real +15.6% (mediana + análise distribucional - correto e completo)
+- ❌ **v1.0:** Salário real -42% (dupla deflação - erro)
+- ⚠️ **v2.0:** Salário real +22% (média simples - incompleto)
+- ✅ **v3.0:** Salário real +15.6% (mediana + análise distribucional - correto e completo)
 
 ### Fontes de Dados
 
@@ -115,10 +115,10 @@ A Tabela 5436 do IBGE fornece rendimentos em "valores reais" - **já deflacionad
 
 | Teste | Resultado | Status |
 |-------|-----------|--------|
-| Salário mínimo real (+18.5%) vs P10 (+16.7%) | Consistente |  Validado |
-| Massa salarial (nosso cálculo vs IBGE) | 7.4pp diferença |  Validado |
-| Gini (desigualdade caindo) vs P10 > P90 | Coerente |  Validado |
-| Desemprego vs salário (correlação inversa) | Confirmada |  Validado |
+| Salário mínimo real (+18.5%) vs P10 (+16.7%) | Consistente | ✅ Validado |
+| Massa salarial (nosso cálculo vs IBGE) | 7.4pp diferença | ✅ Validado |
+| Gini (desigualdade caindo) vs P10 > P90 | Coerente | ✅ Validado |
+| Desemprego vs salário (correlação inversa) | Confirmada | ✅ Validado |
 
 ---
 
@@ -126,16 +126,16 @@ A Tabela 5436 do IBGE fornece rendimentos em "valores reais" - **já deflacionad
 
 | Hipótese | Veredicto | Evidência |
 |----------|-----------|-----------|
-| **H1: Formalização** |  Refutada | Informalidade estável (~39%) |
-| **H2: Salário Mínimo** |  Confirmada | P10 segue SM (+18.5% vs +16.7%) |
-| **H3: Desemprego Baixo** |  Confirmada | Correlação inversa por período |
-| **H4: Concentração no Topo** |  Refutada | Base cresceu mais que topo |
-| **H5: Viés de Sobrevivência** |  Parcial | Efeito existe mas não domina |
-| **H6: Serviços Pós-COVID** |  Confirmada | Mas revertendo em dez/2025 |
+| **H1: Formalização** | ❌ Refutada | Informalidade estável (~39%) |
+| **H2: Salário Mínimo** | ✅ Confirmada | P10 segue SM (+18.5% vs +16.7%) |
+| **H3: Desemprego Baixo** | ✅ Confirmada | Correlação inversa por período |
+| **H4: Concentração no Topo** | ❌ Refutada | Base cresceu mais que topo |
+| **H5: Viés de Sobrevivência** | ⚠️ Parcial | Efeito existe mas não domina |
+| **H6: Serviços Pós-COVID** | ✅ Confirmada | Mas revertendo em dez/2025 |
 
 ---
 
-##  Projeções 2026
+## 📉 Projeções 2026
 
 | Cenário | Probabilidade | P50 Projetado | Variação vs 2024 |
 |---------|--------------|---------------|------------------|
@@ -153,49 +153,49 @@ A Tabela 5436 do IBGE fornece rendimentos em "valores reais" - **já deflacionad
 
 ---
 
-##  Estrutura do Projeto
+## 📁 Estrutura do Projeto
 
 ```
 Projeto-analise-de-dados-Brasil/
-
- dados/                                  # Dados processados e prontos
-    brasil_anual_CORRIGIDO_FINAL.csv   # Série temporal Brasil 2012-2025
-    percentis_rendimento.csv           # P10, P50, P90 (2012-2024)
-    massa_salarial_validacao.csv       # Validação: nosso cálculo vs IBGE
-    desemprego_salario.csv             # Desemprego e P50 por ano
-    participacao_pib.csv               # Trabalho vs Capital no PIB
-    caged_setorial_2025.csv            # CAGED dezembro 2025 por setor
-    projecoes_2026.csv                 # Cenários 2026 (pessimista/base/otimista)
-    salario_real_anual_paises.csv      # Comparação internacional (opcional)
-    produtividade_anual_paises.csv     # Comparação internacional (opcional)
-
- graficos/                               # Visualizações (geradas pelos scripts)
-    01_trajetoria_trabalhador_tipico.png
-    02_decomposicao_estrutural_conjuntural.png
-    03_ganhos_progressivos_percentis.png
-    04_participacao_trabalho_pib.png
-    05_desemprego_vs_salario.png
-    06_massa_salarial_vs_pib.png
-    07_caged_reversao_dez2025.png
-    08_criacao_empregos_desaceleracao.png
-    09_horas_vs_produtividade.png
-    10_projecoes_2026.png
-
- scripts/                                # Código para gerar gráficos
-    gerar_graficos_v3.py               #  Python: TODOS os 10 gráficos
-    graficos_finais_v3_parte1.R        #  R: gráficos 1-5 (alternativo)
-    graficos_finais_v3_parte2.R        #  R: gráficos 6-10 (alternativo)
-
- README.md                               #  Este arquivo (visão geral)
- METODOLOGIA.md                          #  Detalhes técnicos completos
- RELATORIO_FINAL_SALARIOS_BRASIL_2012-2025.md  #  Estudo completo (52 págs)
- LICENSE                                 #  Licença MIT
+│
+├── dados/                                  # Dados processados e prontos
+│   ├── brasil_anual_CORRIGIDO_FINAL.csv   # Série temporal Brasil 2012-2025
+│   ├── percentis_rendimento.csv           # P10, P50, P90 (2012-2024)
+│   ├── massa_salarial_validacao.csv       # Validação: nosso cálculo vs IBGE
+│   ├── desemprego_salario.csv             # Desemprego e P50 por ano
+│   ├── participacao_pib.csv               # Trabalho vs Capital no PIB
+│   ├── caged_setorial_2025.csv            # CAGED dezembro 2025 por setor
+│   ├── projecoes_2026.csv                 # Cenários 2026 (pessimista/base/otimista)
+│   ├── salario_real_anual_paises.csv      # Comparação internacional (opcional)
+│   └── produtividade_anual_paises.csv     # Comparação internacional (opcional)
+│
+├── graficos/                               # Visualizações (geradas pelos scripts)
+│   ├── 01_trajetoria_trabalhador_tipico.png
+│   ├── 02_decomposicao_estrutural_conjuntural.png
+│   ├── 03_ganhos_progressivos_percentis.png
+│   ├── 04_participacao_trabalho_pib.png
+│   ├── 05_desemprego_vs_salario.png
+│   ├── 06_massa_salarial_vs_pib.png
+│   ├── 07_caged_reversao_dez2025.png
+│   ├── 08_criacao_empregos_desaceleracao.png
+│   ├── 09_horas_vs_produtividade.png
+│   └── 10_projecoes_2026.png
+│
+├── scripts/                                # Código para gerar gráficos
+│   ├── gerar_graficos_v3.py               # 🐍 Python: TODOS os 10 gráficos
+│   ├── graficos_finais_v3_parte1.R        # 📊 R: gráficos 1-5 (alternativo)
+│   └── graficos_finais_v3_parte2.R        # 📊 R: gráficos 6-10 (alternativo)
+│
+├── README.md                               # 📖 Este arquivo (visão geral)
+├── METODOLOGIA.md                          # 🔬 Detalhes técnicos completos
+├── RELATORIO_FINAL_SALARIOS_BRASIL_2012-2025.md  # 📄 Estudo completo (52 págs)
+└── LICENSE                                 # ⚖️ Licença MIT
 
 ```
 
 ---
 
-##  Como Reproduzir
+## 🚀 Como Reproduzir
 
 ### Pré-requisitos
 
@@ -254,7 +254,7 @@ Os CSVs na pasta `dados/` estão prontos para análise. Você pode:
 
 ---
 
-##  Destaques Metodológicos
+## 🎓 Destaques Metodológicos
 
 ### 1. Rigor Científico
 - Identificou e corrigiu erro de dupla deflação
@@ -280,7 +280,7 @@ Os CSVs na pasta `dados/` estão prontos para análise. Você pode:
 
 ---
 
-##  Limitações Reconhecidas
+## 📚 Limitações Reconhecidas
 
 ### Dados Não Disponíveis
 1. **Produtividade Real:** PIB/horas totais (setorial)
@@ -299,7 +299,7 @@ Os CSVs na pasta `dados/` estão prontos para análise. Você pode:
 
 ---
 
-##  Documentação Completa
+## 📖 Documentação Completa
 
 - **[RELATORIO_FINAL_SALARIOS_BRASIL_2012-2025.md](RELATORIO_FINAL_SALARIOS_BRASIL_2012-2025.md)**: Estudo completo (52 páginas)
 - **[METODOLOGIA.md](METODOLOGIA.md)**: Detalhes técnicos e fórmulas
@@ -313,22 +313,22 @@ Sugestões, críticas e melhorias são bem-vindas! Abra uma **issue** ou **pull 
 
 ---
 
-##  Contato
+## 📧 Contato
 
 **Vitor Ramos dos Santos**  
- Email: vitorramossantos8@gmail.com  
- LinkedIn: [linkedin.com/in/vitor-ramos-santos](https://linkedin.com/in/vitor-ramos-santos)  
- GitHub: [github.com/Vitor2316](https://github.com/Vitor2316)
+📧 Email: vitorramossantos8@gmail.com  
+💼 LinkedIn: [linkedin.com/in/vitor-ramos-santos](https://linkedin.com/in/vitor-ramos-santos)  
+🐙 GitHub: [github.com/Vitor2316](https://github.com/Vitor2316)
 
 ---
 
-##  Licença
+## 📜 Licença
 
 Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ---
 
-##  Agradecimentos
+## 🌟 Agradecimentos
 
 - **IBGE** - Pela disponibilização dos dados da PNAD Contínua
 - **Ministério do Trabalho** - Pelos dados do Novo CAGED
@@ -336,7 +336,7 @@ Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) par
 
 ---
 
-##  Status do Projeto
+## 📊 Status do Projeto
 
 - [x] Coleta de dados (SIDRA, CAGED)
 - [x] Limpeza e tratamento
@@ -351,11 +351,11 @@ Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) par
 - [x] Relatório final (52 páginas)
 - [x] Documentação completa
 
-**Status:  FINALIZADO** (Fevereiro 2026)
+**Status: ✅ FINALIZADO** (Fevereiro 2026)
 
 ---
 
-##  Diferenciais deste Estudo
+## 🔥 Diferenciais deste Estudo
 
 1. **Transparência Total:** Documenta erro inicial e correção
 2. **Análise Profunda:** Não para no primeiro resultado
@@ -365,5 +365,5 @@ Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) par
 
 ---
 
-** Se este estudo foi útil, considere deixar uma estrela no repositório!**
+**⭐ Se este estudo foi útil, considere deixar uma estrela no repositório!**
 

@@ -7,7 +7,7 @@
 
 ---
 
-##  Sumário
+## 📋 Sumário
 
 1. [Objetivo da Pesquisa](#1-objetivo-da-pesquisa)
 2. [Fontes de Dados](#2-fontes-de-dados)
@@ -124,9 +124,9 @@ indice_salario_real = (valor_ano / valor_2012) * 100  # Sem deflação adicional
 
 | Versão | Método | Resultado Salário Real |
 |--------|--------|------------------------|
-| v1.0  | Dupla deflação | -42% (erro) |
-| v2.0  | Sem deflação adicional, média simples | +22% (incompleto) |
-| v3.0  | Sem deflação, análise de mediana + percentis | +15.6% (correto) |
+| v1.0 ❌ | Dupla deflação | -42% (erro) |
+| v2.0 ⚠️ | Sem deflação adicional, média simples | +22% (incompleto) |
+| v3.0 ✅ | Sem deflação, análise de mediana + percentis | +15.6% (correto) |
 
 ### 3.2 Lições Metodológicas
 
@@ -356,7 +356,7 @@ Decomposição por fator:
 | P10 (PNAD) | +16.7% |
 | Diferença | 1.8pp |
 
-**Veredicto:**  **Consistente** - P10 segue SM de perto
+**Veredicto:** ✅ **Consistente** - P10 segue SM de perto
 
 ### 6.2 Validação com PIB per Capita
 
@@ -374,7 +374,7 @@ Decomposição por fator:
 - Redistribuição do capital para trabalho (+5.6pp)
 - Consistente com compressão de lucros
 
-**Veredicto:**  **Coerente com redistribuição**
+**Veredicto:** ✅ **Coerente com redistribuição**
 
 ### 6.3 Validação com Massa Salarial Oficial
 
@@ -392,7 +392,7 @@ Decomposição por fator:
 - IBGE pode usar rendimento **efetivo** (inclui horas extras, bônus)
 - Ambas as metodologias são válidas
 
-**Veredicto:**  **Ordem de grandeza validada**
+**Veredicto:** ✅ **Ordem de grandeza validada**
 
 ### 6.4 Validação com Gini
 
@@ -406,7 +406,7 @@ Decomposição por fator:
 | Gini | 0.504 | 0.488 | -3.2% |
 | Razão P90/P10 | 11.9x | 11.3x | -5% |
 
-**Veredicto:**  **Totalmente consistente** - Base cresceu mais que topo
+**Veredicto:** ✅ **Totalmente consistente** - Base cresceu mais que topo
 
 ### 6.5 Teste de Correlação Desemprego-Salário
 
@@ -422,11 +422,11 @@ corr = np.corrcoef(desemprego, p50_real)[0,1]
 
 | Período | Desemprego | P50 Real | Relação |
 |---------|-----------|----------|---------|
-| 2012-2014 | 7.4% → 7.0% (caiu) | +7.5% |  Inversa |
-| 2015-2021 | 7.0% → 14.0% (subiu) | -2.8% |  Inversa |
-| 2021-2024 | 14.0% → 6.6% (caiu) | +14.8% |  Inversa |
+| 2012-2014 | 7.4% → 7.0% (caiu) | +7.5% | ✓ Inversa |
+| 2015-2021 | 7.0% → 14.0% (subiu) | -2.8% | ✓ Inversa |
+| 2021-2024 | 14.0% → 6.6% (caiu) | +14.8% | ✓ Inversa |
 
-**Veredicto:**  **Relação inversa confirmada por período**
+**Veredicto:** ✅ **Relação inversa confirmada por período**
 
 ---
 
@@ -505,12 +505,12 @@ Não aplicamos testes estatísticos formais (t-test, ANOVA) por se tratar de dad
 
 | Fator | Estrutural? | Contribuição | Evidência |
 |-------|-------------|--------------|-----------|
-| Salário Mínimo |  Sim | +6.2pp | P10 segue SM (+18.5%) |
-| Redistribuição PIB |  Híbrido | +3.0pp | Part. trabalho +5.6pp |
-| Desemprego Baixo |  Não | +3.0pp | Mínima histórica insustentável |
-| Efeito Base |  Não | +5.0pp | Recuperar nível perdido |
-| Formalização |  Não | 0pp | Informalidade estável ~39% |
-| Produtividade Real |  Incerto | 0-2pp | Dados insuficientes |
+| Salário Mínimo | ✅ Sim | +6.2pp | P10 segue SM (+18.5%) |
+| Redistribuição PIB | ⚠️ Híbrido | +3.0pp | Part. trabalho +5.6pp |
+| Desemprego Baixo | ❌ Não | +3.0pp | Mínima histórica insustentável |
+| Efeito Base | ❌ Não | +5.0pp | Recuperar nível perdido |
+| Formalização | ❌ Não | 0pp | Informalidade estável ~39% |
+| Produtividade Real | ❓ Incerto | 0-2pp | Dados insuficientes |
 
 ### 8.4 Resultados da Decomposição
 
@@ -602,13 +602,13 @@ Não aplicamos testes estatísticos formais (t-test, ANOVA) por se tratar de dad
 
 ### 9.4 O Que NÃO Fizemos (por Limitação de Dados)
 
- **Análise de Subgrupos:** Por setor, região, faixa etária, gênero  
- **Regressão Econométrica:** Com variáveis de controle  
- **Inferência Causal:** Diff-in-diff, variáveis instrumentais  
- **Intervalos de Confiança:** Requereria microdados  
- **Teste de Hipóteses Formais:** t-test, ANOVA (dados são populacional-expandidos)  
- **Análise de Informalidade Completa:** Dados só de 2016+  
- **Produtividade Setorial Real:** PIB/horas por setor indisponível  
+❌ **Análise de Subgrupos:** Por setor, região, faixa etária, gênero  
+❌ **Regressão Econométrica:** Com variáveis de controle  
+❌ **Inferência Causal:** Diff-in-diff, variáveis instrumentais  
+❌ **Intervalos de Confiança:** Requereria microdados  
+❌ **Teste de Hipóteses Formais:** t-test, ANOVA (dados são populacional-expandidos)  
+❌ **Análise de Informalidade Completa:** Dados só de 2016+  
+❌ **Produtividade Setorial Real:** PIB/horas por setor indisponível  
 
 ---
 
@@ -626,9 +626,9 @@ Não aplicamos testes estatísticos formais (t-test, ANOVA) por se tratar de dad
 ### 10.2 Transparência sobre Limitações
 
 **Diferenciamos claramente:**
--  **Comprovado:** Salário mínimo explica P10, desemprego correlaciona com salário
--  **Plausível mas não testado:** Serviços pós-COVID, Bolsa Família
--  **Não testável:** Impacto marginal exato de cada fator
+- ✅ **Comprovado:** Salário mínimo explica P10, desemprego correlaciona com salário
+- ⚠️ **Plausível mas não testado:** Serviços pós-COVID, Bolsa Família
+- ❌ **Não testável:** Impacto marginal exato de cada fator
 
 **Não afirmamos causalidade onde há apenas correlação.**
 
@@ -805,20 +805,20 @@ Razão = Percentil_90 / Percentil_10
 ## CHANGELOG
 
 **v3.0 (Fevereiro 2026) - Atual:**
--  Correção definitiva de dupla deflação
--  Análise de mediana (P50) em vez de média
--  Decomposição estrutural vs conjuntural
--  Validação com 4 fontes independentes
--  Testes de 6 hipóteses concorrentes
--  Identificação de reversão (CAGED dez/2025)
--  Documentação completa de limitações
+- ✅ Correção definitiva de dupla deflação
+- ✅ Análise de mediana (P50) em vez de média
+- ✅ Decomposição estrutural vs conjuntural
+- ✅ Validação com 4 fontes independentes
+- ✅ Testes de 6 hipóteses concorrentes
+- ✅ Identificação de reversão (CAGED dez/2025)
+- ✅ Documentação completa de limitações
 
 **v2.0 (Fevereiro 2026):**
--  Correção de dupla deflação
--  Ainda usava média simples
+- ✅ Correção de dupla deflação
+- ⚠️ Ainda usava média simples
 
 **v1.0 (Fevereiro 2026):**
--  Erro de dupla deflação (resultado -42% incorreto)
+- ❌ Erro de dupla deflação (resultado -42% incorreto)
 
 ---
 

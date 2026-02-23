@@ -1,4 +1,4 @@
-#  Analysis of Productivity and Real Wages in Brazil (2012-2025)
+# 📊 Analysis of Productivity and Real Wages in Brazil (2012-2025)
 
 [![Status](https://img.shields.io/badge/Status-Complete-success)](https://github.com/Vitor2316/Projeto-analise-de-dados-Brasil)
 [![R](https://img.shields.io/badge/R-4.0+-blue)](https://www.r-project.org/)
@@ -9,7 +9,15 @@
 
 ---
 
+<<<<<<< HEAD
+## 🔥 THE CONTROVERSIAL THESIS
+=======
+
 ##  THE CONTROVERSIAL THESIS
+=======
+##  Main Discovery
+>>>>>>> 
+>>>>>>> 97cad5923bc04cf7dc07a27b73b4a63bd562a176
 
 > **Brazilian wage gains (2022-2024) were financed by squeezing corporate profits, not by productivity growth — making them fragile and reversible.**
 
@@ -26,11 +34,21 @@
 - **58% structural** (permanent): real minimum wage policy + redistribution
 - **42% cyclical** (reversible): historic low unemployment + base effect
 
+<<<<<<< HEAD
 **Projection:** If unemployment rises to 8-10%, workers lose ~7pp (cyclical component) but keep ~9pp (structural gains).
+=======
+<<<<<<< 
+**Projection:** If unemployment rises to 8-10%, workers lose ~7pp (cyclical component) but keep ~9pp (structural gains).
+=======
+
+###  Critical Alert (Feb/2026):
+**December 2025 data confirms cycle reversal:** -618 thousand jobs, with services (growth driver 2022-2024) leading layoffs.
+>>>>>>> 5
+>>>>>>> 97cad5923bc04cf7dc07a27b73b4a63bd562a176
 
 ---
 
-##  Main Charts
+## 📈 Main Charts
 
 ### 1. Typical Worker Trajectory (2012-2025)
 ![Trajectory](graficos/01_trajetoria_trabalhador_tipico.png)
@@ -74,7 +92,12 @@
 
 ---
 
+<<<<<<< HEAD
+## 🚀 ADVANCED ANALYSIS (New!)
+=======
+<<<<<<< 
 ##  ADVANCED ANALYSIS (New!)
+>>>>>>> 97cad5923bc04cf7dc07a27b73b4a63bd562a176
 
 ###  Statistical Rigor
 - **Linear Regression:** Unemployment → Wage relationship quantified
@@ -122,7 +145,14 @@ streamlit run dashboard_salarios.py
 
 ---
 
+<<<<<<< HEAD
+## 📊 Complete Results
+=======
 ##  Complete Results
+=======
+##  Complete Results
+>>>>>>> 3200fafba16b95365f6a9cf0f4c7b2667a032805
+>>>>>>> 97cad5923bc04cf7dc07a27b73b4a63bd562a176
 
 | Indicator | 2012 | 2024 | Change | Interpretation |
 |-----------|------|------|--------|----------------|
@@ -138,7 +168,7 @@ streamlit run dashboard_salarios.py
 
 ---
 
-##  Methodology
+## 🔬 Methodology
 
 ### Critical Methodological Correction
 
@@ -146,9 +176,9 @@ streamlit run dashboard_salarios.py
 IBGE Table 5436 provides income in "real values" - **already deflated by IBGE**. Applying additional deflation causes "double deflation" error.
 
 **Study Versions:**
--  **v1.0:** Real wage -42% (double deflation - error)
--  **v2.0:** Real wage +22% (simple mean - incomplete)
--  **v3.0:** Real wage +15.6% (median + distributional analysis - correct and complete)
+- ❌ **v1.0:** Real wage -42% (double deflation - error)
+- ⚠️ **v2.0:** Real wage +22% (simple mean - incomplete)
+- ✅ **v3.0:** Real wage +15.6% (median + distributional analysis - correct and complete)
 
 ### Data Sources
 
@@ -171,10 +201,10 @@ IBGE Table 5436 provides income in "real values" - **already deflated by IBGE**.
 
 | Test | Result | Status |
 |------|--------|--------|
-| Real minimum wage (+18.5%) vs P10 (+16.7%) | Consistent |  Validated |
-| Wage mass (our calculation vs IBGE) | 7.4pp difference |  Validated |
-| Gini (inequality falling) vs P10 > P90 | Coherent |  Validated |
-| Unemployment vs wage (inverse correlation) | Confirmed |  Validated |
+| Real minimum wage (+18.5%) vs P10 (+16.7%) | Consistent | ✅ Validated |
+| Wage mass (our calculation vs IBGE) | 7.4pp difference | ✅ Validated |
+| Gini (inequality falling) vs P10 > P90 | Coherent | ✅ Validated |
+| Unemployment vs wage (inverse correlation) | Confirmed | ✅ Validated |
 
 ---
 
@@ -182,12 +212,12 @@ IBGE Table 5436 provides income in "real values" - **already deflated by IBGE**.
 
 | Hypothesis | Verdict | Evidence |
 |------------|---------|-----------|
-| **H1: Formalization** |  Refuted | Stable informality (~39%) |
-| **H2: Minimum Wage** |  Confirmed | P10 follows MW (+18.5% vs +16.7%) |
-| **H3: Low Unemployment** |  Confirmed | Inverse correlation by period |
-| **H4: Top Concentration** |  Refuted | Base grew more than top |
-| **H5: Survivorship Bias** |  Partial | Effect exists but doesn't dominate |
-| **H6: Post-COVID Services** |  Confirmed | But reversing in Dec/2025 |
+| **H1: Formalization** | ❌ Refuted | Stable informality (~39%) |
+| **H2: Minimum Wage** | ✅ Confirmed | P10 follows MW (+18.5% vs +16.7%) |
+| **H3: Low Unemployment** | ✅ Confirmed | Inverse correlation by period |
+| **H4: Top Concentration** | ❌ Refuted | Base grew more than top |
+| **H5: Survivorship Bias** | ⚠️ Partial | Effect exists but doesn't dominate |
+| **H6: Post-COVID Services** | ✅ Confirmed | But reversing in Dec/2025 |
 
 ---
 
@@ -209,65 +239,64 @@ IBGE Table 5436 provides income in "real values" - **already deflated by IBGE**.
 
 ---
 
-##  Project Structure
+## 📁 Project Structure
 
 ```
 Projeto-analise-de-dados-Brasil/
-
- dados/                                  # Processed and ready data
-    brasil_anual_CORRIGIDO_FINAL.csv   # Brazil time series 2012-2025
-    percentis_rendimento.csv           # P10, P50, P90 (2012-2024)
-    massa_salarial_validacao.csv       # Validation: our calc vs IBGE
-    desemprego_salario.csv             # Unemployment and P50 by year
-    participacao_pib.csv               # Labor vs Capital in GDP
-    caged_setorial_2025.csv            # CAGED December 2025 by sector
-    projecoes_2026.csv                 # 2026 scenarios (pessimistic/base/optimistic)
-    salario_real_anual_paises.csv      # International comparison (optional)
-    produtividade_anual_paises.csv     # International comparison (optional)
-    analise_estatistica_avancada.csv   #  Statistical results
-    previsoes_2026_2030.csv            #  Multi-model forecasts
-    monte_carlo_10k.csv                #  10,000 simulations
-    monte_carlo_resumo.csv             #  Summary statistics
-    stress_test_resultados.csv         #  Extreme scenarios
-
- graficos/                               # Visualizations (generated by scripts)
-    01_trajetoria_trabalhador_tipico.png
-    02_decomposicao_estrutural_conjuntural.png
-    03_ganhos_progressivos_percentis.png
-    04_participacao_trabalho_pib.png
-    05_desemprego_vs_salario.png
-    06_massa_salarial_vs_pib.png
-    07_caged_reversao_dez2025.png
-    08_criacao_empregos_desaceleracao.png
-    09_horas_vs_produtividade.png
-    10_projecoes_2026.png
-    11_previsao_2026_2030.png           #  Multi-model forecast
-    12_analise_sensibilidade.png        #  Sensitivity analysis
-    13_monte_carlo.png                  #  10k simulations
-    14_matriz_cenarios.png              #  Scenario heatmap
-
- scripts/                                # Code to generate charts & analysis
-    gerar_graficos_v3.py               #  Python: ALL 10 main charts
-    graficos_finais_v3_parte1.R        #  R: charts 1-5 (alternative)
-    graficos_finais_v3_parte2.R        #  R: charts 6-10 (alternative)
-    analise_estatistica_avancada.py    #  Statistical analysis (regression, CI)
-    previsao_2026_2030.py              #  Forecasting (multiple models)
-    simulador_avancado.py              #  Monte Carlo + Sensitivity
-    dashboard_salarios.py              #  Interactive Streamlit dashboard
-
- README.md                               #  This file (overview)
- README_PT.md                            #  Portuguese version
- EXECUTIVE_SUMMARY.md                    #  5-min controversial thesis (NEW!)
- METHODOLOGY.md                          #  Complete technical details
- METHODOLOGY_PT.md                       #  Portuguese version
- FINAL_REPORT_BRAZIL_WAGES_2012-2025.md #  Complete study (52 pages)
- LICENSE                                 #  MIT License
+│
+├── dados/                                  # Processed and ready data
+│   ├── brasil_anual_CORRIGIDO_FINAL.csv   # Brazil time series 2012-2025
+│   ├── percentis_rendimento.csv           # P10, P50, P90 (2012-2024)
+│   ├── massa_salarial_validacao.csv       # Validation: our calc vs IBGE
+│   ├── desemprego_salario.csv             # Unemployment and P50 by year
+│   ├── participacao_pib.csv               # Labor vs Capital in GDP
+│   ├── caged_setorial_2025.csv            # CAGED December 2025 by sector
+│   ├── projecoes_2026.csv                 # 2026 scenarios (pessimistic/base/optimistic)
+│   ├── salario_real_anual_paises.csv      # International comparison (optional)
+│   ├── produtividade_anual_paises.csv     # International comparison (optional)
+│   ├── analise_estatistica_avancada.csv   #  Statistical results
+│   ├── previsoes_2026_2030.csv            #  Multi-model forecasts
+│   ├── monte_carlo_10k.csv                #  10,000 simulations
+│   ├── monte_carlo_resumo.csv             #  Summary statistics
+│   └── stress_test_resultados.csv         #  Extreme scenarios
+│
+├── graficos/                               # Visualizations (generated by scripts)
+│   ├── 01_trajetoria_trabalhador_tipico.png
+│   ├── 02_decomposicao_estrutural_conjuntural.png
+│   ├── 03_ganhos_progressivos_percentis.png
+│   ├── 04_participacao_trabalho_pib.png
+│   ├── 05_desemprego_vs_salario.png
+│   ├── 06_massa_salarial_vs_pib.png
+│   ├── 07_caged_reversao_dez2025.png
+│   ├── 08_criacao_empregos_desaceleracao.png
+│   ├── 09_horas_vs_produtividade.png
+│   ├── 10_projecoes_2026.png
+│   ├── 11_previsao_2026_2030.png           #  Multi-model forecast
+│   ├── 12_analise_sensibilidade.png        #  Sensitivity analysis
+│   ├── 13_monte_carlo.png                  #  10k simulations
+│   └── 14_matriz_cenarios.png              #  Scenario heatmap
+│
+├── scripts/                                # Code to generate charts & analysis
+│   ├── gerar_graficos_v3.py               #  Python: ALL 10 main charts
+│   ├── graficos_finais_v3_parte1.R        #  R: charts 1-5 (alternative)
+│   ├── graficos_finais_v3_parte2.R        #  R: charts 6-10 (alternative)
+│   ├── analise_estatistica_avancada.py    #  Statistical analysis (regression, CI)
+│   ├── previsao_2026_2030.py              #  Forecasting (multiple models)
+│   ├── simulador_avancado.py              #  Monte Carlo + Sensitivity
+│   └── dashboard_salarios.py              #  Interactive Streamlit dashboard
+│
+├── README.md                               #  This file (overview)
+├── README_PT.md                            #  Portuguese version
+├── EXECUTIVE_SUMMARY.md                    #  5-min controversial thesis (NEW!)
+├── METHODOLOGY_PT.md                       #  Portuguese version
+├── FINAL_REPORT_BRAZIL_WAGES_2012-2025.md #  Complete study (52 pages)
+└── LICENSE                                 #  MIT License
 
 ```
 
 ---
 
-##  How to Reproduce
+## 🚀 How to Reproduce
 
 ### Prerequisites
 
@@ -350,7 +379,7 @@ CSVs in `dados/` folder are ready for analysis. You can:
 
 ---
 
-##  Methodological Highlights
+## 🎓 Methodological Highlights
 
 ### 1. Scientific Rigor
 - Identified and corrected double deflation error
@@ -376,7 +405,7 @@ CSVs in `dados/` folder are ready for analysis. You can:
 
 ---
 
-##  Acknowledged Limitations
+## 📚 Acknowledged Limitations
 
 ### Unavailable Data
 1. **Real Sectoral Productivity:** GDP/hours by sector
@@ -395,7 +424,7 @@ CSVs in `dados/` folder are ready for analysis. You can:
 
 ---
 
-##  Complete Documentation
+## 📖 Complete Documentation
 
 - **[FINAL_REPORT_BRAZIL_WAGES_2012-2025.md](FINAL_REPORT_BRAZIL_WAGES_2012-2025.md)**: Complete study (52 pages)
 - **[METHODOLOGY.md](METHODOLOGY.md)**: Technical details and formulas
@@ -409,28 +438,28 @@ Suggestions, critiques, and improvements are welcome! Open an **issue** or **pul
 
 ---
 
-##  Contact
+## 📧 Contact
 
 **Vitor Ramos dos Santos**  
- Email: vitorramossantos8@gmail.com  
- LinkedIn: [linkedin.com/in/vitor-ramos-santos](https://linkedin.com/in/vitor-ramos-santos)  
- GitHub: [github.com/Vitor2316](https://github.com/Vitor2316)
+📧 Email: vitorramossantos8@gmail.com  
+💼 LinkedIn: [linkedin.com/in/vitor-ramos-santos](https://linkedin.com/in/vitor-ramos-santos)  
+🐙 GitHub: [github.com/Vitor2316](https://github.com/Vitor2316)
 
 ---
 
-##  License
+## 📜 License
 
 This project is under MIT License. See [LICENSE](LICENSE) file for details.
 
 **What this means:**
--  Anyone can use, modify, and distribute this code
--  Commercial use is allowed
--  You must credit the original author
--  No warranty - use at your own risk
+- ✅ Anyone can use, modify, and distribute this code
+- ✅ Commercial use is allowed
+- ✅ You must credit the original author
+- ⚠️ No warranty - use at your own risk
 
 ---
 
-##  Acknowledgments
+## 🌟 Acknowledgments
 
 - **IBGE** - For providing PNAD Contínua data
 - **Ministry of Labor** - For New CAGED data
@@ -438,7 +467,7 @@ This project is under MIT License. See [LICENSE](LICENSE) file for details.
 
 ---
 
-##  Project Status
+## 📊 Project Status
 
 - [x] Data collection (SIDRA, CAGED)
 - [x] Cleaning and processing
@@ -453,11 +482,11 @@ This project is under MIT License. See [LICENSE](LICENSE) file for details.
 - [x] Final report (52 pages)
 - [x] Complete documentation
 
-**Status:  COMPLETE** (February 2026)
+**Status: ✅ COMPLETE** (February 2026)
 
 ---
 
-##  Study Differentials
+## 🔥 Study Differentials
 
 1. **Total Transparency:** Documents initial error and correction
 2. **Deep Analysis:** Doesn't stop at first result
@@ -467,12 +496,12 @@ This project is under MIT License. See [LICENSE](LICENSE) file for details.
 
 ---
 
-** If this study was useful, please star the repository!**
+**⭐ If this study was useful, please star the repository!**
 
 ---
 
-##  Language Versions
+## 🌍 Language Versions
 
--  **[English](README.md)** - This file
--  **[Portuguese](README_PT.md)** - Versão em Português
+- 🇺🇸 **[English](README.md)** - This file
+- 🇧🇷 **[Portuguese](README_PT.md)** - Versão em Português
 

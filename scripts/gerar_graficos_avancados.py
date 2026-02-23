@@ -1,7 +1,7 @@
 """
 ================================================================================
 GRÁFICOS AVANÇADOS (11-14) - ANÁLISE SALÁRIOS BRASIL
-Versão com detecção automática de caminhos
+Complemento ao gerar_graficos_v3.py
 ================================================================================
 """
 
@@ -11,23 +11,9 @@ import pandas as pd
 import seaborn as sns
 from matplotlib.ticker import FuncFormatter
 import os
-from pathlib import Path
 
-# Detectar diretório do projeto automaticamente
-script_dir = Path(__file__).parent.absolute()
-project_dir = script_dir.parent
-
-# Caminhos absolutos
-graficos_dir = project_dir / 'graficos'
-dados_dir = project_dir / 'dados'
-
-# Criar diretórios se não existirem
-graficos_dir.mkdir(exist_ok=True)
-dados_dir.mkdir(exist_ok=True)
-
-print(f"Diretório do projeto: {project_dir}")
-print(f"Salvando gráficos em: {graficos_dir}")
-print()
+# Criar diretório se não existir
+os.makedirs('../graficos', exist_ok=True)
 
 # Configuração
 plt.style.use('seaborn-v0_8-whitegrid')
@@ -85,11 +71,10 @@ ax.grid(True, alpha=0.3, linestyle='--')
 ax.set_ylim(750, 1100)
 
 plt.tight_layout()
-output_path = graficos_dir / '11_previsao_2026_2030.png'
-plt.savefig(output_path, dpi=300, bbox_inches='tight')
+plt.savefig('../graficos/11_previsao_2026_2030.png', dpi=300, bbox_inches='tight')
 plt.close()
 
-print(f"✓ Gráfico 11 criado: {output_path}")
+print("✓ Gráfico 11 criado")
 
 # ============================================================================
 # GRÁFICO 12: ANÁLISE DE SENSIBILIDADE
@@ -150,11 +135,10 @@ axes[1, 1].set_title('Sensibilidade ao Salário Mínimo', fontweight='bold')
 axes[1, 1].grid(True, alpha=0.3)
 
 plt.tight_layout()
-output_path = graficos_dir / '12_analise_sensibilidade.png'
-plt.savefig(output_path, dpi=300, bbox_inches='tight')
+plt.savefig('../graficos/12_analise_sensibilidade.png', dpi=300, bbox_inches='tight')
 plt.close()
 
-print(f"✓ Gráfico 12 criado: {output_path}")
+print("✓ Gráfico 12 criado")
 
 # ============================================================================
 # GRÁFICO 13: MONTE CARLO (HISTOGRAMA)
@@ -194,11 +178,10 @@ ax.legend(fontsize=10)
 ax.grid(True, alpha=0.3)
 
 plt.tight_layout()
-output_path = graficos_dir / '13_monte_carlo.png'
-plt.savefig(output_path, dpi=300, bbox_inches='tight')
+plt.savefig('../graficos/13_monte_carlo.png', dpi=300, bbox_inches='tight')
 plt.close()
 
-print(f"✓ Gráfico 13 criado: {output_path}")
+print("✓ Gráfico 13 criado")
 
 # ============================================================================
 # GRÁFICO 14: MATRIZ DE CENÁRIOS (HEATMAP)
@@ -240,18 +223,17 @@ cbar = plt.colorbar(im, ax=ax)
 cbar.set_label('Salário Real (R$)', fontweight='bold')
 
 plt.tight_layout()
-output_path = graficos_dir / '14_matriz_cenarios.png'
-plt.savefig(output_path, dpi=300, bbox_inches='tight')
+plt.savefig('../graficos/14_matriz_cenarios.png', dpi=300, bbox_inches='tight')
 plt.close()
 
-print(f"✓ Gráfico 14 criado: {output_path}")
+print("✓ Gráfico 14 criado")
 
 print("\n" + "="*70)
 print("✓ TODOS OS 4 GRÁFICOS AVANÇADOS CRIADOS COM SUCESSO!")
 print("="*70)
-print(f"\nArquivos salvos em: {graficos_dir}")
 print("\nArquivos gerados:")
 print("  - 11_previsao_2026_2030.png")
 print("  - 12_analise_sensibilidade.png")
 print("  - 13_monte_carlo.png")
 print("  - 14_matriz_cenarios.png")
+
