@@ -7,9 +7,17 @@
 
 > **Version 3.0 (Final Validated)** - Complete study with structural vs cyclical decomposition, cross-validation, and real-time discovery of cycle reversal in December 2025.
 
----
+
+<<<<<<< HEAD
+##  THE CONTROVERSIAL THESIS
+=======
 
 ##  THE CONTROVERSIAL THESIS
+=======
+##  Main Discovery
+
+
+>>>>>>> 6448c728d3430a5b577feb0e68d0cf4aaadfc8e7
 
 > **Brazilian wage gains (2022-2024) were financed by squeezing corporate profits, not by productivity growth — making them fragile and reversible.**
 
@@ -26,7 +34,18 @@
 - **58% structural** (permanent): real minimum wage policy + redistribution
 - **42% cyclical** (reversible): historic low unemployment + base effect
 
+<<<<<<< HEAD
 **Projection:** If unemployment rises to 8-10%, workers lose ~7pp (cyclical component) but keep ~9pp (structural gains).
+=======
+
+**Projection:** If unemployment rises to 8-10%, workers lose ~7pp (cyclical component) but keep ~9pp (structural gains).
+=======
+
+###  Critical Alert (Feb/2026):
+**December 2025 data confirms cycle reversal:** -618 thousand jobs, with services (growth driver 2022-2024) leading layoffs.
+
+>>>>>>> 
+>>>>>>> 6448c728d3430a5b577feb0e68d0cf4aaadfc8e7
 
 ---
 
@@ -74,7 +93,14 @@
 
 ---
 
+<<<<<<< HEAD
 ##  ADVANCED ANALYSIS (New!)
+=======
+
+##  ADVANCED ANALYSIS (New!)
+=======
+
+>>>>>>> 6448c728d3430a5b577feb0e68d0cf4aaadfc8e7
 
 ###  Statistical Rigor
 - **Linear Regression:** Unemployment → Wage relationship quantified
@@ -120,9 +146,13 @@ streamlit run dashboard_salarios.py
 - Compare historical periods dynamically
 - Export simulation results
 
----
 
 ##  Complete Results
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 6448c728d3430a5b577feb0e68d0cf4aaadfc8e7
 
 | Indicator | 2012 | 2024 | Change | Interpretation |
 |-----------|------|------|--------|----------------|
@@ -139,8 +169,11 @@ streamlit run dashboard_salarios.py
 ---
 
 ##  Methodology
+<<<<<<< HEAD
 
 ### Critical Methodological Correction
+=======
+>>>>>>> 6448c728d3430a5b577feb0e68d0cf4aaadfc8e7
 
 **Error Identified and Corrected:**
 IBGE Table 5436 provides income in "real values" - **already deflated by IBGE**. Applying additional deflation causes "double deflation" error.
@@ -178,7 +211,7 @@ IBGE Table 5436 provides income in "real values" - **already deflated by IBGE**.
 
 ---
 
-## 🧪 Hypotheses Tested
+##  Hypotheses Tested
 
 | Hypothesis | Verdict | Evidence |
 |------------|---------|-----------|
@@ -308,20 +341,6 @@ python previsao_2026_2030.py
 python simulador_avancado.py
 ```
 
-**Interactive Dashboard:**
-```bash
-# Install Streamlit
-pip install streamlit plotly
-
-# Launch dashboard
-streamlit run dashboard_salarios.py
-```
-
-**Alternative (R):**
-```bash
-Rscript graficos_finais_v3_parte1.R  # Charts 1-5
-Rscript graficos_finais_v3_parte2.R  # Charts 6-10
-```
 
 This will generate:
 - **10 main charts** (graficos/01-10)
@@ -403,7 +422,7 @@ CSVs in `dados/` folder are ready for analysis. You can:
 
 ---
 
-## 🤝 Contributions
+##  Contributions
 
 Suggestions, critiques, and improvements are welcome! Open an **issue** or **pull request**.
 
@@ -455,6 +474,7 @@ This project is under MIT License. See [LICENSE](LICENSE) file for details.
 
 **Status:  COMPLETE** (February 2026)
 
+<<<<<<< HEAD
 ---
 
 ##  Study Differentials
@@ -464,6 +484,8 @@ This project is under MIT License. See [LICENSE](LICENSE) file for details.
 3. **Rigorous Validation:** Cross-references multiple sources
 4. **Original Discovery:** Profit squeeze (+5.6pp GDP)
 5. **Perfect Timing:** Captured reversal in real-time (Dec/2025)
+=======
+>>>>>>> 6448c728d3430a5b577feb0e68d0cf4aaadfc8e7
 
 ---
 
