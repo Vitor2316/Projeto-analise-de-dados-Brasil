@@ -165,11 +165,11 @@ O modelo prevê que o salário mediano se estabilize em torno de R$870-880 até 
 
 **Sobre o Autor**
 
-Vitor Ramos dos Santos é um cientista de dados especializado em análise econômica. Esta pesquisa foi conduzida de forma independente usando fontes de dados públicas. Todo o código e metodologia são de código aberto.
+Vitor Ramos dos Santos é um estudante do ensino médio técnico em informática. Esta pesquisa foi conduzida de forma independente usando fontes de dados públicas. Todo o código e metodologia são de código aberto.
 
 **Contato:** vitorramossantos8@gmail.com  
-**LinkedIn:** [Link do Perfil]  
-**GitHub:** [Link do Repositório]
+**LinkedIn:** www.linkedin.com/in/vitor-ramos2132  
+**GitHub:** https://github.com/Vitor2316/Projeto-analise-de-dados-Brasil
 
 ---
 
