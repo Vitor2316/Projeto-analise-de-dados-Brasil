@@ -180,11 +180,11 @@ The model predicts median wage stabilizing around R$870-880 by 2027 if unemploym
 
 **About the Author**
 
-Vitor Ramos dos Santos is a data scientist specializing in economic analysis. This research was conducted independently using public data sources. All code and methodology are open source.
+Vitor Ramos dos Santos is a student in a technical high school program in computer science. This research was conducted independently using public data sources. All code and methodology are open source.
 
 **Contact:** vitorramossantos8@gmail.com  
-**LinkedIn:** [Profile Link]  
-**GitHub:** [Repository Link]
+**LinkedIn:** www.linkedin.com/in/vitor-ramos2132  
+**GitHub:** https://github.com/Vitor2316/Projeto-analise-de-dados-Brasil
 
 ---
 
