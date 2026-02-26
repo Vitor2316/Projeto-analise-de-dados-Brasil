@@ -128,13 +128,6 @@ indice_salario_real = (valor_ano / valor_2012) * 100  # Sem deflação adicional
 | v2.0  | Sem deflação adicional, média simples | +22% (incompleto) |
 | v3.0  | Sem deflação, análise de mediana + percentis | +15.6% (correto) |
 
-### 3.2 Lições Metodológicas
-
-1. **SEMPRE verificar documentação** da fonte de dados (metadados IBGE)
-2. **Questionar resultados implausíveis** (perda de -42% não batia com realidade)
-3. **Validar com fontes independentes** (salário mínimo, PIB per capita)
-4. **Preferir mediana à média** para dados com distribuição assimétrica
-
 ---
 
 ## 4. PROCESSAMENTO DE DADOS
@@ -169,7 +162,7 @@ def extrair_dados_sidra(arquivo_csv):
 
 ### 4.2 Tratamento da Tabela 7535 (Percentis)
 
-**Desafio:** Tabela usa "preços médios do ano" - cada ano em base diferente.
+ Tabela usa "preços médios do ano" - cada ano em base diferente.
 
 **Solução:** Deflacionar para base comum (2012):
 ```python
