@@ -122,7 +122,7 @@ A Tabela 5436 do IBGE fornece rendimentos em "valores reais" - **já deflacionad
 
 ---
 
-## 🧪 Hipóteses Testadas
+##  Hipóteses Testadas
 
 | Hipótese | Veredicto | Evidência |
 |----------|-----------|-----------|
@@ -307,7 +307,7 @@ Os CSVs na pasta `dados/` estão prontos para análise. Você pode:
 
 ---
 
-## 🤝 Contribuições
+##  Contribuições
 
 Sugestões, críticas e melhorias são bem-vindas! Abra uma **issue** ou **pull request**.
 
