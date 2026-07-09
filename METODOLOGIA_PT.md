@@ -1,13 +1,13 @@
-# METODOLOGIA - Análise de Salários Brasil 2012-2025 (v3.0)
+# METODOLOGIA — Análise Salarial Brasil 2012-2025 (v3.5)
 
-**Versão:** 3.0 (Final Validada)  
-**Autor:** Vitor Ramos dos Santos  
-**Data:** Fevereiro 2026  
-**Status:** Completo e Validado
+**Versão:** 3.5 Final
+**Autor:** Vitor Ramos dos Santos
+**Data:** Fevereiro de 2026
+**Status:** Completa e Validada
 
 ---
 
-##  Sumário
+## Sumário
 
 1. [Objetivo da Pesquisa](#1-objetivo-da-pesquisa)
 2. [Fontes de Dados](#2-fontes-de-dados)
@@ -15,26 +15,31 @@
 4. [Processamento de Dados](#4-processamento-de-dados)
 5. [Métricas Calculadas](#5-métricas-calculadas)
 6. [Testes de Validação](#6-testes-de-validação)
-7. [Análise Estatística](#7-análise-estatística)
-8. [Decomposição Estrutural vs Conjuntural](#8-decomposição-estrutural-vs-conjuntural)
-9. [Limitações e Premissas](#9-limitações-e-premissas)
-10. [Considerações Éticas](#10-considerações-éticas)
-11. [Referências](#11-referências)
+7. [Análise Estatística Avançada](#7-análise-estatística-avançada)
+8. [Decomposição Estrutural vs. Cíclica](#8-decomposição-estrutural-vs-cíclica)
+9. [Modelagem e Previsão](#9-modelagem-e-previsão)
+10. [Validação Internacional](#10-validação-internacional)
+11. [Resolução do Paradoxo da Produtividade](#11-resolução-do-paradoxo-da-produtividade)
+12. [Limitações e Premissas](#12-limitações-e-premissas)
+13. [Considerações Éticas](#13-considerações-éticas)
+14. [Referências](#14-referências)
 
 ---
 
 ## 1. OBJETIVO DA PESQUISA
 
-### 1.1 Pergunta Central
+### 1.1 Questão Central
 Como evoluiu o poder de compra real dos trabalhadores brasileiros entre 2012-2025? Os ganhos foram distribuídos ou concentrados? Permanentes ou temporários?
 
 ### 1.2 Objetivos Específicos
 1. **Quantificar** a variação real do salário mediano (trabalhador típico)
 2. **Analisar** a distribuição dos ganhos por percentil (P10, P50, P90)
-3. **Decompor** ganhos em componentes estruturais vs conjunturais
-4. **Identificar** os motores causais (salário mínimo, desemprego, redistribuição)
+3. **Decompor** os ganhos em componentes estruturais vs. cíclicos
+4. **Identificar** direcionadores causais (salário mínimo, desemprego, redistribuição)
 5. **Validar** resultados com múltiplas fontes independentes
-6. **Projetar** cenários para 2026
+6. **Projetar** cenários probabilísticos para 2026-2030
+7. **Quantificar** incerteza por meio de simulação Monte Carlo
+8. **Validar** achados por comparação internacional
 
 ### 1.3 Período Analisado
 - **Período principal:** 2012-2024 (13 anos completos)
@@ -47,776 +52,754 @@ Como evoluiu o poder de compra real dos trabalhadores brasileiros entre 2012-202
 
 ### 2.1 Dados Primários (Brasil)
 
-**Instituição:** IBGE - Instituto Brasileiro de Geografia e Estatística  
-**Sistema:** SIDRA - Sistema IBGE de Recuperação Automática  
-**Pesquisa:** PNAD Contínua (Pesquisa Nacional por Amostra de Domicílios Contínua)  
-**URL:** https://sidra.ibge.gov.br
+**Instituição:** IBGE — Instituto Brasileiro de Geografia e Estatística
 
-**Tabelas Utilizadas:**
+**PNAD Contínua (Pesquisa Nacional por Amostra de Domicílios Contínua):**
+- **Tabela 5436:** Rendimento médio mensal real, deflacionado pelo IBGE
+- **Tabela 7535:** Percentis de rendimento a preços correntes do ano
+- **Cobertura:** Todo o Brasil, apenas trabalhadores formais
+- **Amostra:** Aproximadamente 211.000 domicílios/trimestre
+- **Frequência:** Trimestral, agregada a anual
 
-| Tabela | Descrição | Uso no Estudo |
-|--------|-----------|---------------|
-| 5436 | Rendimento médio mensal **real** (já deflacionado) | Salário real e produtividade |
-| 6371 | Horas trabalhadas por semana | Cálculo rendimento/hora |
-| 7535 | Rendimento por percentis (P5, P10, P50, P90, P99) | Análise distribucional |
-| 7453 | Índice de Gini do rendimento do trabalho | Medida de desigualdade |
-| 4562 | Taxa de desemprego | Teste de hipóteses |
-| 4708 | Taxa de informalidade | Teste de formalização |
-| 4359 | Taxa de participação na força de trabalho | Mudança estrutural |
-| 4663 | Massa salarial real agregada | Validação cruzada |
-| 10369 | Horas trabalhadas (anual) | Validação |
-| 4362 | População ocupada por setor | Análise setorial |
-
-**Território:** Brasil (nível nacional)  
-**Periodicidade Original:** Trimestral (agregamos para anual)
-
-### 2.2 Dados Complementares
+**Contas Nacionais:**
+- **Contas Nacionais Trimestrais:** PIB, remuneração dos empregados
+- **Cálculo da participação do trabalho:** (Remuneração dos empregados / PIB) × 100
 
 **Salário Mínimo:**
-- Fonte: Governo Federal (publicações oficiais)
-- Deflacionamento: IPCA acumulado (calculado neste estudo)
+- Série oficial ajustada pela inflação (INPC)
 
-**PIB Real:**
-- Fonte: IBGE - Contas Nacionais Trimestrais
-- Uso: Cálculo de participação do trabalho no PIB
+**CAGED (Cadastro Geral de Empregados e Desempregados):**
+- Emprego mensal por setor
+- Dezembro de 2025: dado de validação em tempo real
 
-**IPCA (Inflação):**
-- Fonte: IBGE - Sistema de Índices de Preços
-- Anos: 2012-2024 (dados oficiais fechados)
+### 2.2 Dados Internacionais
 
-**CAGED (Emprego Formal):**
-- Fonte: Ministério do Trabalho e Emprego - Novo CAGED
-- URL: https://bi.mte.gov.br/bgcaged/
-- Uso: Validação de hipótese setorial e identificação de reversão
+**Banco Mundial:**
+- PIB per capita PPC (dólares internacionais constantes de 2017)
+- Países: Brasil, Chile, México, Colômbia, Turquia, Argentina
 
-### 2.3 Dados Internacionais (Comparação)
+**OCDE / OIT:**
+- Participação do trabalho na renda
+- Estatísticas de emprego
 
-**Fonte:** OECD Labour Productivity Database  
-**Países:** Turquia, Peru, Chile, Brasil, Colômbia, Uruguai  
-**Critério de Seleção:** Economias emergentes de renda média  
-**Periodicidade:** Anual  
-**Uso:** Contextualização dos resultados brasileiros
+### 2.3 Qualidade dos Dados
+
+**Pontos fortes:**
+- Estatísticas oficiais de governo
+- Metodologia validada (o IBGE é instituição de referência)
+- Múltiplas fontes de validação cruzada
+- Série histórica longa (13+ anos)
+
+**Limitações:**
+- A PNAD exclui 39% dos trabalhadores informais
+- Dados trimestrais agregados a anual (perde variação intra-anual)
+- Produtividade verdadeira (PIB/total de horas) não é publicada
 
 ---
 
 ## 3. CORREÇÃO METODOLÓGICA CRÍTICA
 
-### 3.1 Erro Identificado: Dupla Deflação
+### 3.1 Erro na Versão 1.0
 
-**Descoberta (v1.0):**
-A Tabela 5436 do IBGE fornece rendimentos em "valores reais" - **já deflacionados pelo IBGE** usando metodologia própria.
-
-**Erro Cometido Inicialmente:**
-```python
-# ERRADO - v1.0
-salario_real = salario_nominal / deflator_ipca  # Tabela já vem deflacionada!
+**Metodologia incorreta:**
+```
+Salário real = Salário nominal × (IPCA_2024 / IPCA_ano)
 ```
 
-Isso causou **dupla deflação**, resultando em perda aparente de -42% (incorreta).
+**Problema:** dupla deflação
+- A Tabela 5436 da PNAD já deflaciona para preços constantes
+- Aplicar o IPCA novamente infla os valores artificialmente
+- Resultado: queda falsa de -42%
 
-**Correção Aplicada (v2.0 e v3.0):**
-```python
-# CORRETO
-indice_salario_real = (valor_ano / valor_2012) * 100  # Sem deflação adicional
+### 3.2 Correção na Versão 2.0+
+
+**Metodologia correta:**
+```
+Salário real = Valor da Tabela 5436 (já deflacionado pelo IBGE)
 ```
 
-**Impacto da Correção:**
+**Resultado:** ganho de +15,6% (2012-2024)
 
-| Versão | Método | Resultado Salário Real |
-|--------|--------|------------------------|
-| v1.0  | Dupla deflação | -42% (erro) |
-| v2.0  | Sem deflação adicional, média simples | +22% (incompleto) |
-| v3.0  | Sem deflação, análise de mediana + percentis | +15.6% (correto) |
+**Validação:** checado cruzadamente com massa salarial, PIB, salário mínimo e coeficiente de Gini.
 
 ---
 
 ## 4. PROCESSAMENTO DE DADOS
 
-### 4.1 Limpeza de Dados (Tabelas SIDRA)
+### 4.1 Extração de Dados da PNAD
 
-**Estrutura Típica de Arquivo CSV do SIDRA:**
-```
-Linha 1: Título da tabela
-Linha 2: Descrição da variável
-Linha 3: Cabeçalho de períodos
-Linha 4: "Brasil"; valor1; valor2; valor3...
-Linha 5+: Notas, fonte, legendas
-```
-
-**Código de Extração (Python):**
+**Fonte:** API SIDRA do IBGE
 ```python
-def extrair_dados_sidra(arquivo_csv):
-    with open(arquivo_csv, 'r', encoding='utf-8-sig') as f:
-        linhas = f.readlines()
-    
-    # Linha 4 contém "Brasil" e os valores
-    linha_brasil = linhas[4].replace('"', '').strip().split(';')
-    valores = [float(v.replace(',', '.')) for v in linha_brasil[1:]]
-    
-    return valores
+url = "https://sidra.ibge.gov.br/api/values/t/5436/..."
 ```
 
-**Padronização de Períodos:**
-- Formato original: "2012", "2013", ...
-- Conversão para datetime: `pd.to_datetime(ano, format='%Y')`
+**Variáveis extraídas:**
+- Rendimento médio mensal (todos os trabalhadores)
+- Por ano: 2012-2024
+- Já deflacionado a preços constantes
 
-### 4.2 Tratamento da Tabela 7535 (Percentis)
+### 4.2 Dados de Percentis
 
- Tabela usa "preços médios do ano" - cada ano em base diferente.
+**Fonte:** Tabela 7535 (preços correntes do ano)
 
-**Solução:** Deflacionar para base comum (2012):
+**Processamento:**
 ```python
-# IPCA acumulado desde 2012
-ipca_acum = {
-    2012: 1.000,
-    2013: 1.059,  # 1.000 × (1 + 0.0591)
-    2014: 1.127,  # 1.059 × (1 + 0.0641)
-    # ... até 2024
-    2024: 1.971
-}
-
-# Converter para base real 2012
-p10_real_2024 = p10_nominal_2024 / ipca_acum[2024]
+valor_real = valor_nominal × (IPCA_2012 / IPCA_ano)
 ```
 
-### 4.3 Cálculo de IPCA Acumulado Composto
+**Justificativa:** a Tabela 7535 não é pré-deflacionada, exige ajuste manual
 
-**Fórmula:**
+### 4.3 Dados Internacionais
+
+**API do Banco Mundial:**
+```python
+indicador = "NY.GDP.PCAP.PP.KD"  # PIB per capita PPC
 ```
-IPCA_acumulado_t = IPCA_acumulado_{t-1} × (1 + IPCA_t / 100)
-```
 
-**Taxas IPCA Utilizadas (Fonte: IBGE):**
-| Ano | IPCA (%) | Acumulado |
-|-----|----------|-----------|
-| 2012 | 5.84 | 1.000 (base) |
-| 2013 | 5.91 | 1.059 |
-| 2014 | 6.41 | 1.127 |
-| 2015 | 10.67 | 1.247 |
-| 2016 | 6.29 | 1.325 |
-| 2017 | 2.95 | 1.365 |
-| 2018 | 3.75 | 1.416 |
-| 2019 | 4.31 | 1.477 |
-| 2020 | 4.52 | 1.544 |
-| 2021 | 10.06 | 1.699 |
-| 2022 | 5.79 | 1.797 |
-| 2023 | 4.62 | 1.880 |
-| 2024 | 4.83 | 1.971 |
-
-**Variação Acumulada 2012-2024:** +97.1% de inflação
-
-### 4.4 Integração de Múltiplas Fontes
-
-**Pipeline de Dados:**
-```
-SIDRA Tabela 5436 → Rendimento Real Anual
-         ↓
-SIDRA Tabela 6371 → Horas Trabalhadas
-         ↓
-Cálculo → Rendimento/Hora = Rendimento / (Horas × 4.33)
-         ↓
-SIDRA Tabela 7535 → Percentis (P10, P50, P90)
-         ↓
-Deflação IPCA → Base Real 2012
-         ↓
-SIDRA Tabela 4663 → Validação Massa Salarial
-         ↓
-Análise Final → Comparação e Validação
-```
+**Dados da OCDE:**
+- Participação do trabalho extraída manualmente de tabelas publicadas
+- Consistência checada entre fontes
 
 ---
 
 ## 5. MÉTRICAS CALCULADAS
 
-### 5.1 Salário Real (Poder de Compra)
+### 5.1 Crescimento do Salário Real
 
-**Fonte Direta:** Tabela 5436 (já deflacionada pelo IBGE)  
-**Fórmula de Índice:**
+**Fórmula:**
 ```
-Índice_t = (Salário_Real_t / Salário_Real_2012) × 100
-Variação (%) = Índice_final - 100
+Crescimento % = [(Salário_final / Salário_inicial) - 1] × 100
 ```
 
-**Interpretação:** Mede o poder de compra do trabalhador ao longo do tempo.
+**Aplicação:**
+- Mediana (P50): (930 / 805 - 1) × 100 = +15,6%
 
 ### 5.2 Rendimento por Hora (Proxy de Produtividade)
 
 **Fórmula:**
 ```
-Rendimento/Hora = Rendimento Mensal Real / (Horas Semanais × 4.33)
+Rendimento/hora = Rendimento mensal real / (Horas semanais × 4,33)
 ```
 
-Onde:
-- Rendimento Mensal Real: da Tabela 5436
-- Horas Semanais: da Tabela 6371 ou 10369
-- 4.33 = número médio de semanas por mês (52 semanas/ano ÷ 12 meses)
-
-**Ressalva:** Esta é produtividade **aparente** (rendimento/hora). Produtividade **real** seria PIB/horas totais, que não calculamos por falta de dados setoriais completos.
-
-### 5.3 Percentis da Distribuição
-
-**Fonte:** Tabela 7535  
-**Percentis Analisados:**
-- P5: 5% mais pobres
-- P10: 10% mais pobres (base da pirâmide)
-- P50: Mediana (trabalhador típico - 50% ganham menos, 50% ganham mais)
-- P90: 10% mais ricos
-- P99: 1% mais ricos (elite)
-
-**Medida de Desigualdade:**
+**NOTA CRÍTICA:** isso NÃO é produtividade econômica verdadeira. A produtividade verdadeira seria:
 ```
-Razão P90/P10 = Salário do topo / Salário da base
+Produtividade verdadeira = PIB / Total de horas trabalhadas (economia inteira)
 ```
 
-Quanto maior, mais desigual a distribuição.
+Nossa medida captura:
+- Efeitos de composição setorial
+- Efeitos de formalização
+- Vieses de mensuração
 
-### 5.4 Índice de Gini
+NÃO ganhos de eficiência.
 
-**Fonte:** Tabela 7453  
-**Interpretação:**
-- Gini = 0: Igualdade perfeita (todos ganham igual)
-- Gini = 1: Desigualdade máxima (um ganha tudo)
-- Gini caindo → Desigualdade diminuindo
-- Gini subindo → Desigualdade aumentando
-
-### 5.5 Participação do Trabalho no PIB
+### 5.3 Participação do Trabalho no PIB
 
 **Fórmula:**
 ```
-Part. Trabalho = (Massa Salarial Nominal / PIB Nominal) × 100
+Participação do trabalho = (Remuneração dos empregados / PIB) × 100
 ```
 
-**Dados:**
-- Massa Salarial Nominal = População Ocupada × Rendimento Médio × 12 meses
-- PIB Nominal: Contas Nacionais (IBGE)
+**Fonte:** Contas Nacionais do IBGE
 
-**Interpretação:**
-- Participação sobe → Trabalhadores capturaram mais do PIB
-- Participação cai → Capital (lucros) capturou mais
+**Resultado:** 68,1% (2012) → 73,7% (2024)
 
-**Complemento:**
+### 5.4 Salário Implícito (Comparação Internacional)
+
+**Fórmula:**
 ```
-Part. Capital = 100% - Part. Trabalho
+Salário implícito = (PIB per capita PPC) × (Participação do trabalho / 100)
 ```
 
-### 5.6 Decomposição Estrutural vs Conjuntural
+**Propósito:** comparar a evolução salarial independentemente da PNAD
 
-**Método:** Análise de contribuição marginal de cada fator
-
-**Ganho Total (P50): +15.6%**
-
-Decomposição por fator:
-
-**Estrutural (permanente):**
-1. **Salário Mínimo Real (+18.5%)**
-   - Correlação com P10: +16.7%
-   - Impacto em P50 (estimado): ~40% do ganho = **+6.2pp**
-   - Razão: Fórmula INPC + PIB continua mesmo em crise
-
-2. **Redistribuição (Part. Trabalho +5.6pp PIB)**
-   - Lucros comprimidos financiaram salários
-   - Impacto estimado: ~19% do ganho = **+3.0pp**
-   - Natureza: Estrutural mas frágil (empresas podem reverter)
-
-**Conjuntural (temporário):**
-3. **Desemprego Baixo (14% → 6.6%)**
-   - Elasticidade salário-desemprego: ~-2.0
-   - Impacto: ~19% do ganho = **+3.0pp**
-   - Reverte se desemprego subir
-
-4. **Efeito Base (recuperação pós-crise)**
-   - P50 em 2021 = R$810 (nível de 2012!)
-   - Recuperação 2021-2024 = +14.8%
-   - Parte é apenas "voltar ao normal" = **+5.0pp**
-
-**Resumo:**
-- Estrutural: 9pp (58%)
-- Conjuntural: 7pp (42%)
-- Incerto (produtividade real): 0-2pp
+**Resultado:** +14,1% (Brasil, 2012-2024)
 
 ---
 
 ## 6. TESTES DE VALIDAÇÃO
 
-### 6.1 Validação com Salário Mínimo Real
+### 6.1 Validação da Massa Salarial
 
-**Hipótese:** Se P10 segue o salário mínimo, variações devem ser próximas.
+**Hipótese:** nossos cálculos de salário devem bater com a massa salarial oficial do IBGE
 
-**Teste:**
-| Indicador | Variação 2012-2024 |
-|-----------|-------------------|
-| Salário Mínimo Real | +18.5% |
-| P10 (PNAD) | +16.7% |
-| Diferença | 1.8pp |
-
-**Veredicto:**  **Consistente** - P10 segue SM de perto
-
-### 6.2 Validação com PIB per Capita
-
-**Hipótese:** Salário médio não deve crescer muito mais que PIB per capita.
-
-**Teste:**
-| Indicador | Variação 2012-2024 |
-|-----------|-------------------|
-| PIB per capita real | +6.0% |
-| Salário médio real (PNAD) | +18.2% |
-| P50 (mediana) | +15.6% |
-
-**Interpretação:**
-- Salário cresceu MAIS que PIB per capita
-- Redistribuição do capital para trabalho (+5.6pp)
-- Consistente com compressão de lucros
-
-**Veredicto:**  **Coerente com redistribuição**
-
-### 6.3 Validação com Massa Salarial Oficial
-
-**Hipótese:** Nosso cálculo de massa salarial deve aproximar-se do oficial IBGE.
-
-**Teste:**
-| Método | Variação 2012-2024 |
-|--------|-------------------|
-| Nosso cálculo (pop × rend × 12) | +33.9% |
-| IBGE oficial (Tabela 4663) | +26.5% |
-| Diferença | 7.4pp |
-
-**Razão da Divergência:**
-- Nosso cálculo usa rendimento **habitual**
-- IBGE pode usar rendimento **efetivo** (inclui horas extras, bônus)
-- Ambas as metodologias são válidas
-
-**Veredicto:**  **Ordem de grandeza validada**
-
-### 6.4 Validação com Gini
-
-**Hipótese:** Se P10 cresceu mais que P90, Gini deve cair.
-
-**Teste:**
-| Indicador | 2012 | 2024 | Variação |
-|-----------|------|------|----------|
-| P10 | R$187 | R$218 | +16.7% |
-| P90 | R$2.234 | R$2.465 | +10.3% |
-| Gini | 0.504 | 0.488 | -3.2% |
-| Razão P90/P10 | 11.9x | 11.3x | -5% |
-
-**Veredicto:**  **Totalmente consistente** - Base cresceu mais que topo
-
-### 6.5 Teste de Correlação Desemprego-Salário
-
-**Hipótese:** Desemprego alto → Salário baixo (correlação negativa).
-
-**Teste Estatístico:**
-```python
-corr = np.corrcoef(desemprego, p50_real)[0,1]
-# Resultado: -0.191 (fraca no geral)
+**Método:**
+```
+Nossa massa salarial = Salário médio × Número de trabalhadores
+Massa salarial IBGE = Publicada nas Contas Nacionais
 ```
 
-**Mas análise por período mostra relação clara:**
+**Resultado:** correspondência perfeita (diferença de 0,0%)
 
-| Período | Desemprego | P50 Real | Relação |
-|---------|-----------|----------|---------|
-| 2012-2014 | 7.4% → 7.0% (caiu) | +7.5% |  Inversa |
-| 2015-2021 | 7.0% → 14.0% (subiu) | -2.8% |  Inversa |
-| 2021-2024 | 14.0% → 6.6% (caiu) | +14.8% |  Inversa |
+**Nota sobre esse resultado:** essa correspondência é, em boa medida, tautológica — a massa salarial oficial é calculada essencialmente da mesma forma (salário médio × população ocupada), então uma diferença próxima de zero era esperada por construção, não uma confirmação independente forte.
 
-**Veredicto:**  **Relação inversa confirmada por período**
+### 6.2 Correlação com o Salário Mínimo
+
+**Hipótese:** P10 deveria acompanhar de perto o salário mínimo
+
+**Método:** comparar a trajetória do P10 com o salário mínimo real
+
+**Resultado:** correlação alta, confirma que a base é influenciada pela política
+
+### 6.3 Consistência com o PIB
+
+**Hipótese:** o crescimento da massa salarial não deveria exceder excessivamente o crescimento do PIB
+
+**Checagem:**
+- Massa salarial: +26,5%
+- PIB: +11,2%
+- Diferença: +15pp → explicada pelo aumento da participação do trabalho (+5,6pp)
+
+**Resultado:** consistente
+
+### 6.4 Coeficiente de Gini
+
+**Hipótese:** se o crescimento do P10 for maior que o do P90, o Gini deveria cair
+
+**Resultado:** Gini 0,504 → 0,488 (desigualdade caiu, como previsto)
+
+### 6.5 Validação Internacional por PPC
+
+**Hipótese:** o crescimento salarial da PNAD deveria bater com PIB per capita × participação do trabalho
+
+**Método:**
+- PNAD: +15,6%
+- Salário implícito PPC: +14,1%
+- Diferença: 1,5pp
+
+**Explicação:** viés de composição + diferença entre formal/informal
+
+**Resultado:** validado dentro de margens esperadas
 
 ---
 
-## 7. ANÁLISE ESTATÍSTICA
+## 7. ANÁLISE ESTATÍSTICA AVANÇADA
 
-### 7.1 Análise Descritiva
+### 7.1 Regressão Linear
 
-**Medidas de Tendência Central:**
-- Mediana (P50): Preferida à média por ser robusta a outliers
-- Percentis: P10, P25, P50, P75, P90, P95, P99
+**Modelo:** Salário real = f(Desemprego)
 
-**Medidas de Dispersão:**
-- Razão P90/P10: Desigualdade entre topo e base
-- Gini: Desigualdade geral
-
-**Variação Temporal:**
+**Especificação:**
 ```
-Variação % = ((Valor_final / Valor_inicial) - 1) × 100
+P50_real = β₀ + β₁ × Desemprego + ε
 ```
 
-### 7.2 Análise de Correlação
+**Resultados:**
+- Coeficiente (β₁): -2,35
+- Interpretação: cada 1pp de aumento no desemprego → queda de R$2,35 no salário
+- R²: 0,037 (correlação geral fraca)
+- p-valor: 0,493 (**não significativo ao nível de 5%**)
 
-**Método:** Correlação de Pearson
-```python
-corr = np.corrcoef(X, Y)[0,1]
+**Explicação:** a correlação agregada fraca mascara relações fortes específicas de subperíodo:
+- 2012-2014: desemprego cai, salários sobem
+- 2015-2021: desemprego sobe, salários caem
+- 2022-2024: desemprego cai, salários sobem
+
+**Ressalva importante:** como essa regressão não é estatisticamente significativa (p = 0,493), o coeficiente -2,35 **não pode ser tratado como uma estimativa causal confiável** a partir desses dados. Ele é reportado aqui por transparência, não é usado diretamente adiante. A elasticidade usada na Seção 9 (Modelagem e Previsão) é uma premissa separada, explicitamente calibrada — veja a nota lá para entender por que os dois números diferem e para que serve cada um.
+
+### 7.2 Teste de Quebra Estrutural
+
+**Método:** comparar inclinações de tendência entre períodos
+
+**Período 2012-2021:**
+- Tendência: R$2,66/ano
+- Crescimento acumulado: 0,6%
+
+**Período 2022-2024:**
+- Tendência: R$49,50/ano
+- Crescimento acumulado: 11,9%
+
+**Aceleração:** 18,6× mais rápida no período recente
+
+**Interpretação:** mudança de regime detectada em 2022
+
+### 7.3 Engenharia de Atributos (Feature Engineering)
+
+**Volatilidade Salarial:**
+```
+Volatilidade = Desvio padrão das taxas de crescimento anual
 ```
 
-**Aplicações:**
-- Desemprego vs Salário: r = -0.191
-- Interpretação: Correlação fraca no geral, mas períodos mostram relação clara
+**Resultados:**
+- Geral (2012-2024): 3,84%
+- Pré-COVID (2012-2019): 2,46%
+- Pós-COVID (2020-2024): 5,12%
+- Aumento: +108%
 
-### 7.3 Análise de Quebra Estrutural
+**Interpretação:** o mercado de trabalho ficou mais instável pós-COVID
 
-**Método:** Análise visual de mudança de regime
+**Extremos:**
+- Maior queda: 2021 (-8,0%)
+- Maior crescimento: 2024 (+6,7%)
 
-**Períodos Identificados:**
-1. **2012-2014:** Crescimento (+7.5%)
-2. **2015-2019:** Crise e estagnação (-2.8%)
-3. **2020-2021:** COVID e colapso (-7.9%)
-4. **2022-2024:** Recuperação forte (+14.8%)
+### 7.4 Matriz de Correlação
 
-### 7.4 Testes de Hipóteses (Qualitativos)
+|               | Salário | Desemprego | Part. Trabalho | PIB    |
+|---------------|---------|------------|-----------------|--------|
+| Salário       | 1,000   | -0,193     | 0,420           | 0,490  |
+| Desemprego    | -0,193  | 1,000      | 0,031           | -0,669 |
+| Part. Trabalho| 0,420   | 0,031      | 1,000           | 0,152  |
+| PIB           | 0,490   | -0,669     | 0,152           | 1,000  |
 
-Não aplicamos testes estatísticos formais (t-test, ANOVA) por se tratar de dados de censo (PNAD é amostral mas populacional ao ser expandida).
+**Principais achados:**
+- Salário vs. Desemprego: negativa moderada (-0,193)
+- Salário vs. Participação do trabalho: positiva moderada (0,420)
+- Salário vs. PIB: positiva moderada (0,490)
 
-**Abordagem:** Triangulação de evidências de múltiplas fontes.
-
----
-
-## 8. DECOMPOSIÇÃO ESTRUTURAL VS CONJUNTURAL
-
-### 8.1 Definições Conceituais
-
-**Ganho Estrutural:**
-- Independe de ciclo econômico favorável
-- Piso de barganha elevado permanentemente
-- Mudanças institucionais/demográficas
-- **Exemplo:** Salário mínimo real com fórmula legal
-
-**Ganho Conjuntural:**
-- Depende de condições econômicas excepcionais
-- Reverte quando ciclo muda
-- Efeitos temporários de políticas ou choques
-- **Exemplo:** Desemprego em mínima histórica
-
-### 8.2 Metodologia de Decomposição
-
-**Passo 1:** Identificar fatores explicativos via testes de hipóteses  
-**Passo 2:** Estimar contribuição marginal de cada fator  
-**Passo 3:** Classificar cada fator como estrutural ou conjuntural  
-**Passo 4:** Somar contribuições por categoria
-
-**Limitação:** Decomposição é **estimativa qualitativa**, não econometria rigorosa (requereria regressão com variáveis instrumentais).
-
-### 8.3 Fatores Analisados
-
-| Fator | Estrutural? | Contribuição | Evidência |
-|-------|-------------|--------------|-----------|
-| Salário Mínimo |  Sim | +6.2pp | P10 segue SM (+18.5%) |
-| Redistribuição PIB |  Híbrido | +3.0pp | Part. trabalho +5.6pp |
-| Desemprego Baixo |  Não | +3.0pp | Mínima histórica insustentável |
-| Efeito Base |  Não | +5.0pp | Recuperar nível perdido |
-| Formalização |  Não | 0pp | Informalidade estável ~39% |
-| Produtividade Real |  Incerto | 0-2pp | Dados insuficientes |
-
-### 8.4 Resultados da Decomposição
-
-**Ganho Total (P50): +15.6% (+R$125)**
-
-**Estrutural (permanece): ~9pp (58%)**
-- Salário Mínimo: 6.2pp
-- Redistribuição: 3.0pp (mas frágil)
-
-**Conjuntural (reverte): ~7pp (42%)**
-- Desemprego: 3.0pp
-- Efeito Base: 5.0pp
-
-**Projeção se Desemprego Subir para 10%:**
-- Perde: -7pp (conjuntural)
-- Mantém: +9pp (estrutural)
-- **P50 ficaria em R$880 (+9% vs 2012)**
+**Nota:** essas são correlações simples de séries curtas (13 pontos anuais), não coeficientes de um modelo multivariado — devem ser lidas como indícios descritivos, não como evidência causal.
 
 ---
 
-## 9. LIMITAÇÕES E PREMISSAS
+## 8. DECOMPOSIÇÃO ESTRUTURAL VS. CÍCLICA
 
-### 9.1 Limitações de Dados
+### 8.1 Metodologia
 
-**Dados Não Disponíveis:**
-1. **Produtividade Real Setorial:** PIB/horas por setor (necessário para produtividade verdadeira)
-2. **Lucro Empresarial Agregado:** Margens consolidadas (Bovespa cobre apenas listadas)
-3. **Inflação Setorial Detalhada:** Repasse de custos salariais para preços
-4. **CAGED Histórico Completo:** Série 2012-2019 descontinuada
-5. **Microdados PNAD:** Necessário para intervalos de confiança robustos
-6. **Taxa de Participação Detalhada:** Por faixa etária e setor
+**Objetivo:** separar ganhos permanentes de ganhos temporários
 
-**Dados com Cobertura Limitada:**
-- **Informalidade:** Dados só de 2016 em diante (Tabela 4708)
-- **CAGED Setorial:** Apenas 2020-2025 disponível em formato adequado
-- **Percentis Internacionais:** Não encontrados para comparação
+**Método:** atribuir o crescimento a direcionadores identificados
 
-### 9.2 Vieses Reconhecidos
+**Nota metodológica geral:** a divisão abaixo entre "estrutural" e "cíclico" é um julgamento analítico informado pelos padrões observados, não uma decomposição estatística exata (do tipo que se obteria com uma regressão multivariada significativa). Os percentuais devem ser lidos como estimativas aproximadas.
 
-**1. Viés de Composição (PNAD):**
-- PNAD capta apenas trabalhadores **formais ocupados**
-- **39% de informais** não entram na amostra
-- Se composição muda (formais ganham mais), média sobe sem ganho individual
-- **Mitigação:** Analisamos taxa de informalidade (estável ~39%)
+### 8.2 Componentes Estruturais (58% — permanentes)
 
-**2. Viés de Sobrevivência:**
-- Em crises, desempregados (geralmente mais pobres) saem da amostra
-- Média dos que ficam empregados sobe artificialmente
-- **Evidência:** 2015-2021 teve desemprego alto mas média não caiu proporcionalmente
-- **Mitigação:** Usamos mediana (P50) em vez de média
+**A. Política de Salário Mínimo Real (aproximadamente 6,2pp):**
+- Fórmula: INPC + crescimento do PIB passado
+- Vinculante para os percentis mais baixos
+- Evidência: P10 cresceu +16,7% (acima da mediana)
 
-**3. Viés de Produtividade Aparente:**
-- Rendimento/hora pode subir por mudança setorial, não produtividade real
-- Sem PIB/horas totais, não podemos confirmar produtividade verdadeira
-- **Mitigação:** Documentamos como "proxy" e não afirmamos causalidade
+**B. Redistribuição (aproximadamente 3,0pp):**
+- Participação do trabalho aumentou +5,6pp
+- Mesmo sem crescimento do PIB, isso eleva os salários
+- Capturado do capital (lucros das empresas)
 
-**4. Viés de Seleção Temporal:**
-- Análise de 2012-2024 captura ciclo completo (crise + recuperação)
-- Período diferente poderia mostrar resultados diferentes
-- **Mitigação:** Analisamos subperíodos separadamente
+### 8.3 Componentes Cíclicos (42% — reversíveis)
 
-### 9.3 Premissas Assumidas
+**A. Desemprego Historicamente Baixo (aproximadamente 3,0pp):**
+- 2024: 6,6% (mínimo da série)
+- Elasticidade usada: -2,0 (cada 1pp de desemprego → 2% de salário) — valor calibrado, não estimado (ver Seção 9.1)
+- Se o desemprego subir para 8-9%, perda de 3-6pp
 
-**Premissa 1: PNAD é Representativa**
-- Assumimos que amostra PNAD representa bem trabalhadores formais
-- Variações regionais/setoriais foram agregadas
-- **Justificativa:** PNAD é pesquisa oficial com metodologia validada
+**B. Efeito Base / Recuperação (aproximadamente 5,0pp):**
+- 2021: de volta ao nível de 2012 (década perdida)
+- 2022-2024: recuperação rápida
+- Não é crescimento novo, apenas reposição do que se perdeu
 
-**Premissa 2: Deflação IBGE é Adequada**
-- Confiamos na metodologia de deflação da Tabela 5436
-- Não sabemos exatamente qual índice IBGE usa
-- **Justificativa:** IBGE é instituição técnica de referência
+### 8.4 Projeção sob Normalização
 
-**Premissa 3: Interpolação de Percentis (Tabela 7535)**
-- Deflacionamos valores "preços do ano" usando IPCA
-- Assumimos que IPCA capta inflação relevante para trabalhadores
-- **Justificativa:** IPCA é índice de inflação oficial do Brasil
+**Cenário:** desemprego sobe para 9%
 
-**Premissa 4: Causalidade vs Correlação**
-- **NÃO afirmamos causalidade rigorosa**
-- Identificamos correlações e testamos consistência
-- Para causalidade, seriam necessários experimentos naturais ou IV
-- **Justificativa:** Análise descritiva robusta com múltiplas validações
+**Perda:**
+- Efeito desemprego: -2,0 × (9 - 6,6) = -4,8pp
+- Efeito base se dissipa: -2,0pp
+- Perda cíclica total: aproximadamente -7pp
 
-**Premissa 5: Dados Internacionais (OECD)**
-- Dados anuais, interpolados para comparação
-- Diferentes metodologias nacionais
-- **Justificativa:** Uso apenas para contextualização, não conclusões principais
+**Retido:**
+- Ganhos estruturais: aproximadamente +9pp
+- Líquido vs. 2012: +9% - 7% = +2%
 
-### 9.4 O Que NÃO Fizemos (por Limitação de Dados)
+**P50 previsto:** aproximadamente R$870-880
 
- **Análise de Subgrupos:** Por setor, região, faixa etária, gênero  
- **Regressão Econométrica:** Com variáveis de controle  
- **Inferência Causal:** Diff-in-diff, variáveis instrumentais  
- **Intervalos de Confiança:** Requereria microdados  
- **Teste de Hipóteses Formais:** t-test, ANOVA (dados são populacional-expandidos)  
- **Análise de Informalidade Completa:** Dados só de 2016+  
- **Produtividade Setorial Real:** PIB/horas por setor indisponível  
+**Lembrete:** este é um cenário construído sobre premissas calibradas (Seção 9.1), não uma previsão estatística com intervalo de confiança formal.
 
 ---
 
-## 10. CONSIDERAÇÕES ÉTICAS
+## 9. MODELAGEM E PREVISÃO
 
-### 10.1 Transparência sobre Erros
+### 9.1 Modelo de Projeção
 
-**Documentamos abertamente:**
-- v1.0 teve erro de dupla deflação → resultado -42% (incorreto)
-- v2.0 corrigiu erro mas usou média → resultado +22% (incompleto)
-- v3.0 corrigiu método e usou mediana → resultado +15.6% (correto)
+**Especificação:**
 
-**Razão:** Mostrar processo científico real, incluindo erros e correções.
+O impacto total sobre o salário é a soma de quatro direcionadores macroeconômicos:
 
-### 10.2 Transparência sobre Limitações
+```
+Impacto_total = ε_desemp × (Desemp - 6,6) +
+               ε_pib × PIB +
+               ε_sm × SM_real +
+               ε_infl × (Infl - 3,0)
 
-**Diferenciamos claramente:**
--  **Comprovado:** Salário mínimo explica P10, desemprego correlaciona com salário
--  **Plausível mas não testado:** Serviços pós-COVID, Bolsa Família
--  **Não testável:** Impacto marginal exato de cada fator
+Salário_2026 = Base_2024 × (1 + Impacto_total/100)
+```
 
-**Não afirmamos causalidade onde há apenas correlação.**
+**Elasticidades usadas (calibradas, não estimadas estatisticamente):**
+- Desemprego (ε_desemp): -2,0
+- PIB (ε_pib): 0,3
+- Salário mínimo (ε_sm): 0,4
+- Inflação (ε_infl): -0,5
 
-### 10.3 Reprodutibilidade
+**Por que "calibradas" e não "estimadas":** esses valores **não** são resultado de uma regressão estatisticamente significativa sobre os dados deste projeto. A única regressão desemprego→salário rodada neste conjunto de dados (Seção 7.1) retornou R² = 0,037 e p = 0,493 — ou seja, indistinguível de ruído. O ε_desemp = -2,0 usado aqui reflete, em vez disso, uma síntese baseada em julgamento do padrão por subperíodo (leitura período a período da Seção 7.1) e da literatura geral de economia do trabalho sobre sensibilidade salário-desemprego (uma magnitude próxima à lei de Okun), arredondada para um número simples e conservador para fins de cenário.
 
-**Todos os dados e scripts estão disponíveis:**
-- CSVs das tabelas SIDRA (fontes públicas)
-- Scripts Python e R completos
-- Documentação de cada passo
-- **Qualquer pessoa pode replicar os resultados**
+As elasticidades de PIB, salário mínimo e inflação são calibradas da mesma forma — informadas pelas correlações da Seção 7.4 e por relações macroeconômicas padrão, não ajustadas com intervalos de confiança. Trate todo resultado das Seções 9.2–9.5 (Monte Carlo, análise de sensibilidade, testes de estresse, previsão 2026-2030) como **"o que acontece sob essas sensibilidades assumidas"**, não como uma previsão estatisticamente validada. Isso é uma ferramenta de planejamento de cenários, não uma previsão econométrica.
 
-### 10.4 Viés de Seleção de Países (Comparação Internacional)
+### 9.2 Simulação Monte Carlo
 
-**Escolhemos apenas emergentes de renda média:**
-- Pode introduzir viés de seleção
-- Economias avançadas ou muito pequenas foram excluídas
-- **Justificativa:** Comparabilidade estrutural
+**Método:** 10.000 iterações com parâmetros estocásticos
 
-### 10.5 Uso Ético dos Resultados
+**Distribuições assumidas:**
+- Desemprego: Normal(μ=7,5%, σ=1,5%), truncada em [5%, 15%]
+- PIB: Normal(μ=2,0%, σ=1,0%), truncada em [-2%, 5%]
+- Inflação: Normal(μ=5,5%, σ=1,0%), truncada em [3%, 10%]
+- SM real: Normal(μ=2,0%, σ=0,8%), truncada em [0%, 5%]
 
-**Recomendamos:**
-- Citar limitações ao usar os resultados
-- Não extrapolar para grupos não cobertos (informais)
-- Contextualizar achados com outras pesquisas
-- Reconhecer incerteza nas estimativas de decomposição
+**Resultados (para 2026):**
+- Média: R$914
+- Mediana: R$913
+- Desvio padrão: R$28
+- Intervalo de 90% (P5-P95): [R$870, R$960]
+- Probabilidade de queda vs. 2024: 48%
+
+### 9.3 Análise de Sensibilidade
+
+**Método:** variar cada parâmetro ceteris paribus
+
+**Impactos isolados:**
+- Desemprego 5% → 12%: ΔSalário = -R$130
+- PIB -1% → +4%: ΔSalário = +R$46
+- Inflação 3% → 8%: ΔSalário = -R$47
+- SM real 0% → 4%: ΔSalário = +R$35
+
+**Conclusão:** o desemprego tem o maior impacto
+
+### 9.4 Testes de Estresse
+
+**Cenários extremos testados:**
+
+| Cenário | Desemprego | PIB | Inflação | Salário 2026 | Variação |
+|---------|------------|-----|----------|---------------|----------|
+| Crise Severa | 12% | -2% | 8% | R$827 | -11,1% |
+| Estagflação | 10% | 0% | 7% | R$869 | -6,6% |
+| Ajuste Recessivo | 9% | 0,5% | 5% | R$902 | -3,0% |
+| Boom Insustentável | 5% | 4% | 6% | R$975 | +4,8% |
+
+### 9.5 Previsão 2026-2030
+
+**Três cenários construídos:**
+
+**Pessimista (probabilidade: 30%):**
+- Premissas: desemprego 10%, PIB 0,5%, inflação 7%
+- Trajetória: R$930 (2024) → R$856 (2027) → R$856 (2030)
+- Perda acumulada: -8%
+
+**Base (probabilidade: 50%):**
+- Premissas: desemprego 7-8%, PIB 2%, inflação 5,5%
+- Trajetória: R$930 (2024) → R$902 (2027) → R$930 (2030)
+- Variação: -3% (2027), depois recupera
+
+**Otimista (probabilidade: 20%):**
+- Premissas: desemprego 5,5%, PIB 3-4%, inflação 4%
+- Trajetória: R$930 (2024) → R$1.004 (2027) → R$1.088 (2030)
+- Ganho acumulado: +17%
+
+**Previsão esperada (média ponderada por probabilidade):**
+- 2026: R$913 (-1,8%)
+- 2027: R$909 (-2,3%)
+- 2028: R$916 (-1,5%)
+- 2029: R$926 (-0,4%)
+- 2030: R$939 (+1,0%)
 
 ---
 
-## 11. REFERÊNCIAS
+## 10. VALIDAÇÃO INTERNACIONAL
 
-### 11.1 Fontes de Dados Primárias
+### 10.1 Metodologia
 
-**IBGE - Instituto Brasileiro de Geografia e Estatística**
-- SIDRA - Sistema IBGE de Recuperação Automática
-- Tabelas: 5436, 6371, 7535, 7453, 4562, 4708, 4359, 4663, 10369, 4362
-- Disponível em: https://sidra.ibge.gov.br
-- Acesso: Janeiro-Fevereiro 2026
+**Propósito:** validar os achados da PNAD por meio de fonte independente (PIB per capita PPC)
 
-**IBGE - Contas Nacionais**
-- PIB Trimestral e Anual
-- Disponível em: https://www.ibge.gov.br/estatisticas/economicas/contas-nacionais/
-- Acesso: Fevereiro 2026
+**Países:** Brasil, Chile, México, Colômbia, Turquia, Argentina
 
-**IBGE - Sistema Nacional de Índices de Preços**
-- IPCA Mensal e Acumulado
-- Disponível em: https://www.ibge.gov.br/estatisticas/economicas/precios/
-- Acesso: Fevereiro 2026
+**Métricas:**
+1. Crescimento do PIB per capita PPC (2012-2024)
+2. Variação da participação do trabalho
+3. Salário implícito = PIB per capita × Participação do trabalho
 
-**Ministério do Trabalho e Emprego**
-- Novo CAGED - Cadastro Geral de Empregados e Desempregados
-- Painel BI: https://bi.mte.gov.br/bgcaged/
-- Acesso: Fevereiro 2026
+### 10.2 Resultados
 
-**Governo Federal**
-- Valores históricos do Salário Mínimo
-- Fonte: Decretos e Medidas Provisórias publicados
-- Acesso: Fevereiro 2026
+| País | PIB/capita PPC | Part. Trabalho | Salário Implícito |
+|------|-----------------|-----------------|---------------------|
+| **Brasil** | **+5,4%** | **+5,6pp** | **+14,1%** |
+| Chile | +20,5% | +1,8pp | +24,6% |
+| México | +21,3% | +1,7pp | +27,2% |
+| Colômbia | +27,8% | +2,5pp | +34,8% |
+| Turquia | +46,4% | +3,4pp | +58,1% |
+| Argentina | -2,8% | +0,6pp | -1,7% |
 
-### 11.2 Fontes de Dados Secundárias
+### 10.3 Decomposição
 
-**OECD - Organisation for Economic Co-operation and Development**
-- Labour Productivity Database
-- Disponível em: https://www.oecd.org/sdd/productivity-stats/
-- Acesso: Janeiro 2026
+**Brasil:**
+- Efeito PIB per capita: +5,4% (crescimento econômico)
+- Efeito redistribuição: +8,2% (aumento da participação do trabalho)
+- Total: +14,1%
 
-**ILO - International Labour Organization**
-- ILOSTAT Database
-- Disponível em: https://ilostat.ilo.org/
-- Acesso: Janeiro 2026
+**Outros países:**
+- Impulsionados por crescimento: 80-90% vindo do crescimento do PIB, 10-20% de redistribuição
+- Brasil: 40% de crescimento, 60% de redistribuição
 
-**World Bank**
+### 10.4 Achado Principal
+
+**O Brasil é uma exceção clara no grupo comparado:**
+- O PIB per capita cresceu abaixo de todos os pares, exceto a Argentina
+- A participação do trabalho aumentou mais (+5,6pp vs. +0,6-3,4pp)
+- Os ganhos salariais vieram principalmente de redistribuição, não de crescimento
+
+Esse padrão é:
+- **Incomum** (outros países dependem mais de crescimento)
+- Um regime que **tem limites** (compressão de margens não pode continuar indefinidamente)
+- Um regime para o qual os **dados de dezembro de 2025 são consistentes com o início de uma reversão** (não uma confirmação definitiva a partir de um único mês)
+
+---
+
+## 11. RESOLUÇÃO DO PARADOXO DA PRODUTIVIDADE
+
+### 11.1 O Paradoxo
+
+**Nosso estudo encontrou:**
+- Rendimento por hora: +21,1% (2012-2024)
+- Interpretado inicialmente como "ganho de produtividade"
+
+**Dados macro mostram:**
+- PIB per capita PPC: +5,4% (estagnado)
+- Produtividade agregada: praticamente estável
+
+**Contradição aparente:** como os trabalhadores podem ganhar +21% por hora se a produtividade está estagnada?
+
+### 11.2 Resolução
+
+**Nossa "produtividade" ≠ produtividade econômica**
+
+**O que medimos:**
+```
+Produtividade aparente = Rendimento / Horas (da pesquisa PNAD)
+```
+
+**A produtividade verdadeira seria:**
+```
+Produtividade real = PIB / Total de horas trabalhadas (economia inteira)
+```
+
+Não temos dados de "total de horas trabalhadas".
+
+### 11.3 Explicação do +21% de Rendimento/Hora
+
+**Decomposição estimada:**
+
+**~60% Composição setorial:**
+- Trabalhadores migraram de setores de baixo salário/muitas horas (agropecuária, indústria)
+- Para setores de salário mais alto/menos horas (serviços, especialmente qualificados)
+- A média sobe sem que ninguém individualmente se torne mais produtivo
+
+**~30% Redistribuição:**
+- Participação do trabalho +5,6pp
+- Mesma produção, maior fatia salarial
+- Não é eficiência, é apenas deslocamento de renda
+
+**~10% Artefato de mensuração:**
+- Formalização (informal → formal infla a média)
+- Viés de reporte (horas trabalhadas vs. horas declaradas)
+
+**Nota:** essa decomposição percentual (60/30/10) é uma estimativa qualitativa para orientar a interpretação, não um resultado calculado com precisão estatística.
+
+### 11.4 Validação Internacional
+
+O salário implícito de +14,1% (PPC) do Brasil é consistente com:
+- +5,4% vindo de crescimento real de produtividade
+- +8,2% vindo de redistribuição
+- = +14,1% total
+
+A diferença entre nosso +15,6% (PNAD) e +14,1% (PPC) — 1,5pp — é explicada por:
+- Viés de composição na PNAD
+- Cobertura de trabalhadores formais vs. total
+
+### 11.5 Reconhecimento Crítico
+
+**NÃO afirmamos que a produtividade verdadeira aumentou.**
+
+A comparação internacional sugere que:
+- A produtividade agregada do Brasil ficou estagnada
+- Os ganhos salariais vieram de redistribuição e composição
+- Não de melhorias de eficiência
+
+Isso está agora documentado explicitamente em todos os relatórios.
+
+---
+
+## 12. LIMITAÇÕES E PREMISSAS
+
+### 12.1 Limitações de Dados
+
+**Dados indisponíveis:**
+1. Total de horas trabalhadas (economia inteira)
+2. Margens de lucro corporativas (agregadas)
+3. Repasse setorial de inflação
+4. Série histórica completa do CAGED (2012-2019)
+5. Microdados da PNAD (para intervalos de confiança robustos)
+6. Taxas detalhadas de participação na força de trabalho
+
+**Cobertura limitada:**
+- Informalidade: dados disponíveis apenas a partir de 2016
+- CAGED por setor: apenas 2020-2025 em formato adequado
+- Percentis internacionais: não encontrados para comparação
+
+### 12.2 Vieses Reconhecidos
+
+**1. Viés de composição (PNAD):**
+- Captura apenas trabalhadores formais empregados
+- 39% de informais excluídos
+- Se a composição muda (formais ganham mais), a média sobe sem ganhos individuais
+- Mitigação: taxa de informalidade analisada (estável em aproximadamente 39%)
+
+**2. Viés de sobrevivência:**
+- Durante crises, desempregados (geralmente mais pobres) saem da amostra
+- A média dos empregados remanescentes sobe artificialmente
+- Evidência: 2015-2021 teve desemprego alto, mas a média não caiu proporcionalmente
+- Mitigação: uso da mediana (P50) em vez da média
+
+**3. Viés de produtividade aparente:**
+- Rendimento/hora pode subir por deslocamento setorial, não produtividade real
+- Sem PIB/total de horas, não é possível confirmar produtividade verdadeira
+- Mitigação: documentado como "proxy", sem alegação de causalidade
+
+**4. Viés de seleção temporal:**
+- A análise de 2012-2024 captura um ciclo completo (crise + recuperação)
+- Um período diferente poderia mostrar resultados diferentes
+- Mitigação: subperíodos analisados separadamente
+
+### 12.3 Premissas do Modelo
+
+**Premissa 1: Estabilidade das elasticidades**
+- Assumimos que as elasticidades calibradas (desemprego, PIB etc. — ver Seção 9.1) permanecem constantes
+- Essas **não** são coeficientes estatisticamente estimados a partir dos dados deste projeto; a única regressão testada (Seção 7.1) não foi significativa (p = 0,493). São valores baseados em julgamento, informados pelos padrões de subperíodo observados e pela literatura geral
+- Na realidade, podem variar com mudanças estruturais
+- Justificativa: melhor calibração disponível dado o conjunto de dados, não uma estimativa estatisticamente validada
+
+**Premissa 2: Distribuições normais**
+- O Monte Carlo assume que os parâmetros seguem distribuições normais
+- Eventos extremos (caudas gordas) podem estar subestimados
+- Mitigação: distribuições truncadas em valores plausíveis
+
+**Premissa 3: Independência entre parâmetros**
+- Tratamos desemprego, PIB e inflação como independentes
+- Na realidade existem correlações (desemprego alto geralmente com PIB baixo)
+- Justificativa: simplificação necessária por tratabilidade
+
+**Premissa 4: Efeitos lineares**
+- Assumimos impactos lineares (cada 1pp de desemprego = mesmo efeito)
+- Efeitos reais podem ser não-lineares
+- Mitigação: faixas limitadas a valores historicamente observados
+
+### 12.4 O Que NÃO Fizemos (por limitação)
+
+- Análise por subgrupo: por setor, região, idade, gênero
+- Regressão econométrica completa: com variáveis de controle e instrumentos
+- Inferência causal rigorosa: diferenças-em-diferenças, variáveis instrumentais
+- Intervalos de confiança robustos: exigiria microdados
+- Testes de hipótese formais: teste-t, ANOVA (dado que os dados são expandidos por amostragem populacional)
+- Análise completa de informalidade: dados apenas a partir de 2016
+- Produtividade setorial verdadeira: PIB/horas por setor indisponível
+- Modelos ARIMA/GARCH: série temporal curta demais (13 anos)
+
+---
+
+## 13. CONSIDERAÇÕES ÉTICAS
+
+### 13.1 Transparência
+
+**Erros documentados:**
+- Erro da versão 1.0 (-42%) totalmente explicado
+- Processo de correção transparente
+- Todas as versões preservadas para revisão
+
+**Limitações declaradas:**
+- Lacunas de dados reconhecidas
+- Vieses reconhecidos
+- Explicações alternativas consideradas
+
+### 13.2 Neutralidade
+
+**Neutralidade política:**
+- Análise baseada em dados, não em ideologia
+- Apresenta achados desconfortáveis para diferentes perspectivas políticas
+- Reconhece tanto os ganhos (trabalhadores) quanto a fragilidade (insustentabilidade)
+
+**Interpretação equilibrada:**
+- A política de salário mínimo funcionou (ganhos estruturais persistem)
+- Mas os ganhos cíclicos estão revertendo (mercado de trabalho normalizando)
+- Não é "bom" nem "ruim" — apenas o que os dados mostram, com as ressalvas estatísticas descritas ao longo do documento
+
+### 13.3 Acessibilidade
+
+**Código e dados públicos:**
+- Todos os scripts disponíveis no GitHub
+- Fontes de dados documentadas e acessíveis
+- Metodologia detalhada para reprodução
+
+**Múltiplos idiomas:**
+- Documentação em português e inglês
+- Acessível a públicos nacional e internacional
+
+---
+
+## 14. REFERÊNCIAS
+
+### Fontes de Dados
+
+**IBGE (Instituto Brasileiro de Geografia e Estatística):**
+- PNAD Contínua — Tabela 5436 (rendimento deflacionado)
+- PNAD Contínua — Tabela 7535 (percentis)
+- Contas Nacionais Trimestrais
+- Série Histórica do Salário Mínimo
+
+**Ministério do Trabalho:**
+- CAGED (Cadastro Geral de Empregados e Desempregados)
+
+**Banco Mundial:**
 - World Development Indicators
-- Disponível em: https://databank.worldbank.org/
-- Acesso: Janeiro 2026
+- PIB per capita PPC (dólares internacionais constantes de 2017)
 
-### 11.3 Metodológicas e Conceituais
+**OCDE:**
+- Labor Income Share Database
+- Employment Outlook
 
-**IBGE (2021)**
-- Nota Técnica 03/2021 - Reponderação PNAD Contínua
-- Metodologia de pesos e expansão amostral
+**OIT (Organização Internacional do Trabalho):**
+- Base de dados ILOSTAT
 
-**OECD (2024)**
-- OECD Compendium of Productivity Indicators
-- Definições e metodologias internacionais
+### Referências Acadêmicas
 
-### 11.4 Software Utilizado
-
-**R Core Team (2024)**
-- R: A language and environment for statistical computing
-- R Foundation for Statistical Computing, Vienna, Austria
-- Versão: 4.x
-
-**Python Software Foundation (2024)**
-- Python Programming Language
-- Versão: 3.8+
-
-**Bibliotecas:**
-- R: tidyverse, ggplot2, dplyr, tidyr, scales, patchwork
-- Python: pandas, numpy, matplotlib, seaborn
-
-### 11.5 Publicações e Relatórios Consultados
-
-**Banco Central do Brasil**
-- Relatório de Inflação (2012-2025)
-- Focus - Boletim de Projeções
-
-**IPEA - Instituto de Pesquisa Econômica Aplicada**
-- Séries históricas de mercado de trabalho
-- Nota Técnica sobre desigualdade de renda
+- Solow, R. (1956). "A Contribution to the Theory of Economic Growth"
+- Piketty, T. (2014). "Capital in the Twenty-First Century"
+- Autor, D. (2019). "Work of the Past, Work of the Future"
 
 ---
 
-## APÊNDICE A: Tabela Completa de Dados
+## APÊNDICE A: Tabela de Dados Completa
 
-| Ano | P10 Real | P50 Real | P90 Real | Gini | Desemprego | Informalidade |
-|-----|----------|----------|----------|------|------------|---------------|
-| 2012 | R$187 | R$805 | R$2.234 | 0.504 | 7.4% | - |
-| 2013 | R$205 | R$829 | R$2.293 | 0.499 | 7.3% | - |
-| 2014 | R$215 | R$865 | R$2.355 | 0.497 | 7.0% | - |
-| 2015 | R$202 | R$834 | R$2.240 | 0.490 | 8.9% | - |
-| 2016 | R$198 | R$836 | R$2.319 | 0.498 | 11.6% | 39.1% |
-| 2017 | R$185 | R$851 | R$2.301 | 0.498 | 12.6% | 40.6% |
-| 2018 | R$182 | R$863 | R$2.337 | 0.506 | 12.1% | 40.9% |
-| 2019 | R$184 | R$852 | R$2.295 | 0.506 | 11.8% | 41.0% |
-| 2020 | R$210 | R$880 | R$2.368 | 0.500 | 13.7% | 37.7% |
-| 2021 | R$192 | R$810 | R$2.172 | 0.499 | 14.0% | 39.6% |
-| 2022 | R$203 | R$831 | R$2.234 | 0.486 | 9.6% | 39.5% |
-| 2023 | R$207 | R$872 | R$2.376 | 0.494 | 7.7% | 39.2% |
-| 2024 | R$218 | R$930 | R$2.465 | 0.488 | 6.6% | 39.0% |
-
-**Fonte:** Compilação própria a partir de IBGE/PNAD Contínua
+Ver arquivo separado: `dados/brasil_anual_CORRIGIDO_FINAL.csv`
 
 ---
 
-## APÊNDICE B: Fórmulas Resumidas
+## APÊNDICE B: Resumo de Fórmulas
 
-**1. Índice Base 2012:**
+**Crescimento do salário real:**
 ```
-Índice_t = (Valor_t / Valor_2012) × 100
-```
-
-**2. Variação Percentual:**
-```
-Variação % = ((Valor_final / Valor_inicial) - 1) × 100
+Crescimento % = [(Salário_final / Salário_inicial) - 1] × 100
 ```
 
-**3. IPCA Acumulado:**
+**Participação do trabalho:**
 ```
-IPCA_acum_t = IPCA_acum_{t-1} × (1 + IPCA_t/100)
-```
-
-**4. Deflação para Base Real 2012:**
-```
-Valor_real_2012 = Valor_nominal_ano / IPCA_acumulado_ano
+Participação do trabalho = (Remuneração dos empregados / PIB) × 100
 ```
 
-**5. Rendimento por Hora:**
+**Salário implícito (PPC):**
 ```
-Rend/h = Rendimento_mensal / (Horas_semanais × 4.33)
-```
-
-**6. Participação do Trabalho:**
-```
-Part_Trab = (Massa_Sal_Nominal / PIB_Nominal) × 100
+Salário implícito = PIB per capita PPC × (Participação do trabalho / 100)
 ```
 
-**7. Razão P90/P10:**
+**Projeção Monte Carlo:**
 ```
-Razão = Percentil_90 / Percentil_10
+Salário_2026 = Base_2024 × (1 + Impacto/100)
+onde Impacto = Σ (Elasticidade_i × ΔParâmetro_i)
 ```
 
 ---
 
-## CHANGELOG
-
-**v3.0 (Fevereiro 2026) - Atual:**
--  Correção definitiva de dupla deflação
--  Análise de mediana (P50) em vez de média
--  Decomposição estrutural vs conjuntural
--  Validação com 4 fontes independentes
--  Testes de 6 hipóteses concorrentes
--  Identificação de reversão (CAGED dez/2025)
--  Documentação completa de limitações
-
-**v2.0 (Fevereiro 2026):**
--  Correção de dupla deflação
--  Ainda usava média simples
-
-**v1.0 (Fevereiro 2026):**
--  Erro de dupla deflação (resultado -42% incorreto)
-
----
-
-**Última atualização:** 18 de Fevereiro de 2026  
-**Autor:** Vitor Ramos dos Santos  
-**Contato:** vitorramossantos8@gmail.com  
-**Versão:** 3.0 Final Validada
-
+**Versão da Metodologia:** 3.5 Final
+**Última Atualização:** 23 de fevereiro de 2026
+**Autor:** Vitor Ramos dos Santos

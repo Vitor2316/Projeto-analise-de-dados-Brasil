@@ -1,202 +1,124 @@
-# Brazilian Wage Gains Were Built on Squeezed Profits — And the Reversal Has Begun
+# Brazilian Wage Gains, 2012–2024: A Structural and Cyclical Decomposition
 
-## A data-driven investigation reveals the uncomfortable truth behind Brazil's 2022-2024 "wage boom"
+## What a 15.6% real wage increase looks like once you separate policy, recovery, and the labor market cycle
 
-Published: February 2026  
-Author: Vitor Ramos dos Santos  
-Reading time: 12 minutes
+Published: February 2026
+Author: Vitor Ramos dos Santos
+Reading time: 10 minutes
 
 ---
 
-## The Headline Everyone Celebrated
+## The headline figure
 
-"Brazilian workers saw real wage gains of +15.6% between 2012-2024, with inequality falling."
+Between 2012 and 2024, the real median wage of Brazilian formal workers rose 15.6%, according to PNAD Contínua data. Over the same period, income inequality (measured by the Gini index) declined. Taken at face value, this looks like straightforwardly good news.
 
-Politicians from across the spectrum claimed credit. Economists praised the recovery. Headlines celebrated the return of purchasing power.
+Decomposing the 15.6% into its components suggests a more mixed picture — part policy effect, part economic recovery, and part a shift in the split between wages and profits that may not be fully sustainable at current levels.
 
-But when you decompose the data, a different picture emerges.
+## Three findings from the data
 
-## The Uncomfortable Discovery
+### 1. Labor's share of GDP increased
 
-After analyzing 14 years of wage data from Brazil's National Household Survey (PNAD Contínua), cross-validating with employment statistics (CAGED), and building econometric models, I found something that contradicts the prevailing narrative:
+Between 2012 and 2024, labor's share of GDP rose from 68.1% to 73.7% (+5.6 percentage points), with capital's share falling correspondingly. In a roughly R$11.7 trillion economy, this is on the order of R$655 billion per year shifting from profits toward wages — a redistribution, not additional output.
 
-**The wage gains of 2022-2024 were financed not by productivity growth, but by compressing corporate profit margins. And December 2025 data confirms the reversal has already begun.**
-
-## The Evidence
-
-### 1. Labor Captured 5.6 Percentage Points of GDP
-
-Between 2012 and 2024, labor's share of GDP rose from 68.1% to 73.7% — an increase of 5.6 percentage points.
-
-In a R$11.7 trillion economy, that's approximately R$655 billion per year that shifted from capital (corporate profits) to labor (wages).
-
-This wasn't organic growth. This was redistribution.
-
-### 2. The "Boom" Was Really a Recovery
+### 2. Much of the "growth" was recovery from the 2015–2021 downturn
 
 Looking at the median worker (P50):
 - 2012: R$805 (base)
-- 2021: R$810 (same as 2012 after 9 years!)
-- 2024: R$930 (+15.6% vs 2012)
+- 2021: R$810 (essentially unchanged after nine years)
+- 2024: R$930 (+15.6% vs. 2012)
 
-Translation: Workers spent 10 years recovering from the 2015-2021 crisis, then gained 14.8% in just 3 years.
+A large share of the headline gain reflects the 2012–2021 period ending close to where it started, followed by a stronger 2022–2024 recovery (+14.8%). This doesn't make the recent gains less real for workers, but it changes how the 15.6% figure should be read.
 
-Half the "gain" was just getting back to where they should have been.
+### 3. December 2025 employment data is consistent with a cyclical reversal — though not conclusive on its own
 
-### 3. December 2025: The Prediction Validated
+Before December 2025 data was published, this analysis noted that a slowdown accompanied by rising unemployment would likely lead firms to restore margins through layoffs, which would show up first in the cyclical share of recent wage gains.
 
-In my analysis (completed before December 2025 data was released), I wrote:
+December 2025 CAGED data reported -618,000 net formal jobs, with services (which drove much of the 2022–2024 wage growth) accounting for the largest share of the decline (-281,000). This is one month of data and should be treated as a data point to monitor rather than a confirmed trend reversal.
 
-> "If unemployment rises and the economy decelerates, companies will restore margins by cutting jobs. The cyclical component (42% of gains) will reverse."
+## Decomposing the +15.6%
 
-December 2025 employment data: **-618,000 jobs**
+The gain can be split into components that look more structural (policy-driven, likely to persist) and more cyclical (tied to the current phase of the business cycle, more likely to reverse):
 
-Services sector (which drove 2022-2024 growth): **-281,000 jobs**
+**Structural (an estimated ~58% of the gain):**
+- Real minimum wage policy (inflation-indexation plus a lagged GDP-growth formula): +6.2pp
+- Labor capturing a larger share of GDP: +3.0pp
 
-The reversal has begun.
+**Cyclical (an estimated ~42% of the gain):**
+- Historically low unemployment (6.6%, likely below a sustainable rate): +3.0pp
+- Base effect from the 2015–2021 downturn: +5.0pp
 
-## The Decomposition
+**A necessary caveat:** this split is a judgment-based estimate, not a statistically derived decomposition. The regression of wages on unemployment run on this dataset (full sample, 2012–2024) was not statistically significant (R² = 0.037, p = 0.493). The unemployment-sensitivity value used in the scenario simulations below reflects sub-period patterns and general labor-economics literature rather than a fitted coefficient — a distinction worth being explicit about, since it affects how much weight the scenario results should carry.
 
-I broke down the +15.6% gain into structural (permanent) and cyclical (reversible) components:
+## What this could mean going forward
 
-**Structural (58% — will persist):**
-- Real minimum wage policy: +6.2pp (formula: inflation + past GDP growth)
-- Redistribution: +3.0pp (labor captured more of GDP)
+**For workers:** if the cyclical component partially reverses — for example, if unemployment rose toward 8–10% — median wages could decline from around R$930 toward roughly R$870–880, while remaining meaningfully above the 2012 level, since the structural component would be expected to persist.
 
-**Cyclical (42% — now reversing):**
-- Historic low unemployment: +3.0pp (6.6% is unsustainable)
-- Base effect: +5.0pp (recovery from 2021 crisis)
+**For firms:** margins were compressed by roughly 5.6 percentage points of GDP over the period, alongside a relatively high policy interest rate (Selic at 14.75%). Reducing headcount is one of the more direct levers available to restore margins, which is consistent with the pattern in the December 2025 data.
 
-## Why This Matters
+**For policy:** the minimum wage formula appears to account for a meaningful share of the structural gains. Whether the cyclical gains can be preserved without renewed inflationary pressure is an open question this analysis doesn't attempt to answer.
 
-### For Workers
-The gains were real, but fragile. Approximately 42% depends on maintaining:
-- Unemployment at 6.6% (a historical minimum)
-- Compressed profit margins (unsustainable long-term)
+## Methodology, briefly
 
-If unemployment rises to 8-10%, workers lose roughly 7 percentage points but keep the 9pp structural gains.
-
-Bottom line: Median wage likely falls from R$930 to ~R$870-880 (still +8-9% above 2012).
-
-### For Companies
-Profit margins were squeezed by 5.6pp of GDP to finance wage growth. Facing:
-- High labor costs (wages growing faster than productivity)
-- High credit costs (Selic at 14.75%)
-- Slowing demand
-
-December 2025 shows companies making their move: cutting headcount to restore margins.
-
-### For Policy Makers
-The minimum wage formula worked — it created a structural floor. But the cyclical gains (pleno emprego effect) are reversing. The question becomes: can policy interventions stabilize employment without reigniting inflation?
-
-## The Methodology
-
-This analysis uses:
 - **Primary data:** IBGE PNAD Contínua (13 years, national household survey)
 - **Validation:** CAGED employment data, National Accounts, minimum wage records
-- **Statistical methods:** Linear regression, Monte Carlo simulation (10,000 scenarios), sensitivity analysis
-- **Transparency:** All code and data publicly available on GitHub
+- **Statistical methods:** linear regression, Monte Carlo simulation (10,000 scenarios), sensitivity analysis
+- **Code and data:** publicly available on GitHub
 
-Key findings survived:
-- 6 hypothesis tests
-- 4 independent data validations  
-- Structural break analysis (pre/post-2021)
-- Real-time prediction validation (December 2025 confirmed forecast)
+An earlier version of this analysis contained a double-deflation error that produced an incorrect -42% estimate; this was identified and corrected to +15.6% in the current version. Four independent data sources (minimum wage records, GDP accounts, wage mass, Gini index) were cross-checked and found broadly consistent.
 
-## The Monte Carlo Simulation
+**One limitation worth restating:** the full-sample regression of wages on unemployment was not statistically significant. The unemployment sensitivity used in the simulations below is a calibrated assumption, not a fitted coefficient. Full detail in the [methodology](https://github.com/Vitor2316/Projeto-analise-de-dados-Brasil/blob/main/METHODOLOGY.md).
 
-To quantify uncertainty, I ran 10,000 simulations varying:
-- Unemployment rate (5-15%)
+## Monte Carlo simulation
+
+To characterize uncertainty around a 2026 projection, the analysis ran 10,000 simulations varying:
+- Unemployment rate (5–15%)
 - GDP growth (-2% to +5%)
-- Inflation (3-10%)
-- Real minimum wage gains (0-5%)
+- Inflation (3–10%)
+- Real minimum wage gains (0–5%)
 
 Results:
-- Expected 2026 median wage: R$914 (range: R$870-960)
-- Probability of decline vs 2024: 47%
-- Probability of decline >5%: 18%
+- Expected 2026 median wage: R$914 (range: R$870–960)
+- Probability of decline vs. 2024: 47%
+- Probability of decline greater than 5%: 18%
 
-Translation: Roughly even odds of small decline, but structural gains prevent catastrophic falls.
+These results describe the model's sensitivity to its input assumptions rather than an independently validated forecast.
 
-## The Stress Tests
+## Stress tests
 
-I tested four extreme scenarios:
+Four illustrative scenarios were also run:
 
-**1. Severe Crisis (Unemployment 12%, GDP -2%, Inflation 8%)**
-Result: Wage falls to R$827 (-11.1%)
+| Scenario | Assumptions | Projected wage | Change vs. 2024 |
+|---|---|---|---|
+| Severe crisis | Unemployment 12%, GDP -2%, Inflation 8% | R$827 | -11.1% |
+| Stagflation | Unemployment 10%, GDP 0%, Inflation 7% | R$869 | -6.6% |
+| Unsustainable boom | Unemployment 5%, GDP 4%, Inflation 6% | R$975 | +4.8% |
+| Recessionary adjustment | Unemployment 9%, GDP 0.5%, Inflation 5% | R$902 | -3.0% |
 
-**2. Stagflation (Unemployment 10%, GDP 0%, Inflation 7%)**
-Result: Wage falls to R$869 (-6.6%)
+December 2025 data appears more consistent with the stagflation or recessionary-adjustment scenarios than with continued strong growth, though it is too early to draw a firm conclusion from a single month.
 
-**3. Unsustainable Boom (Unemployment 5%, GDP 4%, Inflation 6%)**
-Result: Wage rises to R$975 (+4.8%)
+## Summary
 
-**4. Recessionary Adjustment (Unemployment 9%, GDP 0.5%, Inflation 5%)**
-Result: Wage falls to R$902 (-3.0%)
+Real median wages in Brazil rose 15.6% between 2012 and 2024. An estimated 58% of that gain is tied to structural factors — chiefly minimum wage policy — that are likely to persist. An estimated 42% is tied to cyclical conditions, particularly historically low unemployment, that are less likely to persist and where early signs of reversal appeared in December 2025 data. These estimates rely on calibrated assumptions rather than statistically significant coefficients, and should be read with that caveat in mind.
 
-December 2025 data suggests we're entering scenario 2 or 4.
+## Further reading
 
-## The Dashboard
-
-I built an interactive dashboard where you can simulate your own scenarios:
-
-[Link to Streamlit Dashboard]
-
-Adjust sliders for:
-- Unemployment rate
-- GDP growth
-- Inflation
-- Minimum wage policy
-
-See real-time impact on projected wages, with decomposition showing contribution of each factor.
-
-## The Uncomfortable Conclusion
-
-Most analysts will say: "Wages rose +15.6%!"
-
-The data says: "Wages rose +15.6%, but 42% of that gain came from squeezing profits at unsustainable low unemployment. December 2025 shows the reversal beginning. Structural gains (~9%) will persist, but cyclical gains (~7%) are evaporating."
-
-This doesn't fit neat political narratives. It's not "workers winning" or "workers losing" — it's a complex redistribution under specific conditions that are now changing.
-
-## What's Next
-
-I'll be monitoring:
-- Monthly CAGED data (employment by sector)
-- PNAD quarterly releases (wage evolution)
-- Central Bank signals (Selic trajectory)
-- Government response (will minimum wage formula hold?)
-
-The model predicts median wage stabilizing around R$870-880 by 2027 if unemployment normalizes to 8-9%. Let's see if the data confirms.
-
-## Explore Further
-
-- **Full Report (52 pages):** [Link to GitHub]
-- **Interactive Dashboard:** [Link to Streamlit]
-- **Complete Methodology:** [Link to GitHub]
-- **Source Code:** [Link to GitHub]
-- **Raw Data:** All publicly available (IBGE SIDRA, Ministry of Labor)
+- **Full report:** [GitHub](https://github.com/Vitor2316/Projeto-analise-de-dados-Brasil)
+- **Methodology:** [GitHub](https://github.com/Vitor2316/Projeto-analise-de-dados-Brasil/blob/main/METHODOLOGY.md)
+- **Source code:** [GitHub](https://github.com/Vitor2316/Projeto-analise-de-dados-Brasil)
+- **Raw data:** publicly available (IBGE SIDRA, Ministry of Labor)
 
 ---
 
-**About the Author**
+**About the author**
 
-Vitor Ramos dos Santos is a student in a technical high school program in computer science. This research was conducted independently using public data sources. All code and methodology are open source.
+Vitor Ramos dos Santos is a technical high school student in computer science. This research was conducted independently using public data sources. All code and methodology are open source.
 
-**Contact:** vitorramossantos8@gmail.com  
-**LinkedIn:** www.linkedin.com/in/vitor-ramos2132  
+**Contact:** vitorramossantos8@gmail.com
+**LinkedIn:** www.linkedin.com/in/vitor-ramos2132
 **GitHub:** https://github.com/Vitor2316/Projeto-analise-de-dados-Brasil
 
 ---
 
-**Acknowledgments**
+**Data sources:** IBGE (PNAD Contínua, National Accounts), Brazilian Ministry of Labor (CAGED), OECD Labour Productivity Database.
 
-Data sources: IBGE (PNAD Contínua, National Accounts), Brazilian Ministry of Labor (CAGED), OECD Labour Productivity Database.
-
-**Disclaimer**
-
-This analysis represents the author's interpretation of publicly available data. It does not constitute financial, legal, or investment advice. Economic projections involve uncertainty; actual outcomes may differ.
-
----
-
-**If you found this analysis valuable, please share it and follow for updates as the economic situation evolves.**
-
+**Disclaimer:** This analysis reflects the author's interpretation of publicly available data. It does not constitute financial, legal, or investment advice. Economic projections involve uncertainty; actual outcomes may differ from those presented here.

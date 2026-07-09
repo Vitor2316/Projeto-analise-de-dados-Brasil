@@ -1,261 +1,119 @@
-#  EXECUTIVE SUMMARY - Brazilian Wage Analysis 2012-2025
+# Executive Summary — Brazilian Real Wage Analysis, 2012–2025
 
-**Version:** 3.0 Final  
-**Author:** Vitor Ramos dos Santos  
+**Version:** 3.0
+**Author:** Vitor Ramos dos Santos
 **Date:** February 2026
 
 ---
 
-##  THE CONTROVERSIAL THESIS
+## Summary
 
-### Brazilian wage gains (2022-2024) were financed by **squeezing corporate profits**, not by productivity growth — making them **fragile and reversible**.
+Between 2012 and 2024, the real median wage of Brazilian formal workers (P50, PNAD Contínua) rose 15.6%. This document summarizes the main finding of the analysis: a meaningful share of that gain appears to be associated with a compositional shift in national income — labor's share of GDP rose from 68.1% to 73.7% (+5.6 percentage points) while capital's share fell correspondingly — alongside a period of historically low unemployment. Employment data from December 2025 (-618,000 net jobs, concentrated in services) is consistent with, though does not by itself confirm, a reversal of the cyclical component of these gains.
 
-**Evidence:**
-- Labor's share of GDP: 68.1% → 73.7% (**+5.6pp**)
-- Capital's share: 31.9% → 26.3% (**-5.6pp**)
-- December 2025: **-618,000 jobs** (first negative month since COVID)
-- Services (growth driver 2022-2024): **-281k jobs** (leading layoffs)
-
-**Translation:** Workers captured +5.6 percentage points of national income that previously went to business profits. When profits are squeezed, companies restore margins by **cutting jobs**.
-
-**December 2025 proves the reversal has begun.**
+This is an observational, exploratory analysis based on public data. It does not establish causality, and several of the figures below are calibrated assumptions rather than statistically estimated parameters — this is stated explicitly wherever it applies. Readers should weight the conclusions accordingly.
 
 ---
 
-##  THE UNCOMFORTABLE FINDINGS
+## 1. Wage growth was concentrated in a short recovery period
 
-### 1. THE "GROWTH" WAS MOSTLY RECOVERY FROM CRISIS
+| Period | Real median wage change | Note |
+|---|---|---|
+| 2012–2014 | +7.5% | Growth |
+| 2015–2021 | -5.3% | Recession + pandemic |
+| 2021 | — | Level similar to 2012 |
+| 2022–2024 | +14.8% | Recovery |
+| **2012–2024 (net)** | **+15.6%** | |
 
-**Timeline:**
-- 2012-2014: Real median wage **+7.5%** (actual growth)
-- 2015-2021: Real median wage **-5.3%** (crisis ate everything)
-- 2021: **Back to 2012 level** (10 lost years!)
-- 2022-2024: Real median wage **+14.8%** (recovery)
-
-**Net result 2012-2024:** +15.6%
-
-**But 10 of those 13 years were just recovering lost ground.**
-
-The "miracle" of 2022-2024 was simply **getting back to where we should have been**.
+A substantial part of the 2012–2024 change consists of recovering ground lost during 2015–2021, rather than growth beyond the 2012 baseline. This does not diminish the 2022–2024 gains, but it is relevant context for interpreting the headline +15.6% figure.
 
 ---
 
-### 2. GAINS WERE PROGRESSIVE — BUT AT WHOSE EXPENSE?
+## 2. Gains were progressive across the wage distribution
 
-| Percentile | Real Gain 2012-2024 | Interpretation |
-|------------|---------------------|----------------|
-| P10 (bottom 10%) | **+16.7%** | Driven by minimum wage policy |
-| P50 (median) | **+15.6%** | Typical worker |
-| P90 (top 10%) | **+10.3%** | Lower growth |
+| Percentile | Real gain, 2012–2024 |
+|---|---|
+| P10 (bottom decile) | +16.7% |
+| P50 (median) | +15.6% |
+| P90 (top decile) | +10.3% |
 
-**Gini Index:** 0.504 → 0.488 (**inequality fell**)
-
-**So far, so good.** Base grew more than top. Progressive.
-
-**But here's the catch:**
-
-This wasn't financed by economic growth (GDP +11.2%) or productivity gains. It was financed by **redistributing from capital to labor** (+5.6pp GDP).
-
-When growth slows and profits are already squeezed, companies have **only one lever left:** layoffs.
-
-**December 2025 data suggests they're pulling it.**
+The Gini index for labor income fell from 0.504 to 0.488 over the same period. Lower percentiles grew faster than higher ones, consistent with the real minimum wage policy (which sets a binding floor concentrated at the lower end of the distribution) as a contributing factor.
 
 ---
 
-### 3. THE REAL DRIVERS: POLICY + UNSUSTAINABLE LOW UNEMPLOYMENT
+## 3. A structural/cyclical decomposition of the +15.6% gain
 
-**Decomposition of +15.6% gain:**
+The analysis splits the total gain into components judged to be more persistent ("structural") and more sensitive to the business cycle ("cyclical"):
 
-**Structural (58% - permanent):**
-- Real minimum wage policy: **~6pp** (INPC + past GDP growth formula)
-- Redistribution: **~3pp** (labor captured more of GDP)
+**Structural (approx. 58% of the gain):**
+- Real minimum wage policy (INPC + lagged GDP growth formula): ~6.2pp
+- Labor's increased share of GDP: ~3.0pp
 
-**Cyclical (42% - reversible):**
-- Historic low unemployment: **~3pp** (6.6% is unsustainable)
-- Base effect (recovery): **~5pp** (getting back to 2012 level)
+**Cyclical (approx. 42% of the gain):**
+- Historically low unemployment (6.6%, likely below a sustainable rate): ~3.0pp
+- Base effect from the 2015–2021 recession: ~5.0pp
 
-**Projection if unemployment rises to 10%:**
-- Cyclical gains reverse: **-7pp**
-- Structural gains remain: **+9pp**
-- **Net: P50 falls to ~R$880 (-6% vs today, but still +9% vs 2012)**
+**Caveat on these figures:** the boundary between "structural" and "cyclical" is a judgment call, not a statistically derived split, and the percentages should be read as approximate. The unemployment-sensitivity assumption used to project a reversal scenario is a calibrated value informed by sub-period patterns and general labor-economics literature — it is *not* a statistically significant coefficient. The one regression tested on this dataset (real wage on unemployment, full sample, 2012–2024) returned R² = 0.037 and p = 0.493, i.e., not distinguishable from no relationship at the 5% level. Full detail in [METHODOLOGY.md](METHODOLOGY.md), Sections 7.1 and 9.1.
 
----
-
-### 4. THE ELEPHANT IN THE ROOM: PRODUCTIVITY
-
-**Earnings per hour:** +21.1% (2012-2024)
-
-**Should be good news, right?**
-
-**Problem:** This is **apparent** productivity (earnings/hour from survey data).
-
-**True productivity** would be GDP/total hours worked, which we can't measure precisely with available data.
-
-**Three possible explanations:**
-1. **Workers genuinely became more productive** (optimistic)
-2. **Composition bias** (informals → formals, sector shifts inflate average)
-3. **Measurement artifact** (survey methodology changes)
-
-**We don't have enough data to definitively separate these.**
-
-**What we DO know:** 
-- Wage mass grew **+26.5%** (IBGE official)
-- GDP grew **+11.2%**
-- **Gap = +15pp → redistribution from capital**
+**Illustrative scenario (not a forecast):** if unemployment were to rise to around 10%, the model's cyclical component would be expected to reverse (~-7pp), while the structural component would be expected to hold (~+9pp), implying a median wage in the neighborhood of R$880 — still above the 2012 level, but below 2024. This is a scenario built on calibrated assumptions, not a statistical projection with a defined confidence interval.
 
 ---
 
-##  THE PREDICTION (VALIDATED IN REAL-TIME)
+## 4. Productivity: an open question
 
-**Written in study (before December 2025 data):**
+Apparent labor productivity (earnings per hour) rose 21.1% over 2012–2024. This is measured as earnings/hour from survey data, not GDP per hour worked, and the two are not the same thing. Three explanations are plausible and cannot be fully distinguished with the data available:
 
-> "If economy decelerates and unemployment rises, companies will restore margins via layoffs. Cyclical gains (42%) will reverse."
+1. A genuine increase in worker productivity.
+2. Composition effects (shifts between informal and formal work, or between sectors, can move the average without any individual becoming more productive).
+3. Measurement or survey-methodology artifacts.
 
-**December 2025 actual data:**
-- Total jobs: **-618,164**
-- Services: **-280,810** (largest loss)
-- Industry: **-135,087**
-- Construction: **-104,077**
-
-**Translation:** The prediction was correct. The reversal has begun.
+What can be stated with more confidence: nominal wage mass grew 26.5% (IBGE) against GDP growth of 11.2% over the same period — a gap of roughly 15 percentage points, consistent with the labor-share shift described in Section 3.
 
 ---
 
-##  THE COUNTERINTUITIVE INSIGHT
+## 5. December 2025 employment data
 
-### Most people think: "Workers gained +15.6%, inequality fell, everything is great!"
+Before December 2025 data was released, the analysis noted that a deceleration in growth combined with rising unemployment would be expected to reverse the cyclical component of wage gains, as firms typically respond to margin pressure by reducing headcount.
 
-### The data shows: "Workers gained by squeezing profits in an unsustainable unemployment rate (6.6%). When unemployment normalizes to 8-10%, gains partially reverse."
-
-**Why this matters:**
-
-Politicians will claim victory: "Real wages rose under my government!"
-
-**True, but:**
-- 58% is structural (minimum wage policy) → will persist
-- 42% is cyclical (historic low unemployment + recovery) → already reversing
-
-**The honest narrative:**
-"Minimum wage policy worked (+6pp structural). But the rest came from an unsustainable labor market squeeze that's now reversing."
+December 2025 CAGED data reported a net loss of 618,164 formal jobs, with services (-280,810), industry (-135,087), and construction (-104,077) showing the largest declines. This single data point is directionally consistent with the anticipated mechanism, but one month of data is not sufficient to confirm a sustained trend, and alternative explanations (seasonal effects, one-off shocks) have not been ruled out. This should be treated as an observation to monitor, not as validation of the thesis.
 
 ---
 
-##  THE UNCOMFORTABLE CHART NOBODY WANTS TO SEE
+## 6. Uncertainty quantification
 
-**Labor Share of GDP (2012-2024):**
+To characterize uncertainty around a 2026 projection, a Monte Carlo simulation (10,000 draws) varied unemployment, GDP growth, inflation, and minimum-wage policy within plausible ranges, using the calibrated elasticities described in Section 3. Results:
 
-```
-2012: 68.1% 
-2024: 73.7% 
-              ↑ +5.6pp
-```
+- Expected median wage, 2026: ~R$914 (range: R$870–960)
+- Probability of decline vs. 2024: ~47%
+- Probability of decline greater than 5%: ~18%
 
-**This means:**
-- Every 1% of GDP = ~R$117 billion
-- 5.6pp = ~R$655 billion/year shifted from capital to labor
-
-**When profits are squeezed by R$655 billion/year, companies WILL respond.**
-
-December 2025: They did.
+These figures reflect the sensitivity of the model to its input assumptions, not an independent statistical forecast. They should be read as "what the model implies under these assumed sensitivities."
 
 ---
 
-##  THE WARNING NOBODY HEEDED
+## 7. Methodology notes and limitations
 
-**Before December 2025:**
-- Unemployment: 6.6% (historic low)
-- Wage growth: +6.7% (2024 alone)
-- Inflation: 4.8% (above 3% target)
-- Selic: 14.75% (choking credit)
+**What strengthens confidence in the findings:**
+- An earlier version of the analysis contained a double-deflation error, which was identified and corrected (v1.0 estimate of -42% real change corrected to +15.6% in v3.0).
+- Findings were cross-checked against four independent data sources (minimum wage records, GDP accounts, wage mass, Gini index), which were broadly consistent with each other.
+- A structural break test (pre/post-2021) was used to separate trend regimes rather than assuming one continuous trend.
 
-**Every indicator screamed: "This is unsustainable."**
-
-**Companies were caught between:**
-- High labor costs (wages growing faster than productivity)
-- High credit costs (14.75% Selic)
-- Squeezed margins (labor capturing +5.6pp GDP)
-
-**December 2025:** They made their move.
+**Limitations, stated directly:**
+- PNAD Contínua covers formal workers; roughly 39% of the Brazilian workforce is informal and excluded from this analysis.
+- "Productivity" here is a proxy (earnings/hour), not a direct productivity measure.
+- The analysis is correlational. The one regression formally tested (wage vs. unemployment) was not statistically significant; elasticities used in the scenario simulator are calibrated assumptions, not fitted coefficients, and this is stated wherever those figures are used.
+- The structural/cyclical decomposition percentages are estimates based on judgment, not a precise statistical decomposition.
 
 ---
 
-##  METHODOLOGICAL RIGOR THAT STRENGTHENS THE THESIS
+## Further reading
 
-**This study survived:**
-
-1. **Self-correction:** Fixed double deflation error (v1.0: -42% → v3.0: +15.6%)
-2. **6 hypothesis tests:** Formalization? No. Minimum wage? Yes. Top concentration? No.
-3. **4 independent validations:** Minimum wage, GDP, wage mass, Gini — all consistent
-4. **Temporal decomposition:** Separated structural from cyclical components
-5. **Real-time validation:** Predicted reversal, confirmed by Dec 2025 data
-
-**Limitations openly acknowledged:**
-- PNAD captures only formal workers (39% informal excluded)
-- Productivity is proxy, not true measure
-- Causality is correlational, not econometric
-- Decomposition percentages are estimates, not precise measures
-
-**Transparency about errors and limitations STRENGTHENS credibility.**
+- **[Methodology](METHODOLOGY.md):** full derivation, hypothesis tests, and limitations.
+- **[Charts](graficos/):** supporting visualizations.
+- **[Scripts](scripts/):** Python and R code, reproducible from public data.
+- **[Data](dados/):** source CSVs, all sources documented.
 
 ---
 
-##  THE BOTTOM LINE FOR RECRUITERS
-
-**If you have 3 minutes, here's what matters:**
-
-1. **Thesis:** Wage gains came from profit squeeze, not productivity
-2. **Evidence:** Labor share +5.6pp GDP, productivity questionable
-3. **Prediction:** Gains are fragile, will partially reverse
-4. **Validation:** December 2025 data proves reversal started
-5. **Decomposition:** 58% structural (stays), 42% cyclical (reverting)
-
-**This shows:**
--  I can identify uncomfortable truths in data
--  I can separate signal from noise
--  I don't just describe — I argue with evidence
--  I make falsifiable predictions and test them
--  I understand economic mechanisms, not just statistical patterns
-
-**That's the difference between a data analyst and a data scientist who thinks economically.**
-
----
-
-##  THE CONTROVERSIAL CONCLUSION
-
-### The Brazilian wage "boom" of 2022-2024 was:
-1. **50% recovering lost ground** (2012-2021 lost decade)
-2. **40% minimum wage policy** (structural, will persist)
-3. **10% profit squeeze** (cyclical, reversing now)
-
-### Translation:
-- **Permanent gain:** ~9% above 2012 (structural component)
-- **Temporary gain:** ~7% (cyclical, already reversing)
-
-### December 2025 proves we called it.
-
-### Most analysts will say: "Wages rose +15.6%!"
-### We say: "Wages rose +15.6%, but 42% of that gain is reversing now because it came from squeezing profits in an unsustainable labor market."
-
-**The data doesn't care about political narratives.**
-
-**It tells the truth.**
-
----
-
-**Want the full analysis?**
-- **[Complete Report](RELATORIO_FINAL_SALARIOS_BRASIL_2012-2025.md)**: 52 pages, all evidence
-- **[Methodology](METHODOLOGY.md)**: How we got here, errors corrected, limitations acknowledged
-- **[Charts](graficos/)**: 10 professional visualizations (300 DPI)
-
-**Want to replicate?**
-- **[Scripts](scripts/)**: Python + R, fully reproducible
-- **[Data](dados/)**: 9 CSVs, all sources documented
-
----
-
-**Last updated:** February 19, 2026  
-**Author:** Vitor Ramos dos Santos  
+**Last updated:** February 19, 2026
+**Author:** Vitor Ramos dos Santos
 **Contact:** vitorramossantos8@gmail.com
-
-**This summary is provocative by design. The full report has nuance. But if you can't handle a strong thesis, this isn't the project for you.**
-
